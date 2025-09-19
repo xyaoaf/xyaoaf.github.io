@@ -12,13 +12,13 @@ Welcome to my personal website! I'm Xihan Yao (姚希翰), a researcher passiona
 
 ## Education
 
-**PhD, Geography** — The University of Texas at Austin (2025 – Present)
+**PhD, Geography** — University of Texas, Austin, 2025-present
 
-**Master, Environmental Planning** — University of California, Berkeley (2021 – 2023)
+**Master, Environmental Planning** — University of California, Berkeley, 2021-2023
 - Certificate in Geographic Information Science & Technology (GIST)
 - Certificate of Teaching and Learning in Higher Education
 
-**BSc, Environmental Management and Technology** — Hong Kong University of Science and Technology (HKUST), 2021
+**BSc, Environmental Management and Technology** — Hong Kong University of Science and Technology (HKUST), 2017-2021
 
 ## Professional Experience
 
