@@ -8,68 +8,74 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my personal website! I'm Xihan Yao, a researcher passionate about advancing knowledge through innovative approaches in computer science and data analysis.
+Welcome to my personal website! I'm Xihan Yao (姚希翰), a researcher passionate about advancing knowledge at the intersection of GeoAI, high-resolution remote sensing, and human–environment interactions. My work combines cutting-edge computational methods with environmental science to support climate resilience, urban sustainability, and ecosystem services assessment.
 
 ## About Me
 
-I am currently pursuing my academic and research career with a focus on [your specific field - please update based on your LinkedIn]. My work involves [brief description of your current research/work - please update].
+I am currently a PhD student in Geography & the Environment at The University of Texas at Austin, where I work as a Graduate Research Assistant in the GISense Lab directed by Prof. Yuhao Kang. My research explores how multimodal geospatial data (e.g., satellite & aerial imagery, LiDAR, street view imagery, human mobility, and survey data) can be integrated with AI methods to understand environmental processes, urban microclimates, and human perceptions of place.
 
 ## Education
 
-[Please update with your education from LinkedIn:]
-<!-- 
-- **PhD in [Field]** - [University], [Year - Present/Expected]
-- **Master's/Bachelor's in [Field]** - [University], [Year]
--->
+**PhD in Geography & the Environment** — The University of Texas at Austin (2025 – Present)
+
+**Master of Environmental Planning** — University of California, Berkeley (2021 – 2023)
+- Certificate in Geographic Information Science & Technology (GIST)
+- Certificate of Teaching and Learning in Higher Education
+
+**Bachelor of Science in Environmental Management & Technology** — Hong Kong University of Science and Technology (HKUST), 2021
 
 ## Professional Experience
 
-[Please update with your work experience from LinkedIn:]
-<!-- 
-- **[Current Position]** - [Organization], [Dates]
-  - [Brief description of responsibilities/achievements]
-- **[Previous Position]** - [Organization], [Dates]
-  - [Brief description of responsibilities/achievements]
--->
+**Graduate Research Assistant** — GISense Lab, UT Austin (2025 – Present)
+- Research on GeoAI, multimodal place perception, and human–environment interactions.
+
+**GIS Analyst** — EarthDefine, LLC (2024 – 2025)
+- Developed deep learning pipelines for sub-meter urban land cover classification using NAIP imagery.
+- Contributed to the National Urban Tree Cover Map with the Arbor Day Foundation.
+
+**Lecturer** — UC Berkeley (Fall 2023)
+- Instructor of record for GEOG/LDARCH C188: Geographic Information Science, Berkeley's largest GIS course with 200+ students.
+
+**Graduate Student Instructor** — UC Berkeley (2022 – 2023)
+- Taught labs for Applied Remote Sensing (ESPM/LDARCH C289) and GIScience (GEOG/LDARCH C188).
+
+**Research Assistant** — UC Berkeley & Partner Projects (2022 – 2024)
+- Projects on wildfire burn severity, post-wildfire flood risk, urban forestry microclimate modeling, and wetland conservation.
 
 ## Research Interests
 
-My research focuses on several key areas:
-<!-- Please update based on your actual interests:
-- Machine Learning and Artificial Intelligence
-- Data Science and Analytics  
-- [Your specific research area]
-- [Another research area]
--->
+**GeoAI & Remote Sensing** — Deep learning for land cover mapping, multimodal embeddings, and spatial perception modeling.
+
+**Urban Microclimate & Ecosystem Services** — Using LiDAR, simulations, and tree classification to study cooling, shading, and environmental justice.
+
+**Street View & Human Perception** — Linking visual urban form to human experiences, safety perception, and personality–environment relationships.
+
+**Climate Resilience** — Spatial modeling of wildfire, flooding, and ecosystem services to support planning and adaptation.
 
 ## Skills
 
-**Technical Skills:**
-<!-- Update based on your LinkedIn skills:
-- Programming: Python, R, MATLAB, etc.
-- Machine Learning: TensorFlow, PyTorch, scikit-learn
-- Data Analysis: pandas, numpy, SQL
-- Visualization: matplotlib, seaborn, ggplot2
--->
+**Technical:**
+- **Programming**: Python, R, SQL
+- **Machine Learning**: PyTorch, TensorFlow, scikit-learn, segmentation_models_pytorch
+- **Geospatial**: ArcGIS Pro, QGIS, Google Earth Engine, GDAL, rasterio, geopandas
+- **Remote Sensing**: LiDAR processing, object-based image analysis, classification workflows
+- **Visualization**: matplotlib, seaborn, ggplot2, Leaflet, ipyleaflet
 
 **Languages:**
-<!-- Update based on your language skills:
 - English (Fluent)
-- [Other languages]
--->
+- Mandarin Chinese (Native)
 
 ## Recent News & Achievements
 
-<!-- Add your recent accomplishments:
-- [Date]: [Achievement or news]
-- [Date]: [Publication, award, or milestone]
--->
+- Starting PhD at UT Austin in Fall 2025, joining the GISense Lab 🎉
+- Mentored NASA DEVELOP Fall 2024 project on urban canopy cover & heat in San Jose
+- Presented at MIT Senseable City Lab and Stanford Natural Capital Symposium (2024)
+- Manuscript on urban forests, LiDAR classification, and microclimate simulation under review at *Landscape and Urban Planning*
 
 ## Contact
 
 I'm always interested in discussing research collaborations, academic opportunities, or professional connections.
 
-- **Email**: [Please add your email]
 - **LinkedIn**: [xihan-yao-6381b3181](https://www.linkedin.com/in/xihan-yao-6381b3181/)
 - **Google Scholar**: [View Publications](https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en)
 - **ORCID**: [0000-0003-1166-4497](https://orcid.org/0000-0003-1166-4497)
