@@ -7,7 +7,18 @@ author_profile: true
 
 {% include base_path %}
 
-Welcome to "Connecting the dots" - a space where I explore the intersections between different aspects of my research and how various projects, ideas, and experiences come together to form a cohesive vision.
+# Mini-Geo Journey: Theories of Space and Place
+
+Welcome to my **first Mini-Geo Journey** - an interactive exploration of how theories of space and place shape my intellectual development and research trajectory toward understanding built-environment-personality relationships.
+
+This visualization represents my intellectual roadmap, demonstrating how foundational spatial theories connect to contemporary research in GeoAI and human-environment interactions. Each node in the web below represents a key reading, and the connections show how ideas flow and build upon one another in my scholarly journey.
+
+## About This Journey
+
+This interactive knowledge web serves as both:
+- **Academic Assignment**: First Mini-Geo Journey focusing on space/place theories for my graduate coursework
+- **Research Foundation**: Theoretical groundwork for my built-environment-personality study
+- **Intellectual Map**: Visual demonstration of how I engage with spatial theory and connect it to methodological approaches
 
 ### Interactive Knowledge Web
 
@@ -155,64 +166,117 @@ let papers = [];
 let connections = [];
 let raycaster, mouse;
 
-// Sample papers data - you can easily expand this
+// Sample papers data - representing my space/place theory journey
 const samplePapers = [
   {
     id: 0,
     title: "Topophilia: A Study of Environmental Perceptions, Attitudes, and Values",
     author: "Yi-Fu Tuan",
     type: "book",
-    field: "Human Geography",
+    field: "Humanistic Geography",
     position: { x: 0, y: 0, z: 0 }, // Central position
     color: 0xD4AF37, // Gold color for this foundational work
-    connections: [1, 3, 5], // Connected to perception-related papers
+    connections: [1, 2, 3, 5], // Connected to perception and experience papers
     isCenter: true,
-    file: "/files/papers/topophilia.rtf"
+    description: "Foundational work exploring human emotional bonds with place and environment",
+    relevance: "Central to understanding how people develop affective relationships with built environments"
   },
   {
     id: 1,
-    title: "Deep Learning for Urban Land Cover Classification",
-    type: "paper",
-    field: "GeoAI",
-    position: { x: -3, y: 1, z: 2 }, // Moved away from center
+    title: "Space and Place: The Perspective of Experience",
+    author: "Yi-Fu Tuan",
+    type: "book",
+    field: "Phenomenological Geography",
+    position: { x: -3, y: 2, z: 1 },
     color: 0x4CAF50,
-    connections: [0, 2, 3]
+    connections: [0, 2, 4],
+    description: "Explores the phenomenological distinction between space and place",
+    relevance: "Key theoretical framework for understanding spatial experience in built environments"
   },
   {
     id: 2,
-    title: "LiDAR Processing for Microclimate Analysis",
-    type: "paper",
-    field: "Remote Sensing",
+    title: "The Poetics of Space",
+    author: "Gaston Bachelard",
+    type: "book", 
+    field: "Phenomenology",
     position: { x: 2, y: 3, z: -1 },
     color: 0x2196F3,
-    connections: [1, 4]
+    connections: [0, 1, 6],
+    description: "Phenomenological investigation of the psychological significance of spatial forms",
+    relevance: "Connects spatial psychology to personality through architectural experience"
   },
   {
     id: 3,
-    title: "Human Perception of Urban Environments",
-    type: "paper",
-    field: "Human-Environment",
+    title: "The Production of Space",
+    author: "Henri Lefebvre", 
+    type: "book",
+    field: "Critical Geography",
     position: { x: 3, y: -2, z: 1 },
     color: 0xFF9800,
-    connections: [0, 1, 5] // Connected to Topophilia
+    connections: [0, 4, 7],
+    description: "Theorizes space as socially produced through spatial practices and representations",
+    relevance: "Framework for understanding how built environments reflect and shape social relations"
   },
   {
     id: 4,
-    title: "Climate Resilience Planning",
+    title: "The Image of the City",
+    author: "Kevin Lynch",
     type: "book",
     field: "Urban Planning",
     position: { x: -2, y: -2, z: -2 },
     color: 0x9C27B0,
-    connections: [2, 5]
+    connections: [1, 3, 5, 6],
+    description: "Studies how people perceive and navigate urban environments",
+    relevance: "Bridge between spatial cognition and environmental psychology in cities"
   },
   {
     id: 5,
-    title: "Ecosystem Services Assessment",
-    type: "paper",
-    field: "Environmental Science",
+    title: "Environmental Psychology and Human Behavior",
+    author: "Mehta, Bonnes & Lee",
+    type: "book",
+    field: "Environmental Psychology",
     position: { x: 1, y: -3, z: 2 },
     color: 0xF44336,
-    connections: [0, 3, 4] // Connected to Topophilia
+    connections: [0, 4, 7, 8],
+    description: "Comprehensive overview of person-environment relationships",
+    relevance: "Provides psychological foundation for built-environment-personality connections"
+  },
+  {
+    id: 6,
+    title: "Pattern Language",
+    author: "Christopher Alexander",
+    type: "book",
+    field: "Architecture Theory",
+    position: { x: -1, y: 2, z: -3 },
+    color: 0x795548,
+    connections: [2, 4, 8],
+    description: "Identifies spatial patterns that support human well-being",
+    relevance: "Links architectural design principles to psychological outcomes"
+  },
+  {
+    id: 7,
+    title: "Machine Learning for Urban Sensing and Environmental Psychology",
+    author: "Current Research Frontier",
+    type: "paper",
+    field: "GeoAI",
+    position: { x: 2, y: 1, z: 3 },
+    color: 0x00BCD4,
+    connections: [3, 5, 8],
+    description: "Emerging field using AI to understand human-environment interactions",
+    relevance: "Methodological approach for my built-environment-personality research"
+  },
+  {
+    id: 8,
+    title: "Big Five Personality and Urban Environment Preferences",
+    author: "My Proposed Research",
+    type: "research",
+    field: "Environmental Psychology + GeoAI",
+    position: { x: 0, y: -1, z: 3 },
+    color: 0xE91E63,
+    connections: [5, 6, 7],
+    description: "Investigating how personality traits relate to built environment preferences",
+    relevance: "Central research question emerging from this theoretical foundation",
+    isGoal: true
   }
 ];
 
@@ -386,18 +450,28 @@ function showPaperInfo(paperData) {
   const infoPanel = document.getElementById('paper-info');
   document.getElementById('paper-title').textContent = paperData.title;
   
-  let detailsHTML = `<strong>Type:</strong> ${paperData.type}<br><strong>Field:</strong> ${paperData.field}`;
+  let detailsHTML = `<strong>Author:</strong> ${paperData.author || 'Unknown'}<br>`;
+  detailsHTML += `<strong>Type:</strong> ${paperData.type}<br>`;
+  detailsHTML += `<strong>Field:</strong> ${paperData.field}<br>`;
   
-  if (paperData.author) {
-    detailsHTML += `<br><strong>Author:</strong> ${paperData.author}`;
+  if (paperData.description) {
+    detailsHTML += `<br><strong>About:</strong> ${paperData.description}<br>`;
+  }
+  
+  if (paperData.relevance) {
+    detailsHTML += `<br><strong>Relevance:</strong> <em>${paperData.relevance}</em>`;
   }
   
   if (paperData.isCenter) {
-    detailsHTML += `<br><em style="color: #D4AF37;">⭐ Central foundational work</em>`;
+    detailsHTML += `<br><br><span style="color: #D4AF37;">⭐ Foundational Work</span>`;
+  }
+  
+  if (paperData.isGoal) {
+    detailsHTML += `<br><br><span style="color: #E91E63;">🎯 Research Goal</span>`;
   }
   
   if (paperData.file) {
-    detailsHTML += `<br><a href="${paperData.file}" target="_blank" style="color: #007cba;">📄 View file</a>`;
+    detailsHTML += `<br><br><a href="${paperData.file}" target="_blank" style="color: #007cba;">📄 View file</a>`;
   }
   
   document.getElementById('paper-details').innerHTML = detailsHTML;
@@ -478,54 +552,80 @@ function createFallbackVisualization() {
   const container = document.getElementById('knowledge-web');
   container.innerHTML = `
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
-      <h3 style="color: #333; margin-bottom: 30px;">Knowledge Network</h3>
-      <div style="position: relative; width: 400px; height: 300px;">
-        <!-- Central book -->
-        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #D4AF37; color: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10;">
+      <h3 style="color: #333; margin-bottom: 20px;">Space & Place Theory Journey</h3>
+      <p style="color: #666; text-align: center; margin-bottom: 30px; max-width: 500px;">
+        My intellectual roadmap from foundational spatial theory to contemporary research applications
+      </p>
+      <div style="position: relative; width: 500px; height: 350px;">
+        <!-- Central foundational work -->
+        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #D4AF37; color: white; padding: 12px; border-radius: 8px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10; max-width: 140px;">
           <strong>Topophilia</strong><br>
           <small>Yi-Fu Tuan</small><br>
-          <em>⭐ Central Work</em>
+          <em>⭐ Foundation</em>
         </div>
         
-        <!-- Connected papers -->
-        <div style="position: absolute; left: 10%; top: 20%; background: #4CAF50; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
-          Deep Learning for Urban Classification
+        <!-- Theoretical papers arranged around center -->
+        <div style="position: absolute; left: 5%; top: 15%; background: #4CAF50; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>Space and Place</strong><br>
+          <small>Tuan</small>
         </div>
         
-        <div style="position: absolute; right: 10%; top: 30%; background: #FF9800; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
-          Human Perception of Urban Environments
+        <div style="position: absolute; right: 5%; top: 20%; background: #2196F3; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>Poetics of Space</strong><br>
+          <small>Bachelard</small>
         </div>
         
-        <div style="position: absolute; left: 15%; bottom: 20%; background: #F44336; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
-          Ecosystem Services Assessment
+        <div style="position: absolute; left: 8%; top: 65%; background: #FF9800; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>Production of Space</strong><br>
+          <small>Lefebvre</small>
         </div>
         
-        <div style="position: absolute; right: 15%; bottom: 30%; background: #2196F3; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
-          LiDAR Microclimate Analysis
+        <div style="position: absolute; right: 8%; bottom: 15%; background: #9C27B0; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>Image of the City</strong><br>
+          <small>Lynch</small>
         </div>
         
-        <div style="position: absolute; left: 30%; bottom: 10%; background: #9C27B0; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
-          Climate Resilience Planning
+        <div style="position: absolute; left: 25%; bottom: 5%; background: #F44336; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>Environmental Psychology</strong><br>
+          <small>Mehta et al.</small>
+        </div>
+        
+        <div style="position: absolute; right: 25%; top: 8%; background: #795548; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>Pattern Language</strong><br>
+          <small>Alexander</small>
+        </div>
+        
+        <div style="position: absolute; left: 75%; bottom: 35%; background: #00BCD4; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>GeoAI Methods</strong><br>
+          <small>Current Research</small>
+        </div>
+        
+        <div style="position: absolute; left: 35%; bottom: 25%; background: #E91E63; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
+          <strong>My Research Goal</strong><br>
+          <small>🎯 Built-Env-Personality</small>
         </div>
         
         <!-- Connection lines -->
         <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
-          <line x1="50%" y1="50%" x2="15%" y2="25%" stroke="#999" stroke-width="2" opacity="0.6"/>
-          <line x1="50%" y1="50%" x2="85%" y2="35%" stroke="#999" stroke-width="2" opacity="0.6"/>
-          <line x1="50%" y1="50%" x2="20%" y2="75%" stroke="#999" stroke-width="2" opacity="0.6"/>
-          <line x1="50%" y1="50%" x2="80%" y2="70%" stroke="#999" stroke-width="2" opacity="0.6"/>
-          <line x1="50%" y1="50%" x2="35%" y2="85%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="12%" y2="22%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="88%" y2="28%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="15%" y2="72%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="85%" y2="78%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="32%" y2="88%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="68%" y2="15%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="80%" y2="65%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="42%" y2="75%" stroke="#999" stroke-width="2" opacity="0.6"/>
         </svg>
       </div>
       
-      <p style="color: #666; margin-top: 20px; text-align: center; max-width: 400px;">
-        This network shows the connections between foundational readings and current research areas. 
-        Hover over items to explore relationships.
+      <p style="color: #666; margin-top: 20px; text-align: center; max-width: 450px; font-size: 14px;">
+        <strong>Mini-Geo Journey 1:</strong> This network maps my engagement with space/place theories, 
+        showing the intellectual progression from phenomenological foundations to contemporary GeoAI applications.
       </p>
       
       <div style="margin-top: 15px;">
         <button onclick="location.reload()" style="background: #007cba; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
-          🔄 Try 3D Version
+          🔄 Try 3D Interactive Version
         </button>
       </div>
     </div>
@@ -533,30 +633,52 @@ function createFallbackVisualization() {
 }
 </script>
 
-### Research Synergies
+## Theoretical Framework Development
 
-Here I discuss how my work in GeoAI, remote sensing, and human-environment interactions creates synergies across different domains:
+### From Phenomenology to Digital Methods
 
-- **Technology meets Environment**: How cutting-edge AI methods can be applied to solve real environmental challenges
-- **Data Integration**: Bringing together diverse data sources (satellite imagery, LiDAR, street view, survey data) for comprehensive understanding
-- **Scale Connections**: Linking micro-scale observations to macro-scale environmental processes
+This knowledge web demonstrates my theoretical journey from classical phenomenological approaches to contemporary digital methodologies:
 
-### Cross-Disciplinary Insights
+1. **Foundational Spatial Theory**: Starting with Tuan's *Topophilia* and phenomenological geography
+2. **Critical Spatial Theory**: Incorporating Lefebvre's production of space and Lynch's urban imaging
+3. **Environmental Psychology**: Bridging spatial theory with psychological frameworks
+4. **Contemporary Applications**: Connecting theory to GeoAI and machine learning methods
 
-My interdisciplinary background allows me to see connections between:
+### Research Evolution
 
-- **Geography and Computer Science**: Spatial thinking enhanced by computational methods
-- **Environmental Science and AI**: Using machine learning to understand ecosystem dynamics
-- **Planning and Technology**: How geospatial technologies inform better urban planning decisions
+**Phase 1: Theoretical Grounding**
+- Establishing understanding of space vs. place distinctions
+- Exploring phenomenological approaches to spatial experience
+- Understanding critical perspectives on spatial production
 
-### Future Directions
+**Phase 2: Psychological Integration**
+- Connecting spatial theory to environmental psychology
+- Investigating person-environment relationships
+- Exploring design principles that support well-being
 
-This page will evolve to showcase:
+**Phase 3: Methodological Innovation** 
+- Applying machine learning to spatial behavior patterns
+- Using GeoAI for large-scale environmental psychology research
+- Developing new approaches to built-environment-personality studies
 
-- **Emerging Research Themes**: New directions where my interests are converging
-- **Collaborative Opportunities**: How different research streams can be combined
-- **Innovation Potential**: Where the intersection of my skills and interests might lead to breakthrough insights
+### Assignment Reflection
+
+This Mini-Geo Journey accomplishes several academic goals:
+
+- **Theoretical Engagement**: Demonstrates deep reading in space/place literature
+- **Intellectual Connections**: Shows how different theoretical traditions inform my research
+- **Methodological Bridge**: Connects classical theory to contemporary digital methods
+- **Research Roadmap**: Illustrates progression toward my built-environment-personality study
+
+### Interactive Features
+
+- **Drag and Rotate**: Explore the 3D knowledge space
+- **Hover for Details**: Learn about each work and its relevance
+- **Connection Mapping**: See how ideas flow between different authors and approaches
+- **Theoretical Clustering**: Notice how different schools of thought group together
 
 ---
 
-*This page represents my ongoing effort to synthesize knowledge across domains and identify novel research opportunities at the intersections of my expertise.*
+*This visualization serves as my first Mini-Geo Journey, demonstrating how theories of space and place inform my research trajectory in environmental psychology and GeoAI. The interactive format allows viewers to explore the connections between foundational readings and contemporary methodological approaches.*
+
+**Assignment Context**: First of three Mini-Geo Journeys for graduate coursework, focusing on space/place theory engagement and research foundation building.
