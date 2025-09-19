@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://xyaoaf.github.io/sitemap.xml
+
+# Disallow certain paths if needed (uncomment if you want to exclude specific directories)
+# Disallow: /assets/
+# Disallow: /_sass/
