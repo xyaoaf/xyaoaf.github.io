@@ -1,12 +1,12 @@
-<!-- ---
+---
 permalink: /
-title: "About Xihan Yao"
+# title: "About Xihan Yao"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
---- -->
+---
 
 Welcome to my personal website! I'm Xihan Yao (姚希翰), a researcher passionate about advancing knowledge at the intersection of GeoAI, high-resolution remote sensing, and human–environment interactions. My work combines cutting-edge computational methods with environmental science to support climate resilience, urban sustainability, and ecosystem services assessment. I am currently a PhD student in Geography & the Environment at The University of Texas at Austin, where I work in the [GISense Lab](https://sites.utexas.edu/gisense/) directed by Prof. [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en). My research explores how multimodal geospatial data (e.g., satellite & aerial imagery, LiDAR, street view imagery, human mobility) can be integrated with GeoAI methods to understand environmental processes, and human-environment interactions.
 
