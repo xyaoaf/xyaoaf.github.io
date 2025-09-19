@@ -18,5 +18,8 @@ main:
   - title: "CV"
     url: /cv/
     
+  - title: "Connecting the dots"
+    url: /connecting-the-dots/
+    
   - title: "Guide"
     url: /markdown/
