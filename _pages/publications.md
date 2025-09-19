@@ -5,9 +5,15 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+You can also find my articles on **[my Google Scholar profile](https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en)**.
+
+---
+
+## Peer-Reviewed Publications
+
+The following publications are listed in reverse chronological order (most recent first) and numbered accordingly. All citations follow APA format.
+
+*Note: Publication list is manually curated from Google Scholar. For the most up-to-date citation counts and metrics, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en).*
 
 {% include base_path %}
 
