@@ -253,18 +253,35 @@ function onMouseClick(event) {
   
   if (intersects.length > 0) {
     const clickedPaper = intersects[0].object.parent;
-    // You can add click functionality here (e.g., open paper details)
-    console.log('Clicked paper:', clickedPaper.userData.title);
+    const paperData = clickedPaper.userData;
+    
+    // If the paper has a file, open it
+    if (paperData.file) {
+      window.open(paperData.file, '_blank');
+    }
+    console.log('Clicked paper:', paperData.title);
   }
 }
 
 function showPaperInfo(paperData) {
   const infoPanel = document.getElementById('paper-info');
   document.getElementById('paper-title').textContent = paperData.title;
-  document.getElementById('paper-details').innerHTML = `
-    <strong>Type:</strong> ${paperData.type}<br>
-    <strong>Field:</strong> ${paperData.field}
-  `;
+  
+  let detailsHTML = `<strong>Type:</strong> ${paperData.type}<br><strong>Field:</strong> ${paperData.field}`;
+  
+  if (paperData.author) {
+    detailsHTML += `<br><strong>Author:</strong> ${paperData.author}`;
+  }
+  
+  if (paperData.isCenter) {
+    detailsHTML += `<br><em style="color: #D4AF37;">⭐ Central foundational work</em>`;
+  }
+  
+  if (paperData.file) {
+    detailsHTML += `<br><a href="${paperData.file}" target="_blank" style="color: #007cba;">📄 View file</a>`;
+  }
+  
+  document.getElementById('paper-details').innerHTML = detailsHTML;
   infoPanel.style.display = 'block';
 }
 
