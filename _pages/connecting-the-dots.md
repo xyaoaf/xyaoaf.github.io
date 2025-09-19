@@ -677,6 +677,87 @@ This Mini-Geo Journey accomplishes several academic goals:
 - **Connection Mapping**: See how ideas flow between different authors and approaches
 - **Theoretical Clustering**: Notice how different schools of thought group together
 
+## Papers I Have Read
+
+Below are the comprehensive bibliographies of papers I have read across three key areas of my research. These readings form the foundation of my theoretical understanding and inform my approach to built-environment-personality research.
+
+### 📊 GeoAI & Spatial Intelligence
+
+<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #007cba;">
+
+**Brown, C. F., Kazmierski, M. R., Pasquarella, V. J., et al.** (2025). *AlphaEarth Foundations: An embedding field model for accurate and efficient global mapping from sparse label data* (arXiv:2507.22291). arXiv. [https://doi.org/10.48550/arXiv.2507.22291](https://doi.org/10.48550/arXiv.2507.22291)
+
+**Goodchild, M. F., & Janelle, D. G.** (2004). Thinking Spatially in the Social Sciences. In M. F. Goodchild & D. G. Janelle (Eds.), *Spatially Integrated Social Science* (p. 0). Oxford University Press. [https://doi.org/10.1093/oso/9780195152708.003.0001](https://doi.org/10.1093/oso/9780195152708.003.0001)
+
+**Goodchild, M. F., & Li, W.** (2021). Replication across space and time must be weak in the social and environmental sciences. *Proceedings of the National Academy of Sciences*, *118*(35), e2015759118. [https://doi.org/10.1073/pnas.2015759118](https://doi.org/10.1073/pnas.2015759118)
+
+**Hu, Y., Gao, S., Lunga, D., Li, W., Newsam, S., & Bhaduri, B.** (2019). GeoAI at ACM SIGSPATIAL: Progress, challenges, and future directions. *SIGSPATIAL Special*, *11*(2), 5–15. [https://doi.org/10.1145/3377000.3377002](https://doi.org/10.1145/3377000.3377002)
+
+**Janowicz, K., Gao, S., McKenzie, G., Hu, Y., & Bhaduri, B.** (2020). GeoAI: Spatially explicit artificial intelligence techniques for geographic knowledge discovery and beyond. *International Journal of Geographical Information Science*, *34*(4), 625–636. [https://doi.org/10.1080/13658816.2019.1684500](https://doi.org/10.1080/13658816.2019.1684500)
+
+**Jean, N., Wang, S., Samar, A., Azzari, G., Lobell, D., & Ermon, S.** (2019). Tile2Vec: Unsupervised Representation Learning for Spatially Distributed Data. *Proceedings of the AAAI Conference on Artificial Intelligence*, *33*(01), 3967–3974. [https://doi.org/10.1609/aaai.v33i01.33013967](https://doi.org/10.1609/aaai.v33i01.33013967)
+
+</div>
+
+### 🧠 Geography & Personality Research
+
+<div style="background: #f1f8e9; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #4CAF50;">
+
+**Biljecki, F., & Ito, K.** (2021). Street view imagery in urban analytics and GIS: A review. *Landscape and Urban Planning*, *215*, 104217. [https://doi.org/10.1016/j.landurbplan.2021.104217](https://doi.org/10.1016/j.landurbplan.2021.104217)
+
+**Ebert, T., Gebauer, J. E., Brenner, T., Bleidorn, W., Gosling, S. D., Potter, J., & Rentfrow, P. J.** (2022). Are Regional Differences in Psychological Characteristics and Their Correlates Robust? Applying Spatial-Analysis Techniques to Examine Regional Variation in Personality. *Perspectives on Psychological Science*, *17*(2), 407–441. [https://doi.org/10.1177/1745691621998326](https://doi.org/10.1177/1745691621998326)
+
+**Götz, F. M., Ebert, T., Gosling, S. D., Obschonka, M., Potter, J., & Rentfrow, P. J.** (2021). Local housing market dynamics predict rapid shifts in cultural openness: A 9-year study across 199 cities. *American Psychologist*, *76*(6), 947–961. [https://doi.org/10.1037/amp0000812](https://doi.org/10.1037/amp0000812)
+
+**Götz, F. M., Gosling, S. D., & Rentfrow, P. J.** (2022). Small Effects: The Indispensable Foundation for a Cumulative Psychological Science. *Perspectives on Psychological Science*, *17*(1), 205–215. [https://doi.org/10.1177/1745691620984483](https://doi.org/10.1177/1745691620984483)
+
+**Götz, F. M., Montello, D. R., Varnum, M. E. W., Luca, D., & Kenrick, D. T.** (2025). A unified framework integrating psychology and geography. *Nature Human Behaviour*, 1–13. [https://doi.org/10.1038/s41562-025-02237-y](https://doi.org/10.1038/s41562-025-02237-y)
+
+**Ito, K., Kang, Y., Gosling, S. D., Potter, J., Yao, X., & Biljecki, F.** Uncovering the Associations between Human Big Five Personality Traits and Built Environment Characteristics from Street View Imagery. *[In Preparation]*
+
+**Ito, K., Zhu, Y., Abdelrahman, M., et al.** (2025). ZenSVI: An open-source software for the integrated acquisition, processing and analysis of street view imagery towards scalable urban science. *Computers, Environment and Urban Systems*, *119*, 102283. [https://doi.org/10.1016/j.compenvurbsys.2025.102283](https://doi.org/10.1016/j.compenvurbsys.2025.102283)
+
+**Jokela, M., Bleidorn, W., Lamb, M. E., Gosling, S. D., & Rentfrow, P. J.** (2015). Geographically varying associations between personality and life satisfaction in the London metropolitan area. *Proceedings of the National Academy of Sciences*, *112*(3), 725–730. [https://doi.org/10.1073/pnas.1415800112](https://doi.org/10.1073/pnas.1415800112)
+
+**Militaru, I. E., Serapio-García, G., Ebert, T., et al.** (2024). The lay of the land: Associations between environmental features and personality. *Journal of Personality*, *92*(1), 88–110. [https://doi.org/10.1111/jopy.12822](https://doi.org/10.1111/jopy.12822)
+
+**Rentfrow, P. J., Gosling, S. D., Jokela, M., Stillwell, D. J., Kosinski, M., & Potter, J.** (2013). Divided we stand: Three psychological regions of the United States and their political, economic, social, and health correlates. *Journal of Personality and Social Psychology*, *105*(6), 996–1012. [https://doi.org/10.1037/a0034434](https://doi.org/10.1037/a0034434)
+
+**Rentfrow, P. J., Gosling, S. D., & Potter, J.** (2008). A Theory of the Emergence, Persistence, and Expression of Geographic Variation in Psychological Characteristics. *Perspectives on Psychological Science*, *3*(5), 339–369. [https://doi.org/10.1111/j.1745-6924.2008.00084.x](https://doi.org/10.1111/j.1745-6924.2008.00084.x)
+
+**Wei, W., Lu, J. G., Galinsky, A. D., et al.** (2017). Regional ambient temperature is associated with human personality. *Nature Human Behaviour*, *1*(12), 890–895. [https://doi.org/10.1038/s41562-017-0240-0](https://doi.org/10.1038/s41562-017-0240-0)
+
+</div>
+
+### 🏛️ Critical Issues in Geography
+
+<div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FF9800;">
+
+**Cox, K.** (2021). Human and physical geography and the question of space. *Belgeo. Revue Belge de Géographie*, *4*. [https://doi.org/10.4000/belgeo.52790](https://doi.org/10.4000/belgeo.52790)
+
+**Fluri, J. L.** (2021). Political geography 1: Extractions. *Progress in Human Geography*, *45*(4), 855–865. [https://doi.org/10.1177/0309132520970258](https://doi.org/10.1177/0309132520970258)
+
+**Goodchild, M. F.** (2011). Scale in GIS: An overview. *Geomorphology*, *130*(1), 5–9. [https://doi.org/10.1016/j.geomorph.2010.10.004](https://doi.org/10.1016/j.geomorph.2010.10.004)
+
+**Kobayashi, A.** (2014). The Dialectic of Race and the Discipline of Geography. *Annals of the Association of American Geographers*, *104*(6), 1101–1115. [https://doi.org/10.1080/00045608.2014.958388](https://doi.org/10.1080/00045608.2014.958388)
+
+**Lin, Y., & Kim, J.** (2025). Pillars of GeoAI in Human Geography. In X. Huang, S. Wang, J. Wilson, & P. Kedron (Eds.), *GeoAI and Human Geography: The Dawn of a New Spatial Intelligence Era* (pp. 29–40). Springer Nature Switzerland. [https://doi.org/10.1007/978-3-031-87421-5_3](https://doi.org/10.1007/978-3-031-87421-5_3)
+
+**Mansfield, B., Lave, R., McSweeney, K., et al.** (2019). It's time to recognize how men's careers benefit from sexually harassing women in academia. *Human Geography*, *12*(1), 82–87. [https://doi.org/10.1177/194277861901200110](https://doi.org/10.1177/194277861901200110)
+
+</div>
+
+### 📚 Reading Strategy & Research Impact
+
+These comprehensive reading lists demonstrate my systematic approach to literature review across multiple domains:
+
+- **🔬 Technical Foundation**: GeoAI papers provide methodological grounding for computational spatial analysis
+- **🧩 Theoretical Integration**: Geography-personality research bridges spatial theory with psychological frameworks  
+- **⚖️ Critical Perspective**: Issues in geography ensure awareness of disciplinary challenges and social justice concerns
+- **🔗 Interdisciplinary Synthesis**: Combined readings inform my built-environment-personality research approach
+
+*The papers listed above represent active engagement with current literature in my field, informing both my Mini-Geo Journey theoretical development and my ongoing research methodology.*
+
 ---
 
 *This visualization serves as my first Mini-Geo Journey, demonstrating how theories of space and place inform my research trajectory in environmental psychology and GeoAI. The interactive format allows viewers to explore the connections between foundational readings and contemporary methodological approaches.*
