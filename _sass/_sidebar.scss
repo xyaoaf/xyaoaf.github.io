@@ -84,7 +84,6 @@
 
   img {
     max-width: 175px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 
     @include breakpoint($large) {
       padding: 5px;
