@@ -16,13 +16,13 @@ I am currently a PhD student in Geography & the Environment at The University of
 
 ## Education
 
-**PhD in Geography & the Environment** — The University of Texas at Austin (2025 – Present)
+**PhD, Geography** — The University of Texas at Austin (2025 – Present)
 
-**Master of Environmental Planning** — University of California, Berkeley (2021 – 2023)
+**Master, Environmental Planning** — University of California, Berkeley (2021 – 2023)
 - Certificate in Geographic Information Science & Technology (GIST)
 - Certificate of Teaching and Learning in Higher Education
 
-**Bachelor of Science in Environmental Management & Technology** — Hong Kong University of Science and Technology (HKUST), 2021
+**BSc, Environmental Management and Technology** — Hong Kong University of Science and Technology (HKUST), 2021
 
 ## Professional Experience
 
