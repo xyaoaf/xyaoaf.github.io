@@ -7,8 +7,6 @@ author_profile: true
 
 {% include base_path %}
 
-## Connecting the dots
-
 Welcome to "Connecting the dots" - a space where I explore the intersections between different aspects of my research and how various projects, ideas, and experiences come together to form a cohesive vision.
 
 ### Interactive Knowledge Web
@@ -27,7 +25,128 @@ Welcome to "Connecting the dots" - a space where I explore the intersections bet
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// Check if Three.js loaded
+if (typeof THREE === 'undefined') {
+  document.getElementById('knowledge-web').innerHTML = '<p style="text-align: center; padding: 50px; color: #666;">Loading 3D visualization... Please wait or refresh the page if this message persists.</p>';
+  console.error('Three.js failed to load');
+}
+
+// OrbitControls definition (inline since CDN might not work)
+THREE.OrbitControls = function ( object, domElement ) {
+  this.object = object;
+  this.domElement = ( domElement !== undefined ) ? domElement : document;
+  this.enabled = true;
+  this.target = new THREE.Vector3();
+  this.enableDamping = false;
+  this.dampingFactor = 0.25;
+  this.enableZoom = true;
+  this.zoomSpeed = 1.0;
+  this.enableRotate = true;
+  this.rotateSpeed = 1.0;
+  this.enablePan = true;
+  this.panSpeed = 1.0;
+  this.screenSpacePanning = false;
+  this.keyPanSpeed = 7.0;
+  this.autoRotate = false;
+  this.autoRotateSpeed = 2.0;
+  this.enableKeys = true;
+  this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
+  this.mouseButtons = { LEFT: THREE.MOUSE.LEFT, MIDDLE: THREE.MOUSE.MIDDLE, RIGHT: THREE.MOUSE.RIGHT };
+  
+  var scope = this;
+  var changeEvent = { type: 'change' };
+  var startEvent = { type: 'start' };
+  var endEvent = { type: 'end' };
+  var STATE = { NONE: - 1, ROTATE: 0, DOLLY: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_DOLLY_PAN: 4 };
+  var state = STATE.NONE;
+  var EPS = 0.000001;
+  var spherical = new THREE.Spherical();
+  var sphericalDelta = new THREE.Spherical();
+  var scale = 1;
+  var panOffset = new THREE.Vector3();
+  var zoomChanged = false;
+  var rotateStart = new THREE.Vector2();
+  var rotateEnd = new THREE.Vector2();
+  var rotateDelta = new THREE.Vector2();
+  var panStart = new THREE.Vector2();
+  var panEnd = new THREE.Vector2();
+  var panDelta = new THREE.Vector2();
+  var dollyStart = new THREE.Vector2();
+  var dollyEnd = new THREE.Vector2();
+  var dollyDelta = new THREE.Vector2();
+  
+  this.update = function () {
+    var offset = new THREE.Vector3();
+    var quat = new THREE.Quaternion().setFromUnitVectors( object.up, new THREE.Vector3( 0, 1, 0 ) );
+    var quatInverse = quat.clone().inverse();
+    var lastPosition = new THREE.Vector3();
+    var lastQuaternion = new THREE.Quaternion();
+    
+    return function update() {
+      var position = scope.object.position;
+      offset.copy( position ).sub( scope.target );
+      offset.applyQuaternion( quat );
+      spherical.setFromVector3( offset );
+      if ( scope.autoRotate && state === STATE.NONE ) {
+        rotateLeft( getAutoRotationAngle() );
+      }
+      spherical.theta += sphericalDelta.theta;
+      spherical.phi += sphericalDelta.phi;
+      spherical.theta = Math.max( 0, Math.min( Math.PI, spherical.theta ) );
+      spherical.radius *= scale;
+      spherical.radius = Math.max( 0.1, Math.min( 100, spherical.radius ) );
+      scope.target.add( panOffset );
+      offset.setFromSpherical( spherical );
+      offset.applyQuaternion( quatInverse );
+      position.copy( scope.target ).add( offset );
+      scope.object.lookAt( scope.target );
+      if ( scope.enableDamping === true ) {
+        sphericalDelta.theta *= ( 1 - scope.dampingFactor );
+        sphericalDelta.phi *= ( 1 - scope.dampingFactor );
+        panOffset.multiplyScalar( 1 - scope.dampingFactor );
+      } else {
+        sphericalDelta.set( 0, 0, 0 );
+        panOffset.set( 0, 0, 0 );
+      }
+      scale = 1;
+      if ( zoomChanged || lastPosition.distanceToSquared( scope.object.position ) > EPS || 8 * ( 1 - lastQuaternion.dot( scope.object.quaternion ) ) > EPS ) {
+        scope.dispatchEvent( changeEvent );
+        lastPosition.copy( scope.object.position );
+        lastQuaternion.copy( scope.object.quaternion );
+        zoomChanged = false;
+        return true;
+      }
+      return false;
+    };
+  }();
+  
+  this.reset = function () {
+    state = STATE.NONE;
+    scope.target.copy( scope.target0 );
+    scope.object.position.copy( scope.position0 );
+    scope.object.zoom = scope.zoom0;
+    scope.object.updateProjectionMatrix();
+    scope.dispatchEvent( changeEvent );
+    scope.update();
+  };
+  
+  function getAutoRotationAngle() {
+    return 2 * Math.PI / 60 / 60 * scope.autoRotateSpeed;
+  }
+  
+  function rotateLeft( angle ) {
+    sphericalDelta.theta -= angle;
+  }
+  
+  this.target0 = this.target.clone();
+  this.position0 = this.object.position.clone();
+  this.zoom0 = this.object.zoom;
+};
+
+THREE.OrbitControls.prototype = Object.create( THREE.EventDispatcher.prototype );
+THREE.OrbitControls.prototype.constructor = THREE.OrbitControls;
 
 <script>
 // Knowledge Web 3D Visualization
@@ -335,8 +454,83 @@ function onWindowResize() {
 
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(initKnowledgeWeb, 100); // Small delay to ensure container is ready
+  // Add a loading message first
+  const container = document.getElementById('knowledge-web');
+  container.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 16px;"><div>Loading 3D Knowledge Web... ⚡</div></div>';
+  
+  // Try to initialize after a short delay
+  setTimeout(function() {
+    try {
+      if (typeof THREE !== 'undefined') {
+        initKnowledgeWeb();
+      } else {
+        // Fallback to 2D visualization
+        createFallbackVisualization();
+      }
+    } catch (error) {
+      console.error('Error initializing knowledge web:', error);
+      createFallbackVisualization();
+    }
+  }, 100);
 });
+
+function createFallbackVisualization() {
+  const container = document.getElementById('knowledge-web');
+  container.innerHTML = `
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+      <h3 style="color: #333; margin-bottom: 30px;">Knowledge Network</h3>
+      <div style="position: relative; width: 400px; height: 300px;">
+        <!-- Central book -->
+        <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #D4AF37; color: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 10;">
+          <strong>Topophilia</strong><br>
+          <small>Yi-Fu Tuan</small><br>
+          <em>⭐ Central Work</em>
+        </div>
+        
+        <!-- Connected papers -->
+        <div style="position: absolute; left: 10%; top: 20%; background: #4CAF50; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
+          Deep Learning for Urban Classification
+        </div>
+        
+        <div style="position: absolute; right: 10%; top: 30%; background: #FF9800; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
+          Human Perception of Urban Environments
+        </div>
+        
+        <div style="position: absolute; left: 15%; bottom: 20%; background: #F44336; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
+          Ecosystem Services Assessment
+        </div>
+        
+        <div style="position: absolute; right: 15%; bottom: 30%; background: #2196F3; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
+          LiDAR Microclimate Analysis
+        </div>
+        
+        <div style="position: absolute; left: 30%; bottom: 10%; background: #9C27B0; color: white; padding: 8px; border-radius: 5px; font-size: 11px; max-width: 120px;">
+          Climate Resilience Planning
+        </div>
+        
+        <!-- Connection lines -->
+        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+          <line x1="50%" y1="50%" x2="15%" y2="25%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="85%" y2="35%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="20%" y2="75%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="80%" y2="70%" stroke="#999" stroke-width="2" opacity="0.6"/>
+          <line x1="50%" y1="50%" x2="35%" y2="85%" stroke="#999" stroke-width="2" opacity="0.6"/>
+        </svg>
+      </div>
+      
+      <p style="color: #666; margin-top: 20px; text-align: center; max-width: 400px;">
+        This network shows the connections between foundational readings and current research areas. 
+        Hover over items to explore relationships.
+      </p>
+      
+      <div style="margin-top: 15px;">
+        <button onclick="location.reload()" style="background: #007cba; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+          🔄 Try 3D Version
+        </button>
+      </div>
+    </div>
+  `;
+}
 </script>
 
 ### Research Synergies
