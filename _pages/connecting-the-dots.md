@@ -39,20 +39,32 @@ let raycaster, mouse;
 // Sample papers data - you can easily expand this
 const samplePapers = [
   {
+    id: 0,
+    title: "Topophilia: A Study of Environmental Perceptions, Attitudes, and Values",
+    author: "Yi-Fu Tuan",
+    type: "book",
+    field: "Human Geography",
+    position: { x: 0, y: 0, z: 0 }, // Central position
+    color: 0xD4AF37, // Gold color for this foundational work
+    connections: [1, 3, 5], // Connected to perception-related papers
+    isCenter: true,
+    file: "/files/papers/topophilia.rtf"
+  },
+  {
     id: 1,
     title: "Deep Learning for Urban Land Cover Classification",
     type: "paper",
     field: "GeoAI",
-    position: { x: 0, y: 0, z: 0 },
+    position: { x: -3, y: 1, z: 2 }, // Moved away from center
     color: 0x4CAF50,
-    connections: [2, 3]
+    connections: [0, 2, 3]
   },
   {
     id: 2,
     title: "LiDAR Processing for Microclimate Analysis",
     type: "paper",
     field: "Remote Sensing",
-    position: { x: -3, y: 2, z: 1 },
+    position: { x: 2, y: 3, z: -1 },
     color: 0x2196F3,
     connections: [1, 4]
   },
@@ -61,16 +73,16 @@ const samplePapers = [
     title: "Human Perception of Urban Environments",
     type: "paper",
     field: "Human-Environment",
-    position: { x: 3, y: -1, z: 2 },
+    position: { x: 3, y: -2, z: 1 },
     color: 0xFF9800,
-    connections: [1, 5]
+    connections: [0, 1, 5] // Connected to Topophilia
   },
   {
     id: 4,
     title: "Climate Resilience Planning",
     type: "book",
     field: "Urban Planning",
-    position: { x: -2, y: -3, z: -1 },
+    position: { x: -2, y: -2, z: -2 },
     color: 0x9C27B0,
     connections: [2, 5]
   },
@@ -79,9 +91,9 @@ const samplePapers = [
     title: "Ecosystem Services Assessment",
     type: "paper",
     field: "Environmental Science",
-    position: { x: 2, y: 3, z: -2 },
+    position: { x: 1, y: -3, z: 2 },
     color: 0xF44336,
-    connections: [3, 4]
+    connections: [0, 3, 4] // Connected to Topophilia
   }
 ];
 
@@ -145,9 +157,12 @@ function createPapers() {
 function createPaperObject(paperData) {
   const group = new THREE.Group();
   
-  // Create paper/book geometry
+  // Create paper/book geometry - special size for central book
   let geometry;
-  if (paperData.type === 'paper') {
+  if (paperData.isCenter) {
+    // Make the central book larger and more prominent
+    geometry = new THREE.BoxGeometry(0.8, 1.0, 0.25);
+  } else if (paperData.type === 'paper') {
     geometry = new THREE.BoxGeometry(0.6, 0.8, 0.05);
   } else {
     geometry = new THREE.BoxGeometry(0.5, 0.7, 0.15);
