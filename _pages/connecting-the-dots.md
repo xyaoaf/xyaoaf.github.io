@@ -13,6 +13,37 @@ Welcome to my **Mini-Geo Journey** - an interactive exploration of how theories 
 
 This visualization represents my intellectual roadmap, demonstrating how foundational spatial theories connect to contemporary research in GeoAI and human-environment interactions. Each node in the web below represents a key reading, and the connections show how ideas flow and build upon one another in my scholarly journey.
 
+## 📊 Interactive Analysis Options
+
+### Option 1: Jupyter Notebook Format 
+**🎯 Recommended for Deep Exploration**
+
+<div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #4CAF50;">
+  <p><strong>🔬 Interactive Data Analysis:</strong> Explore the complete bibliography dataset with Python code, network visualizations, and interactive widgets.</p>
+  
+  <p><strong>Key Features:</strong></p>
+  <ul>
+    <li>📈 Interactive network graphs with clickable nodes</li>
+    <li>🔍 Filterable paper explorer by domain, year, and keywords</li>
+    <li>📊 Timeline analysis of reading progression</li>
+    <li>🎛️ Dynamic visualizations with hover details</li>
+    <li>💻 Full Python code for reproducible analysis</li>
+  </ul>
+  
+  <p style="margin-top: 15px;">
+    <a href="connecting-the-dots.ipynb" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+      🚀 Launch Interactive Notebook
+    </a>
+  </p>
+  
+  <p style="font-size: 14px; color: #666; margin-top: 10px;">
+    <em>Best viewed in Jupyter Lab or VSCode. Click nodes to see paper properties, use widgets to filter by domain/year.</em>
+  </p>
+</div>
+
+### Option 2: 3D Web Visualization 
+**🌐 Browser-Based Exploration**
+
 ## About This Journey
 
 This interactive knowledge web serves as both:
