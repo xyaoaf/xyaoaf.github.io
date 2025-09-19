@@ -12,29 +12,64 @@ redirect_from:
 Education
 ======
 * B.S. in Environmental Management and Technology, Hong Kong University of Science and Technology, 2021
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* [Update with your current degree if pursuing graduate studies]
+<!-- Example format:
+* M.S./Ph.D in [Your Field], [University Name], [Year - Present/Expected]
+-->
 
-Work experience
+Work Experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* [Update with your current position from LinkedIn]
+  <!-- Example format:
+  * [Position Title]
+    * [Organization/Company Name]
+    * Duties included: [Key responsibilities]
+    * [Duration]
+  -->
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* [Previous positions from LinkedIn]
+  <!-- Add your work history here -->
+
+Research Experience
+======
+* [Add your research experience]
+  <!-- Example format:
+  * Research Assistant/Intern
+    * [Institution/Lab Name]
+    * Project: [Brief description]
+    * Supervisor: [Supervisor name]
+    * [Duration]
+  -->
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming Languages**
+  <!-- Update based on your LinkedIn:
+  * Python
+  * R
+  * MATLAB
+  * SQL
+  -->
+
+* **Data Science & Machine Learning**
+  <!-- Update based on your experience:
+  * Machine Learning frameworks (TensorFlow, PyTorch, scikit-learn)
+  * Data analysis (pandas, numpy)
+  * Statistical analysis
+  -->
+
+* **Other Technical Skills**
+  <!-- Add relevant skills:
+  * Data visualization
+  * Database management
+  * Version control (Git)
+  -->
+
+* **Languages**
+  <!-- Update based on your language skills:
+  * English (Fluent)
+  * [Other languages]
+  -->
 
 Publications
 ======
