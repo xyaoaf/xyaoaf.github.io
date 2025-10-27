@@ -12,6 +12,8 @@ author_profile: true
 Welcome to my **Mini-Geo Journey** - an interactive exploration of how theories of space and place shape my intellectual development and research trajectory toward understanding built-environment-personality relationships.
 
 This visualization represents my intellectual roadmap, demonstrating how foundational spatial theories connect to contemporary research in GeoAI and human-environment interactions. Each node in the web below represents a key reading, and the connections show how ideas flow and build upon one another in my scholarly journey.
+> Related post: [Integrating Elements into Geographic Science](/posts/2025/10/integrating-elements-into-geographic-science/)
+
 
 ## 📊 Interactive Analysis Options
 
