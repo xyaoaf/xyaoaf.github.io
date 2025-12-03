@@ -1,10 +1,10 @@
 # main links
 main:
   - title: "Home"
-    url: /
+    url: /about/
     
   - title: "About Me"
-    url: /about/
+    url: /self-intro/
     
   - title: "News & Posts"
     url: /year-archive/
@@ -16,7 +16,7 @@ main:
     url: /teaching/
     
   - title: "CV"
-    url: /cv/
+    url: /files/251201_XihanYao_Academic_CV.pdf
 
 # # main links links
 # main:
