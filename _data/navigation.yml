@@ -1,25 +1,45 @@
-# main links links
+# main links
 main:
-  - title: "Publications"
-    url: /publications/
-
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
+  - title: "Home"
+    url: /
     
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
+  - title: "About Me"
+    url: /about/
+    
+  - title: "News & Posts"
     url: /year-archive/
+    
+  - title: "Research"
+    url: /publications/
+    
+  - title: "Teaching"
+    url: /teaching/
     
   - title: "CV"
     url: /cv/
+
+# # main links links
+# main:
+#   - title: "Home"
+#     url: /Home/
+
+#   - title: "Talks"
+#     url: /talks/    
+
+#   - title: "Teaching"
+#     url: /teaching/    
     
-  - title: "Connecting the dots"
-    url: /connecting-the-dots/
+#   - title: "Portfolio"
+#     url: /portfolio/
+        
+#   - title: "Blog Posts"
+#     url: /year-archive/
     
-  - title: "Guide"
-    url: /markdown/
+#   - title: "CV"
+#     url: /cv/
+    
+#   - title: "Connecting the dots"
+#     url: /connecting-the-dots/
+    
+#   - title: "Guide"
+#     url: /markdown/
