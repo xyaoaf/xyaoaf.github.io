@@ -1,6 +1,6 @@
 ---
 permalink: /
-# title: "About Xihan Yao"
+title: "Home"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,77 +8,65 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in Geography & the Environment at The University of Texas at Austin, working in the [GISense Lab](https://sites.utexas.edu/gisense/) advised by Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en). My research develops data-driven and GeoAI-powered approaches to understand how the built and natural environment evolve and interact. I integrate multimodal geospatial data—including satellite and aerial imagery, LiDAR, street-level imagery, and human mobility datasets—with computational modeling to analyze environmental processes, assess ecosystem services, and uncover the dynamics of human–environment interactions.
+ Read more [About Me](/self-intro/) and my [CV](/files/251201_XihanYao_Academic_CV.pdf).
+
+## Xihan Yao
+
+I'm a PhD student in Geography & the Environment at The University of Texas at Austin, working in the [GISense Lab](https://sites.utexas.edu/gisense/) advised by Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en). My research develops data-driven and GeoAI-powered approaches to understand how the built and natural environment evolve and interact. I integrate multimodal geospatial data—including satellite and aerial imagery, LiDAR, street-level imagery, and human mobility datasets—with computational modeling to analyze environmental processes, assess ecosystem services, and uncover the dynamics of human–environment interactions.
 
 Ultimately, my work aims to build scalable, interpretable tools that support climate resilience, urban sustainability, and equitable environmental planning across heterogeneous and rapidly changing landscapes.
 
-## Education
+I received my Master's degree in Environmental Planning at University of California, Berkeley, supervised by Professor Iryna Dronova. I received my BSc degree from the Hong Kong University of Science and Technology.
 
-**PhD, Geography** — University of Texas, Austin, 2025-present
+## Recent News
 
-**Master, Environmental Planning** — University of California, Berkeley, 2021-2023
-- Certificate in Geographic Information Science & Technology (GIST)
-- Certificate of Teaching and Learning in Higher Education
+**December 2024**  
+[Award] Starting PhD at UT Austin in Fall 2025, joining the GISense Lab 🎉
 
-**BSc, Environmental Management and Technology** — Hong Kong University of Science and Technology (HKUST), 2017-2021
+**Fall 2024**  
+[Mentorship] Mentored NASA DEVELOP Fall 2024 project on urban canopy cover & heat in San Jose
 
-## Professional Experience
+**2024**  
+[Talk] Presented at MIT Senseable City Lab and Stanford Natural Capital Symposium
 
-**Graduate Research Assistant** — GISense Lab, UT Austin (2025 – Present)
-- Research on GeoAI, multimodal place perception, and human–environment interactions.
+**2024**  
+[Paper] Manuscript on urban forests, LiDAR classification, and microclimate simulation under review at *Landscape and Urban Planning*
 
-**GIS Analyst** — EarthDefine, LLC (2024 – 2025)
-- Developed deep learning pipelines for sub-meter urban land cover classification using NAIP imagery.
-- Contributed to the National Urban Tree Cover Map with the Arbor Day Foundation.
+**Fall 2023**  
+[Teaching] Instructor of record for GEOG/LDARCH C188: Geographic Information Science at UC Berkeley (200+ students)
 
-**Lecturer** — UC Berkeley (Fall 2023)
-- Instructor of record for GEOG/LDARCH C188: Geographic Information Science, Berkeley's largest GIS course with 200+ students.
-
-**Graduate Student Instructor** — UC Berkeley (2022 – 2023)
-- Taught labs for Applied Remote Sensing (ESPM/LDARCH C289) and GIScience (GEOG/LDARCH C188).
-
-**Research Assistant** — UC Berkeley & Partner Projects (2022 – 2024)
-- Projects on wildfire burn severity, post-wildfire flood risk, urban forestry microclimate modeling, and wetland conservation.
-
-## Research Interests
-
-**GeoAI & Remote Sensing** — Deep learning for land cover mapping, multimodal embeddings, and spatial perception modeling.
-
-**Urban Microclimate & Ecosystem Services** — Using LiDAR, simulations, and tree classification to study cooling, shading, and environmental justice.
-
-**Street View & Human Perception** — Linking visual urban form to human experiences, safety perception, and personality–environment relationships.
-
-**Climate Resilience** — Spatial modeling of wildfire, flooding, and ecosystem services to support planning and adaptation.
-
-## Skills
-
-**Technical:**
-- **Programming**: Python, R, SQL
-- **Machine Learning**: PyTorch, TensorFlow, scikit-learn, segmentation_models_pytorch
-- **Geospatial**: ArcGIS Pro, QGIS, Google Earth Engine, GDAL, rasterio, geopandas
-- **Remote Sensing**: LiDAR processing, object-based image analysis, classification workflows
-- **Visualization**: matplotlib, seaborn, ggplot2, Leaflet, ipyleaflet
-
-**Languages:**
-- English (Fluent)
-- Mandarin Chinese (Native)
-
-## Recent News & Achievements
-
-- Starting PhD at UT Austin in Fall 2025, joining the GISense Lab 🎉
-- Mentored NASA DEVELOP Fall 2024 project on urban canopy cover & heat in San Jose
-- Presented at MIT Senseable City Lab and Stanford Natural Capital Symposium (2024)
-- Manuscript on urban forests, LiDAR classification, and microclimate simulation under review at *Landscape and Urban Planning*
-
-## Contact
-
-I'm always interested in discussing research collaborations, academic opportunities, or professional connections.
-
-- **LinkedIn**: [xihan-yao-6381b3181](https://www.linkedin.com/in/xihan-yao-6381b3181/)
-- **Google Scholar**: [View Publications](https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en)
-- **ORCID**: [0000-0003-1166-4497](https://orcid.org/0000-0003-1166-4497)
-- **Twitter/X**: [@YaoXihan](https://x.com/YaoXihan)
+[See All News](/year-archive/)
 
 ---
 
-*This website is powered by [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).*
+## Highlighted Research
+
+### Urban Forests & Microclimate Modeling
+Community-scale microclimate simulation and object-based urban tree classification using LiDAR data to study cooling effects, shading patterns, and environmental justice implications.  
+[Paper](#)
+
+**Topics:** Remote Sensing • Urban • Climate Resilience • GeoAI
+
+### Deep Learning for Land Cover Classification
+Developed deep learning pipelines for sub-meter urban land cover classification using NAIP imagery. Contributed to the National Urban Tree Cover Map with the Arbor Day Foundation.  
+[Project](#)
+
+**Topics:** GeoAI • Remote Sensing • Urban • Machine Learning
+
+### Multimodal Place Perception
+Integrating street-level imagery, satellite data, and human mobility to understand visual urban form, safety perception, and personality–environment relationships.  
+[Research](#)
+
+**Topics:** GeoAI • Urban • Human-Environment Interaction
+
+### Climate Resilience & Ecosystem Services
+Spatial modeling of wildfire burn severity, post-wildfire flood risk, and wetland conservation to support climate adaptation planning.  
+[Projects](#)
+
+**Topics:** Climate Resilience • Natural Hazards • Ecosystem Services
+
+[See More Research](/publications/)
+
+---
+
+© 2025 Xihan Yao. All rights reserved.
