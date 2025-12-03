@@ -10,6 +10,8 @@ My work aims to build scalable, interpretable tools that support climate resilie
 
 I received my Master's degree in Environmental Planning at University of California, Berkeley, supervised by Professor [Iryna Dronova](https://scholar.google.com/citations?user=qDUBrUMAAAAJ&hl=en&inst=4034227699702668181). I received my BSc degree from The Hong Kong University of Science and Technology.
 
+---
+
 ## Education
 
 ### University of Texas, Austin
