@@ -84,37 +84,12 @@ author:
   avatar           : "IMG_1748.jpeg"
   bio              : "PhD student in Geography, University of Texas, Austin"
   location         : "Austin, TX"
-  employer         :
-  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=your+name"
-  googlescholar    : "https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en"
   email            : "xyaoaf@utexas.edu"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : 
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
   github           : "xyaoaf"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  googlescholar    : "https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en"
   linkedin         : "xihan-yao-6381b3181"
-  lastfm           :
   orcid            : "https://orcid.org/0000-0003-1166-4497"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
   twitter          : "YaoXihan"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
 
 
 # Reading Files
