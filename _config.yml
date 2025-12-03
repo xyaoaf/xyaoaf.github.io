@@ -82,9 +82,12 @@ analytics:
 author:
   name             : "Xihan Yao"
   avatar           : "IMG_1748.jpeg"
-  bio              : "PhD student, Geography and the Environment, University of Texas, Austin"
+  bio              : >-
+    Ph.D. Student<br>
+    Department of Geography and the Environment<br>
+    The University of Texas at Austin
   location         : "Austin, TX"
-  email            : "xyaoaf[at]utexas[dot]edu"
+  email            : "xyaoaf<at>utexas<dot>edu"
   github           : "xyaoaf"
   googlescholar    : "https://scholar.google.com/citations?user=YguEIS4AAAAJ&hl=en"
   linkedin         : "xihan-yao-6381b3181"
