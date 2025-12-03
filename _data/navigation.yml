@@ -7,9 +7,9 @@ main:
     url: /self-intro/
     
   - title: "News & Posts"
-    url: /year-archive/
+    url: /News-Posts/
     
-  - title: "Research"
+  - title: "Publications"
     url: /publications/
     
   - title: "Teaching"
