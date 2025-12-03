@@ -1,3 +1,4 @@
+---
 permalink: /
 title: "Xihan Yao, UT Austin"
 excerpt: "About me"
@@ -5,6 +6,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+---
 
 
 I am a PhD student at the Department of Geography and the Environment at The University of Texas at Austin. I work in the [GISense Lab](https://sites.utexas.edu/gisense/) and I am advised by Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en). My research develops data-driven and GeoAI-powered approaches to understand how the built and natural environment evolve and interact. I integrate multimodal geospatial data, including satellite and aerial imagery, LiDAR, street-level imagery, and human mobility datasets, with computational modeling to analyze environmental processes, assess ecosystem services, and uncover the dynamics of human–environment interactions.
