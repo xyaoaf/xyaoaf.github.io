@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Home"
-    url: /about/
+    url: /Home/
     
   - title: "About Me"
     url: /self-intro/
