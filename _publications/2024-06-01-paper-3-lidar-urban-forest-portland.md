@@ -3,7 +3,7 @@ title: "A Lidar-based Method for 3D Urban Forest Evaluation and Microclimate Ass
 collection: publications
 permalink: /publication/2024-lidar-urban-forest-portland
 date: 2024-06-01
-venue: 'Authorea Preprints, 2024'
+venue: 'AGU, 2023 (Conference)'
 paperurl: 'https://doi.org/10.22541/essoar.170914530.09781933/v1'
 citation: '**Yao, X.**, & Kim, M.'
 ---
