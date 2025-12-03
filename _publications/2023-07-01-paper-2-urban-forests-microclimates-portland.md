@@ -4,8 +4,8 @@ collection: publications
 permalink: /publication/2023-urban-forests-microclimates-portland
 date: 2023-07-01
 venue: 'IGARSS 2023'
-paperurl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YguEIS4AAAAJ&citation_for_view=YguEIS4AAAAJ:Y0pCki6q_DkC'
+paperurl: 'https://doi.org/10.1109/IGARSS52108.2023.10282088'
 citation: '**Yao, X.**, & Kim, M.'
 ---
 
-[paper](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YguEIS4AAAAJ&citation_for_view=YguEIS4AAAAJ:Y0pCki6q_DkC)
+[paper](https://doi.org/10.1109/IGARSS52108.2023.10282088)

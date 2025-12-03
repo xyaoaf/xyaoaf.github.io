@@ -4,8 +4,8 @@ collection: publications
 permalink: /publication/2024-light-pollution-hong-kong
 date: 2024-01-01
 venue: 'Energy & Environment, 2024'
-paperurl: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YguEIS4AAAAJ&citation_for_view=YguEIS4AAAAJ:d1gkVwhDpl0C'
+paperurl: 'https://doi.org/10.1177/0958305X221146942'
 citation: 'Tong, J. C. K., **Yao, X. H.**, Lau, E. S. L., Cheung, W. K. S., Ho, K. K. S., Ng, V. Y. Y., & Lau, A. P. S.'
 ---
 
-[paper](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YguEIS4AAAAJ&citation_for_view=YguEIS4AAAAJ:d1gkVwhDpl0C)
+[paper](https://doi.org/10.1177/0958305X221146942)
