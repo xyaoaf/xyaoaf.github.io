@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Xihan Yao, UT Austin"
+# title: "Xihan Yao, UT Austin"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
