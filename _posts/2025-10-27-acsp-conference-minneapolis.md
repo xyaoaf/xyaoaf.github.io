@@ -1,5 +1,5 @@
 ---
-title: 'Presenting at ACSP 2025 Conference in Minneapolis'
+title: '[Conference] ACSP 2025 Conference in Minneapolis'
 date: 2025-10-27
 permalink: /posts/2025/10/acsp-conference-minneapolis/
 tags:
