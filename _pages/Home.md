@@ -29,29 +29,14 @@ I received my Master's degree in Environmental Planning at University of Califor
 
 ## Highlighted Research
 
-### Urban Forests & Microclimate Modeling
-Community-scale microclimate simulation and object-based urban tree classification using LiDAR data to study cooling effects, shading patterns, and environmental justice implications.  
-[Paper](#)
+{% for pub in site.publications limit:3 %}
+### {{ pub.title }}
+{{ pub.excerpt }}  
+[Paper]({{ pub.paperurl }})
 
-**Topics:** Remote Sensing • Urban • Climate Resilience • GeoAI
+**Topics:** Research • GeoAI • Environmental Science
 
-### Deep Learning for Land Cover Classification
-Developed deep learning pipelines for sub-meter urban land cover classification using NAIP imagery. Contributed to the National Urban Tree Cover Map with the Arbor Day Foundation.  
-[Project](#)
-
-**Topics:** GeoAI • Remote Sensing • Urban • Machine Learning
-
-### Multimodal Place Perception
-Integrating street-level imagery, satellite data, and human mobility to understand visual urban form, safety perception, and personality–environment relationships.  
-[Research](#)
-
-**Topics:** GeoAI • Urban • Human-Environment Interaction
-
-### Climate Resilience & Ecosystem Services
-Spatial modeling of wildfire burn severity, post-wildfire flood risk, and wetland conservation to support climate adaptation planning.  
-[Projects](#)
-
-**Topics:** Climate Resilience • Natural Hazards • Ecosystem Services
+{% endfor %}
 
 [See More Research](/publications/)
 
