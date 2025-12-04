@@ -1,9 +1,12 @@
 ---
-layout: posts
-title: "First Place Award at CyberTraining Summer School 2025"
+title: 'First Place Award at CyberTraining Summer School 2025'
 date: 2025-10-11
-categories: news
-excerpt: "Honored to announce that my team won First Place at the Texas A&M CyberTraining Summer School competition for our work on disaster impact assessment using multimodal geospatial data."
+permalink: /posts/2025/10/cybertraining-first-place/
+tags:
+  - awards
+  - competition
+  - geoai
+  - disaster-management
 ---
 
 I'm thrilled to share that my team won **First Place** at the **2025 CyberTraining Summer School Competition** hosted by Texas A&M University!

@@ -1,9 +1,12 @@
 ---
-layout: posts
-title: "Second Place Award at UT Austin Geoscience Hackathon 2025"
+title: 'Second Place Award at UT Austin Geoscience Hackathon 2025'
 date: 2025-10-12
-categories: news
-excerpt: "Our team won Second Place at the 2025 Geoscience Hackathon for developing an open-source geospatial AI platform that detects and visualizes land-cover changes at planetary scale using Google Earth Engine and AlphaEarth embeddings."
+permalink: /posts/2025/10/geoscience-hackathon-second-place/
+tags:
+  - awards
+  - competition
+  - geoai
+  - earth-observation
 ---
 
 Excited to share that my team won **Second Place** at the **2025 UT Austin Geoscience Hackathon**!
