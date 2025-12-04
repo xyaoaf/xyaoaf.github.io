@@ -110,7 +110,13 @@ def create_journey_map(locations):
     # Create custom hover text with HTML formatting for story popups
     hover_texts = []
     for _, row in df.iterrows():
-        hover_text = f"<b style='font-size:16px;'>{row['name']}</b><br><br>{row['story']}"
+        hover_text = f"""
+        <div style='width: 280px; padding: 16px; background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-family: Arial, sans-serif;'>
+            <h3 style='margin: 0 0 12px 0; font-size: 18px; color: #333; font-weight: bold;'>{row['name']}</h3>
+            <div style='font-size: 13px; color: #666; line-height: 1.6;'>{row['story']}</div>
+            <div style='margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 11px; color: #999;'>Click to explore more</div>
+        </div>
+        """
         hover_texts.append(hover_text)
     
     # Add markers for each location (no connecting lines)
@@ -122,7 +128,7 @@ def create_journey_map(locations):
         name='',
         marker=dict(
             size=14,
-            color='rgb(255, 127, 80)',  # Coral color
+            color='rgb(255, 0, 0)',  # Red color
             line=dict(width=2, color='white'),
             symbol='circle'
         ),
