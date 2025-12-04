@@ -16,9 +16,9 @@ Each marker represents a significant location in my journey—where I've studied
 
 ## Interactive Journey Map
 
-**Click on the markers to explore stories from each location**
+**Click on markers to see full details in the sidebar panel**
 
-<iframe src="/files/journey_map.html" width="100%" height="700px" style="border:1px solid #ddd; border-radius: 8px;"></iframe>
+<iframe src="/files/journey_map.html" width="100%" height="800px" style="border:1px solid #ddd; border-radius: 8px;"></iframe>
 
 ---
 
