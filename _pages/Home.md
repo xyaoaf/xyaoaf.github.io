@@ -3,7 +3,7 @@ layout: archive
 permalink: /
 # title: "Xihan Yao, UT Austin"
 excerpt: "About me"
-author_profile: false
+author_profile: true
 redirect_from: 
   - /about/
   - /about.html

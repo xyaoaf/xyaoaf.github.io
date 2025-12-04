@@ -3,7 +3,7 @@ layout: archive
 permalink: /journey/
 title: "Connecting the Dots: A Geospatial Journey"
 excerpt: "An interactive map tracing places that shaped my academic and personal journey"
-author_profile: false
+author_profile: true
 ---
 
 ## Connecting the Dots: A Geospatial Journey Through Place and Space
