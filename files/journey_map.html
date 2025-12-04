@@ -1,126 +1,155 @@
-
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Geospatial Journey: Connecting the Dots</title>
-        <style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Geospatial Journey: Connecting the Dots</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #map-container {
+            flex: 1;
+            position: relative;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        #sidebar {
+            width: 400px;
+            background: white;
+            border-left: 1px solid #ddd;
+            overflow-y: auto;
+            padding: 24px;
+            box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+        }
+        #sidebar h2 {
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 24px;
+        }
+        #sidebar h3 {
+            margin: 16px 0 8px 0;
+            color: #666;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        #sidebar .years {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        #sidebar .story {
+            color: #555;
+            line-height: 1.7;
+            font-size: 14px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+        }
+        #sidebar .placeholder {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .marker-icon {
+            color: #dc3545;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 768px) {
             body {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-                display: flex;
-                height: 100vh;
-                overflow: hidden;
-            }
-            #map-container {
-                flex: 1;
-                position: relative;
+                flex-direction: column;
             }
             #sidebar {
-                width: 400px;
-                background: white;
-                border-left: 1px solid #ddd;
-                overflow-y: auto;
-                padding: 24px;
-                box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+                width: 100%;
+                height: 40vh;
+                border-left: none;
+                border-top: 1px solid #ddd;
             }
-            #sidebar h2 {
-                margin: 0 0 8px 0;
-                color: #333;
-                font-size: 24px;
+            #map-container {
+                height: 60vh;
             }
-            #sidebar h3 {
-                margin: 16px 0 8px 0;
-                color: #666;
-                font-size: 16px;
-                font-weight: normal;
-            }
-            #sidebar .years {
-                color: #999;
-                font-size: 14px;
-                margin-bottom: 16px;
-            }
-            #sidebar .story {
-                color: #555;
-                line-height: 1.7;
-                font-size: 14px;
-                margin-top: 16px;
-                padding-top: 16px;
-                border-top: 1px solid #eee;
-            }
-            #sidebar .placeholder {
-                color: #999;
-                font-style: italic;
-                text-align: center;
-                margin-top: 100px;
-            }
-            .marker-icon {
-                color: #dc3545;
-                font-size: 18px;
-                margin-bottom: 8px;
-            }
-            @media (max-width: 768px) {
-                body {
-                    flex-direction: column;
-                }
-                #sidebar {
-                    width: 100%;
-                    height: 40vh;
-                    border-left: none;
-                    border-top: 1px solid #ddd;
-                }
-                #map-container {
-                    height: 60vh;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <div id="map-container">
-            
-    
-    
-            <div class="folium-map" id="map_fc6ec15da948ae1a431b119aab69b0ff" ></div>
-        
-
+        }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <div id="sidebar">
+        <div class="placeholder">
+            <p>👈 Click on a marker to explore stories from each location</p>
         </div>
-        <div id="sidebar">
-            <div class="placeholder">
-                <p>👈 Click on a marker to explore stories from each location</p>
-            </div>
-        </div>
-        
-        <script>
-            // Location data
-            const locations = [{"name": "Hong Kong", "lat": 22.3193, "lon": 114.1694, "institution": "Hong Kong University of Science and Technology", "degree": "BSc in Environmental Science", "years": "2015 - 2019", "story": "\n            Where my journey began. This is where I first discovered my passion for \n            understanding human-environment interactions and the power of geospatial \n            analysis to address environmental challenges. The vibrant city and coastal \n            ecosystems provided a rich context for learning about urban environmental issues.\n        "}, {"name": "Berkeley, California", "lat": 37.8715, "lon": -122.273, "institution": "University of California, Berkeley", "degree": "Master of Landscape Architecture (MLA)", "years": "2021 - 2023", "story": "\n            At UC Berkeley, I deepened my understanding of urban forests, microclimate \n            modeling, and how environmental planning can create more equitable and \n            sustainable cities. Working with Prof. Iryna Dronova opened new doors \n            to remote sensing and GeoAI research. The Bay Area's diverse landscapes \n            and progressive environmental policies provided endless research opportunities.\n        "}, {"name": "Austin, Texas", "lat": 30.2849, "lon": -97.7341, "institution": "The University of Texas at Austin", "degree": "PhD in Geography", "years": "2023 - Present", "story": "\n            Currently pursuing my PhD in the GISense Lab with Prof. Yuhao Kang. \n            Here, I'm developing data-driven GeoAI approaches to understand environmental \n            processes, urban sustainability, and climate resilience. Austin has become \n            my home for exploring the frontiers of geospatial science. The city's rapid \n            growth and environmental challenges provide a living laboratory for my research.\n        "}, {"name": "Minneapolis, Minnesota", "lat": 44.9778, "lon": -93.265, "institution": "ACSP 2025 Conference", "degree": "Conference Presentation", "years": "October 2025", "story": "\n            My first ACSP conference! Presented my research on urban forests and \n            microclimate modeling in the \"Advanced Methods for Environmental Science\" session. \n            Visited Prof. Yao-Yi Chiang's lab at University of Minnesota and connected \n            with the planning community. The Mill City Museum and Minneapolis Institute \n            of Art were highlights of the visit. The city's commitment to green infrastructure \n            was inspiring.\n        "}];
-            
-            // Function to update sidebar
-            function updateSidebar(locationData) {
-                const sidebar = document.getElementById('sidebar');
-                sidebar.innerHTML = `
-                    <div class="marker-icon">📍</div>
-                    <h2>${locationData.name}</h2>
-                    <h3>${locationData.institution}</h3>
-                    <div class="years">${locationData.years}</div>
-                    <p><strong>${locationData.degree}</strong></p>
-                    <div class="story">${locationData.story}</div>
-                `;
-            }
-            
-            // Add click listeners to all markers
-            setTimeout(function() {
-                const markers = document.querySelectorAll('.leaflet-marker-icon');
-                markers.forEach((marker, index) => {
-                    marker.addEventListener('click', function() {
-                        if (locations[index]) {
-                            updateSidebar(locations[index]);
-                        }
-                    });
-                });
-            }, 1000);
-        </script>
-    </body>
-    </html>
+    </div>
     
+    <script>
+        // Location data
+        const locations = [{"name": "Hong Kong", "lat": 22.3193, "lon": 114.1694, "institution": "Hong Kong University of Science and Technology", "degree": "BSc in Environmental Science", "years": "2015 - 2019", "story": "\n            Where my journey began. This is where I first discovered my passion for \n            understanding human-environment interactions and the power of geospatial \n            analysis to address environmental challenges. The vibrant city and coastal \n            ecosystems provided a rich context for learning about urban environmental issues.\n        "}, {"name": "Berkeley, California", "lat": 37.8715, "lon": -122.273, "institution": "University of California, Berkeley", "degree": "Master of Landscape Architecture (MLA)", "years": "2021 - 2023", "story": "\n            At UC Berkeley, I deepened my understanding of urban forests, microclimate \n            modeling, and how environmental planning can create more equitable and \n            sustainable cities. Working with Prof. Iryna Dronova opened new doors \n            to remote sensing and GeoAI research. The Bay Area's diverse landscapes \n            and progressive environmental policies provided endless research opportunities.\n        "}, {"name": "Austin, Texas", "lat": 30.2849, "lon": -97.7341, "institution": "The University of Texas at Austin", "degree": "PhD in Geography", "years": "2023 - Present", "story": "\n            Currently pursuing my PhD in the GISense Lab with Prof. Yuhao Kang. \n            Here, I'm developing data-driven GeoAI approaches to understand environmental \n            processes, urban sustainability, and climate resilience. Austin has become \n            my home for exploring the frontiers of geospatial science. The city's rapid \n            growth and environmental challenges provide a living laboratory for my research.\n        "}, {"name": "Minneapolis, Minnesota", "lat": 44.9778, "lon": -93.265, "institution": "ACSP 2025 Conference", "degree": "Conference Presentation", "years": "October 2025", "story": "\n            My first ACSP conference! Presented my research on urban forests and \n            microclimate modeling in the \"Advanced Methods for Environmental Science\" session. \n            Visited Prof. Yao-Yi Chiang's lab at University of Minnesota and connected \n            with the planning community. The Mill City Museum and Minneapolis Institute \n            of Art were highlights of the visit. The city's commitment to green infrastructure \n            was inspiring.\n        "}];
+        
+        // Create the map
+        var map = L.map('map').setView([37.0, -95.0], 4);
+        
+        // Add tile layer
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors © CARTO',
+            maxZoom: 19
+        }).addTo(map);
+        
+        // Add markers
+        locations.forEach((loc, index) => {
+            var marker = L.marker([loc.lat, loc.lon], {
+                icon: L.icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                })
+            }).addTo(map);
+            
+            // Add popup
+            marker.bindPopup(`
+                <div style="width: 200px; font-family: Arial, sans-serif;">
+                    <h4 style="margin: 0 0 8px 0; color: #333;">${loc.name}</h4>
+                    <p style="margin: 4px 0; font-size: 12px; color: #666;">
+                        <b>${loc.institution}</b><br>
+                        ${loc.years}
+                    </p>
+                    <p style="margin: 8px 0 0 0; font-size: 11px; color: #999;">
+                        Click marker for full details →
+                    </p>
+                </div>
+            `);
+            
+            // Add click event to update sidebar
+            marker.on('click', function() {
+                updateSidebar(loc);
+            });
+        });
+        
+        // Function to update sidebar
+        function updateSidebar(locationData) {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.innerHTML = `
+                <div class="marker-icon">📍</div>
+                <h2>${locationData.name}</h2>
+                <h3>${locationData.institution}</h3>
+                <div class="years">${locationData.years}</div>
+                <p><strong>${locationData.degree}</strong></p>
+                <div class="story">${locationData.story}</div>
+            `;
+        }
+    </script>
+</body>
+</html>

@@ -171,142 +171,191 @@ def save_map_with_sidebar(map_obj, locations, filename='journey_map.html'):
         locations: List of location dictionaries
         filename: Output HTML filename
     """
-    # Save the base map
-    map_obj.save(filename)
+    # Save the base map to a temporary file
+    temp_file = 'temp_map.html'
+    map_obj.save(temp_file)
     
     # Read the generated HTML
-    with open(filename, 'r', encoding='utf-8') as f:
-        html_content = f.read()
+    with open(temp_file, 'r', encoding='utf-8') as f:
+        map_html = f.read()
+    
+    # Extract just the head content and body content from Folium
+    head_start = map_html.find('<head>')
+    head_end = map_html.find('</head>') + 7
+    head_content = map_html[head_start:head_end]
+    
+    body_start = map_html.find('<body>')
+    body_end = map_html.find('</body>')
+    body_content = map_html[body_start+6:body_end]
     
     # Create location data as JSON for JavaScript
     locations_json = json.dumps(locations)
     
     # Enhanced HTML with sidebar
-    enhanced_html = f"""
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Geospatial Journey: Connecting the Dots</title>
-        <style>
+    enhanced_html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Geospatial Journey: Connecting the Dots</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body {{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }}
+        #map-container {{
+            flex: 1;
+            position: relative;
+        }}
+        #map {{
+            width: 100%;
+            height: 100%;
+        }}
+        #sidebar {{
+            width: 400px;
+            background: white;
+            border-left: 1px solid #ddd;
+            overflow-y: auto;
+            padding: 24px;
+            box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+        }}
+        #sidebar h2 {{
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 24px;
+        }}
+        #sidebar h3 {{
+            margin: 16px 0 8px 0;
+            color: #666;
+            font-size: 16px;
+            font-weight: normal;
+        }}
+        #sidebar .years {{
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }}
+        #sidebar .story {{
+            color: #555;
+            line-height: 1.7;
+            font-size: 14px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+        }}
+        #sidebar .placeholder {{
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            margin-top: 100px;
+        }}
+        .marker-icon {{
+            color: #dc3545;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }}
+        @media (max-width: 768px) {{
             body {{
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-                display: flex;
-                height: 100vh;
-                overflow: hidden;
-            }}
-            #map-container {{
-                flex: 1;
-                position: relative;
+                flex-direction: column;
             }}
             #sidebar {{
-                width: 400px;
-                background: white;
-                border-left: 1px solid #ddd;
-                overflow-y: auto;
-                padding: 24px;
-                box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+                width: 100%;
+                height: 40vh;
+                border-left: none;
+                border-top: 1px solid #ddd;
             }}
-            #sidebar h2 {{
-                margin: 0 0 8px 0;
-                color: #333;
-                font-size: 24px;
+            #map-container {{
+                height: 60vh;
             }}
-            #sidebar h3 {{
-                margin: 16px 0 8px 0;
-                color: #666;
-                font-size: 16px;
-                font-weight: normal;
-            }}
-            #sidebar .years {{
-                color: #999;
-                font-size: 14px;
-                margin-bottom: 16px;
-            }}
-            #sidebar .story {{
-                color: #555;
-                line-height: 1.7;
-                font-size: 14px;
-                margin-top: 16px;
-                padding-top: 16px;
-                border-top: 1px solid #eee;
-            }}
-            #sidebar .placeholder {{
-                color: #999;
-                font-style: italic;
-                text-align: center;
-                margin-top: 100px;
-            }}
-            .marker-icon {{
-                color: #dc3545;
-                font-size: 18px;
-                margin-bottom: 8px;
-            }}
-            @media (max-width: 768px) {{
-                body {{
-                    flex-direction: column;
-                }}
-                #sidebar {{
-                    width: 100%;
-                    height: 40vh;
-                    border-left: none;
-                    border-top: 1px solid #ddd;
-                }}
-                #map-container {{
-                    height: 60vh;
-                }}
-            }}
-        </style>
-    </head>
-    <body>
-        <div id="map-container">
-            {html_content.split('<body>')[1].split('</body>')[0]}
+        }}
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <div id="sidebar">
+        <div class="placeholder">
+            <p>👈 Click on a marker to explore stories from each location</p>
         </div>
-        <div id="sidebar">
-            <div class="placeholder">
-                <p>👈 Click on a marker to explore stories from each location</p>
-            </div>
-        </div>
+    </div>
+    
+    <script>
+        // Location data
+        const locations = {locations_json};
         
-        <script>
-            // Location data
-            const locations = {locations_json};
+        // Create the map
+        var map = L.map('map').setView([37.0, -95.0], 4);
+        
+        // Add tile layer
+        L.tileLayer('https://cartodb-basemaps-{{s}}.global.ssl.fastly.net/light_all/{{z}}/{{x}}/{{y}}.png', {{
+            attribution: '© OpenStreetMap contributors © CARTO',
+            maxZoom: 19
+        }}).addTo(map);
+        
+        // Add markers
+        locations.forEach((loc, index) => {{
+            var marker = L.marker([loc.lat, loc.lon], {{
+                icon: L.icon({{
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                }})
+            }}).addTo(map);
             
-            // Function to update sidebar
-            function updateSidebar(locationData) {{
-                const sidebar = document.getElementById('sidebar');
-                sidebar.innerHTML = `
-                    <div class="marker-icon">📍</div>
-                    <h2>${{locationData.name}}</h2>
-                    <h3>${{locationData.institution}}</h3>
-                    <div class="years">${{locationData.years}}</div>
-                    <p><strong>${{locationData.degree}}</strong></p>
-                    <div class="story">${{locationData.story}}</div>
-                `;
-            }}
+            // Add popup
+            marker.bindPopup(`
+                <div style="width: 200px; font-family: Arial, sans-serif;">
+                    <h4 style="margin: 0 0 8px 0; color: #333;">${{loc.name}}</h4>
+                    <p style="margin: 4px 0; font-size: 12px; color: #666;">
+                        <b>${{loc.institution}}</b><br>
+                        ${{loc.years}}
+                    </p>
+                    <p style="margin: 8px 0 0 0; font-size: 11px; color: #999;">
+                        Click marker for full details →
+                    </p>
+                </div>
+            `);
             
-            // Add click listeners to all markers
-            setTimeout(function() {{
-                const markers = document.querySelectorAll('.leaflet-marker-icon');
-                markers.forEach((marker, index) => {{
-                    marker.addEventListener('click', function() {{
-                        if (locations[index]) {{
-                            updateSidebar(locations[index]);
-                        }}
-                    }});
-                }});
-            }}, 1000);
-        </script>
-    </body>
-    </html>
-    """
+            // Add click event to update sidebar
+            marker.on('click', function() {{
+                updateSidebar(loc);
+            }});
+        }});
+        
+        // Function to update sidebar
+        function updateSidebar(locationData) {{
+            const sidebar = document.getElementById('sidebar');
+            sidebar.innerHTML = `
+                <div class="marker-icon">📍</div>
+                <h2>${{locationData.name}}</h2>
+                <h3>${{locationData.institution}}</h3>
+                <div class="years">${{locationData.years}}</div>
+                <p><strong>${{locationData.degree}}</strong></p>
+                <div class="story">${{locationData.story}}</div>
+            `;
+        }}
+    </script>
+</body>
+</html>"""
     
     # Write enhanced HTML
     with open(filename, 'w', encoding='utf-8') as f:
         f.write(enhanced_html)
+    
+    # Clean up temp file
+    import os
+    if os.path.exists(temp_file):
+        os.remove(temp_file)
     
     print(f"✓ Map with sidebar saved as {filename}")
     print(f"✓ Open {filename} in your browser to view")
