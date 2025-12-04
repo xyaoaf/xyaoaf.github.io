@@ -7,7 +7,7 @@ Edit this file to add/update locations, then run journey_map_folium.py to regene
 
 JOURNEY_LOCATIONS = [
     {
-        'name': 'Yueqing, China',
+        'name': 'Yueqing, Zhejiang',
         'lat': 28.1167,
         'lon': 120.9667,
         'story': '''
@@ -25,7 +25,7 @@ JOURNEY_LOCATIONS = [
         '''
     },
     {
-        'name': 'Hangzhou, China',
+        'name': 'Hangzhou, Zhejiang',
         'lat': 30.2741,
         'lon': 120.1551,
         'story': '''
@@ -76,7 +76,7 @@ JOURNEY_LOCATIONS = [
         '''
     },
     {
-        'name': 'Shanghai, China',
+        'name': 'Shanghai',
         'lat': 31.2304,
         'lon': 121.4737,
         'story': '''
@@ -104,7 +104,7 @@ JOURNEY_LOCATIONS = [
         '''
     },
     {
-        'name': 'Beijing, China',
+        'name': 'Beijing',
         'lat': 39.9042,
         'lon': 116.4074,
         'story': '''
@@ -130,15 +130,37 @@ JOURNEY_LOCATIONS = [
         '''
     },
     {
+        'name': 'Seattle, Washington',
+        'lat': 47.6062,
+        'lon': -122.3321,
+        'story': '''
+            Seattle holds a special place in my life because of two very different—but equally meaningful—chapters I experienced there.
+
+            My first connection to Seattle was in 2019, when I spent a semester as an exchange student at the University of Washington. It was my first time studying at an American university, and I was immediately struck by the beauty of the UW campus, the diversity of the student community, and the vibrant atmosphere of the city itself. During that semester, I enrolled in courses I could not take back in Hong Kong—urban planning, geographic programming, and other classes that opened my eyes to new ways of thinking about geography, cities, and the environment. Outside of class, I made friends from around the world and traveled across Washington State, visiting national parks and soaking in the natural beauty of the Pacific Northwest. That exchange semester was a pivotal moment that broadened my academic horizons and reshaped my cultural perspective.
+
+            My second Seattle chapter came several years later, when I took my first industrial job at EarthDefine, a small geospatial company based in Redmond, right next to Seattle. I worked there for over a year, applying my academic training to real-world geospatial challenges. EarthDefine specialized in producing high-resolution land cover datasets for city governments and national agencies. Using open-source deep learning models and NAIP imagery, we built detailed classifications of urban landscapes. My role involved generating tree canopy and land cover data that cities relied on to understand their communities, plan for the future, and monitor changes in vegetation and development over time.
+
+            This experience was deeply meaningful because it was the first time I saw how my work directly informed real decisions in urban planning and environmental management. It taught me how technical spatial data could translate into tangible public benefits.
+
+            Both of these Seattle experiences—one academic, one professional—played vital roles in shaping who I am today. Together, they expanded my worldview, deepened my skills, and marked key turning points in both my personal and career development.
+        '''
+    },
+    {
         'name': 'Berkeley, California',
         'lat': 37.8715,
         'lon': -122.2730,
         'story': '''
-            At UC Berkeley, I deepened my understanding of urban forests, microclimate 
-            modeling, and how environmental planning can create more equitable and 
-            sustainable cities. Working with Prof. Iryna Dronova opened new doors 
-            to remote sensing and GeoAI research. The Bay Area's diverse landscapes 
-            and progressive environmental policies provided endless research opportunities.
+            Berkeley, California, is unquestionably one of the most influential places in my life. From 2021 to 2023, I completed my Master's degree in Environmental Planning at UC Berkeley—an experience that reshaped not only my academic trajectory but also my understanding of myself. On the very first day of class, I realized I was the only Chinese or foreign student in my cohort. That moment carried far more weight than I expected; it made me acutely aware of how different cultural backgrounds and worldviews intersect in an academic environment like Berkeley.
+
+            The diversity of perspectives on campus opened my eyes in ways I had never experienced before. But the beginning was not easy. Many of my peers came in with years of professional experience and already had a clear sense of their research goals. Meanwhile, I felt I had to explore widely—testing ideas, learning new methods, and searching for the direction that resonated with me. It was an uncertain period, but also an incredibly formative one.
+
+            With the encouragement of my cohort and mentors, I gradually found my footing. I ended up developing an independent and innovative thesis that combined datasets and analytical approaches I had never used before. That project gave me confidence in my ability to carve out my own research path rather than simply following established ones.
+
+            After graduating, I remained in Berkeley for another two years, and one of the most memorable chapters unfolded almost immediately. In the first semester after finishing my degree, I stepped into the role of lecturer for Berkeley's largest GIS class, C188, after my professor retired. I was only 24 at the time—just a few years older than many of the students I was teaching. I modernized the course, redesigned the slides and labs, and made an intentional effort to learn all 200 students' names.
+
+            Standing in front of a lecture hall of so many students for the first time was both intimidating and exhilarating. It taught me how to teach, how to lead, and how to design a learning environment that could inspire curiosity. That experience fundamentally reshaped the way I viewed academia and revealed a side of myself I didn't know existed.
+
+            Berkeley wasn't just where I earned my degree. It became a turning point—a place that challenged me, supported me, and ultimately helped me grow into who I am today.
         '''
     },
     {
@@ -146,11 +168,11 @@ JOURNEY_LOCATIONS = [
         'lat': 30.2849,
         'lon': -97.7341,
         'story': '''
-            Currently pursuing my PhD in the GISense Lab with Prof. Yuhao Kang. 
-            Here, I'm developing data-driven GeoAI approaches to understand environmental 
-            processes, urban sustainability, and climate resilience. Austin has become 
-            my home for exploring the frontiers of geospatial science. The city's rapid 
-            growth and environmental challenges provide a living laboratory for my research.
+            Austin, Texas marks the newest chapter of my journey as I begin my PhD in Geography. It's a fresh start in a young, energetic city, and I feel fortunate to have joined a research group that fits me so well. I didn't choose my labmates, but working with them has been one of the best surprises—they're supportive, talented, and make the start of my PhD feel exciting rather than overwhelming.
+
+            Academically, Austin offers perspectives and courses that are quite different from what I encountered at Berkeley, giving me new ways to think about my work. Even though I've only been here for about three months, I already feel the importance of protecting my time and focusing on what matters most as I settle into my PhD.
+
+            Austin is still new to me, but it's full of possibility. I'm looking forward to the growth, challenges, and opportunities this chapter will bring.
         '''
     },
     {
@@ -158,12 +180,7 @@ JOURNEY_LOCATIONS = [
         'lat': 44.9778,
         'lon': -93.2650,
         'story': '''
-            My first ACSP conference! Presented my research on urban forests and 
-            microclimate modeling in the "Advanced Methods for Environmental Science" session. 
-            Visited Prof. Yao-Yi Chiang's lab at University of Minnesota and connected 
-            with the planning community. The Mill City Museum and Minneapolis Institute 
-            of Art were highlights of the visit. The city's commitment to green infrastructure 
-            was inspiring.
+            I visited Minneapolis in October 2025 for the ACSP conference—my first time attending a planning conference. It brought together people from technology, science, and social science, all discussing planning from different angles. The experience gave me fresh insights and new connections, and I wrote a short post about my time there to look back on. It was brief, but it added another valuable perspective to my path.
         '''
     },
     

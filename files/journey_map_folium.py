@@ -28,7 +28,7 @@ except ImportError:
     print("Warning: journey_locations.py not found, using embedded data")
     LOCATIONS = [
     {
-        'name': 'Yueqing',
+        'name': 'Yueqing, Zhejiang',
         'lat': 28.1167,
         'lon': 120.9667,
         'institution': 'Birthplace',
@@ -49,7 +49,7 @@ except ImportError:
         '''
     },
     {
-        'name': 'Hangzhou',
+        'name': 'Hangzhou, Zhejiang',
         'lat': 30.2741,
         'lon': 120.1551,
         'institution': 'Childhood Home',
