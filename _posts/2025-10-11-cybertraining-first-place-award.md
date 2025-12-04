@@ -1,5 +1,5 @@
 ---
-title: 'First Place Award at CyberTraining Summer School 2025'
+title: '[Award] First Place Award at CyberTraining Summer School 2025'
 date: 2025-10-11
 permalink: /posts/2025/10/cybertraining-first-place/
 tags:
