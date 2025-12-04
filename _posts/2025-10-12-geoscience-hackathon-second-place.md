@@ -1,5 +1,5 @@
 ---
-title: 'Second Place Award at UT Austin Geoscience Hackathon 2025'
+title: '[Award] Second Place Award at UT Austin Geoscience Hackathon 2025'
 date: 2025-10-12
 permalink: /posts/2025/10/geoscience-hackathon-second-place/
 tags:

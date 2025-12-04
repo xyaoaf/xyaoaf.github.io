@@ -1,5 +1,5 @@
 ---
-title: "Integrating Elements into Geographic Science"
+title: "[Thought] Integrating Elements into Geographic Science"
 date: 2025-10-24
 permalink: /posts/2025/10/integrating-elements-into-geographic-science/
 tags:
