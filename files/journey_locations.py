@@ -183,6 +183,32 @@ JOURNEY_LOCATIONS = [
             I visited Minneapolis in October 2025 for the ACSP conference—my first time attending a planning conference. It brought together people from technology, science, and social science, all discussing planning from different angles. The experience gave me fresh insights and new connections, and I wrote a short post about my time there to look back on. It was brief, but it added another valuable perspective to my path.
         '''
     },
+    {
+        'name': 'Portland, Oregon',
+        'lat': 45.5152,
+        'lon': -122.6784,
+        'story': '''
+            Portland holds a special place in my heart as the city where I conducted my Master's thesis research on urban forest equity and microclimate disparities. I visited Portland several times during my research, and I was privileged to collaborate with the Bureau of Environmental Services at the City of Portland. They provided me with invaluable resources—especially the 2019 high-density LiDAR dataset—that made my thesis research possible.
+
+            For my study, I selected two contrasting census blocks to compare: one historically affluent neighborhood and another located in the far suburbs on previously brownfield land, where residents tend to be more vulnerable. Using advanced remote sensing and spatial analysis, my research revealed not only significant differences in the quantity of urban trees between these communities but also major disparities in the composition and quality of their urban forests. These differences contributed to unequal access to ecosystem services—particularly cooling benefits that reduce heat exposure during summer months.
+
+            The most meaningful part came after completing the research, when I finally visited both communities in person. Walking the streets and seeing the neighborhoods with my own eyes gave me a profound connection to the data I had analyzed. I even located and visited the two specific sample trees I had studied in detail for my thesis. Seeing those trees firsthand—understanding their physical characteristics, their role in their neighborhoods, and their impact on the people living around them—made the entire project feel real, grounded, and deeply meaningful. Portland transformed my understanding of what it means to do environmental justice research: it's not just about numbers and remote sensing, but about real communities and real people.
+        '''
+    },
+    {
+        'name': 'Pasadena, California',
+        'lat': 34.1478,
+        'lon': -118.1445,
+        'story': '''
+            Pasadena, California marks a pivotal milestone in my research career. In June 2023, I attended the IEEE IGARSS conference—the first major academic conference of my career and the first time I publicly presented my Master's thesis research on a large international stage.
+
+            I delivered a full presentation on my project, "Object-Based Urban Trees Characterization with Airborne LiDAR for Microclimate Simulation," sharing my findings about urban forest equity and the disparities in tree canopy and ecosystem services between different neighborhoods in Portland. The experience of standing in front of hundreds of researchers from around the world, discussing my work, and receiving questions and feedback was both exhilarating and formative.
+
+            Beyond the main presentation, I also distilled my thesis research into a sharp elevator pitch for the GeoPitch competition—a showcase of innovative work in geoscience. To my surprise and genuine excitement, I earned the Third Place Award in the IEEE Geoscience and Remote Sensing Society's GeoPitch competition for my innovative approach to sustainable geoscience.
+
+            Pasadena marked many firsts for me: my first major international conference, my first thesis presentation, my first research award—an unforgettable milestone that pushed me forward in my research career and gave me confidence in my ability to contribute meaningfully to the geospatial science community.
+        '''
+    },
     
     # ADD MORE LOCATIONS BELOW THIS LINE:
     # Just add the place name, coordinates, and your story:
