@@ -19,13 +19,19 @@ import folium
 from folium import IFrame
 import pandas as pd
 import json
+import sys
+import os
+
+# Add current directory to path to ensure imports work
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # Import locations from separate data file
 try:
     from journey_locations import JOURNEY_LOCATIONS as LOCATIONS
-except ImportError:
+    print(f"✓ Successfully imported {len(LOCATIONS)} locations from journey_locations.py")
+except ImportError as e:
     # Fallback if journey_locations.py doesn't exist
-    print("Warning: journey_locations.py not found, using embedded data")
+    print(f"Warning: Could not import journey_locations.py ({e}), using embedded data")
     LOCATIONS = [
     {
         'name': 'Yueqing, Zhejiang',
