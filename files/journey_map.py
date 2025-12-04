@@ -107,35 +107,28 @@ def create_journey_map(locations):
     # Create the 3D globe trace
     fig = go.Figure()
     
-    # Add markers for each location
+    # Create custom hover text with HTML formatting for story popups
+    hover_texts = []
+    for _, row in df.iterrows():
+        hover_text = f"<b style='font-size:16px;'>{row['name']}</b><br><br>{row['story']}"
+        hover_texts.append(hover_text)
+    
+    # Add markers for each location (no connecting lines)
     fig.add_trace(go.Scattergeo(
         lon=df['lon'],
         lat=df['lat'],
-        text=df['story'],
-        mode='markers+text',
+        customdata=hover_texts,
+        mode='markers',
         name='',
         marker=dict(
-            size=12,
+            size=14,
             color='rgb(255, 127, 80)',  # Coral color
             line=dict(width=2, color='white'),
             symbol='circle'
         ),
-        textposition='top center',
-        textfont=dict(size=10, color='white'),
-        hovertemplate='<b>%{hovertext}</b><br><br>%{text}<extra></extra>',
-        hovertext=df['name']
+        hovertemplate='%{customdata}<extra></extra>',
+        showlegend=False
     ))
-    
-    # Add connecting lines between consecutive locations (optional)
-    for i in range(len(df) - 1):
-        fig.add_trace(go.Scattergeo(
-            lon=[df.iloc[i]['lon'], df.iloc[i+1]['lon']],
-            lat=[df.iloc[i]['lat'], df.iloc[i+1]['lat']],
-            mode='lines',
-            line=dict(width=1, color='rgba(255, 127, 80, 0.3)'),
-            showlegend=False,
-            hoverinfo='skip'
-        ))
     
     # Update layout for 3D globe appearance
     fig.update_geos(
