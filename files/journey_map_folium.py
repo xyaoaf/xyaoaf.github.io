@@ -20,11 +20,48 @@ from folium import IFrame
 import pandas as pd
 import json
 
-# ============================================================================
-# EDIT THIS SECTION: Add your locations and stories
-# ============================================================================
+# Import locations from separate data file
+try:
+    from journey_locations import JOURNEY_LOCATIONS as LOCATIONS
+except ImportError:
+    # Fallback if journey_locations.py doesn't exist
+    print("Warning: journey_locations.py not found, using embedded data")
+    LOCATIONS = [
+    {
+        'name': 'Yueqing',
+        'lat': 28.1167,
+        'lon': 120.9667,
+        'institution': 'Birthplace',
+        'degree': 'Early Childhood',
+        'years': '1998 - 2003',
+        'story': '''
+            I was born in 1998 in Yueqing, a coastal town tucked under the jurisdiction of Wenzhou in eastern China. 
+            Ringed by mountains on one side and the sea on the other, it's a place shaped by fishing traditions, 
+            early industrial growth, and the rhythms of the ocean. I spent my earliest years there—only until about 
+            the age of five—but it wasn't until much later that I understood how distinctive my hometown really was.
+            Yueqing was transforming rapidly back then, with countless privately owned lighting factories sprouting 
+            up across the town. At the same time, it was constantly tested by nature. Typhoons were a regular part 
+            of life, and I still remember waking up to find a foot of water covering the ground outside. My dad would 
+            simply roll up his pants, start his motorcycle, and ride through the flooded streets to pick up groceries, 
+            unfazed by the stormy chaos around him. Even though I left early, these memories have stayed with me. 
+            Yueqing remains a place of deep personal significance—my first home, and the backdrop of the experiences 
+            that quietly shaped my sense of resilience, curiosity, and connection to the environments I later chose to study.
+        '''
+    },
+    {
+        'name': 'Hangzhou',
+        'lat': 30.2741,
+        'lon': 120.1551,
+        'story': '''
+            The second meaningful place in my life is Hangzhou, the capital of Zhejiang Province and one of China’s largest and most storied cities. I spent nearly all my childhood and teenage years there—from primary school through high school—before heading off to university. Hangzhou is a city with a long memory, having once served as the capital of a major part of China, and its landscapes carry layers of history, culture, and human ingenuity.
 
-LOCATIONS = [
+Growing up, the West Lake was a constant presence. As a UNESCO World Cultural Heritage site, it represents thousands of years of deliberate efforts to harmonize the built environment with nature. Bridges, pavilions, and pagodas crafted by generations have shaped the lake into a celebrated landscape—no longer purely natural, but unquestionably iconic. Walking or biking along its shores gave me an early sense of how deeply nature can shape urban life and identity.
+
+To the west of the city, the expansive wetland that was preserved and transformed into a national wetland park served as another reminder: Hangzhou was once a vast swamp before the city rose around it. And the Grand Canal—stretching all the way from Beijing to Hangzhou—was a living testament to the role of water not just as a resource, but as a cultural artery that carried people, goods, and ideas across hundreds of years.
+
+All of these elements shaped my understanding of the close relationship between humans and water, and of how natural systems quietly but powerfully influence the rhythm of urban life. Hangzhou wasn’t just the city where I grew up—it was a formative landscape that nurtured my early appreciation for the interplay between nature, history, and everyday living.
+        '''
+    },
     {
         'name': 'Hong Kong',
         'lat': 22.3193,
@@ -85,17 +122,7 @@ LOCATIONS = [
             was inspiring.
         '''
     },
-    # ADD MORE LOCATIONS HERE:
-    # {
-    #     'name': 'Your City',
-    #     'lat': 0.0,
-    #     'lon': 0.0,
-    #     'institution': 'Institution Name',
-    #     'degree': 'Degree or Event',
-    #     'years': 'Years',
-    #     'story': 'Your detailed story about this place...'
-    # },
-]
+    ]
 
 # ============================================================================
 # VISUALIZATION CODE
@@ -124,14 +151,10 @@ def create_journey_map_folium(locations):
     for i, loc in enumerate(locations):
         # Create popup content (brief version)
         popup_html = f"""
-        <div style="width: 200px; font-family: Arial, sans-serif;">
+        <div style="width: 180px; font-family: Arial, sans-serif;">
             <h4 style="margin: 0 0 8px 0; color: #333;">{loc['name']}</h4>
-            <p style="margin: 4px 0; font-size: 12px; color: #666;">
-                <b>{loc['institution']}</b><br>
-                {loc['years']}
-            </p>
             <p style="margin: 8px 0 0 0; font-size: 11px; color: #999;">
-                Click marker for full details →
+                Click marker for the full story →
             </p>
         </div>
         """
@@ -139,23 +162,10 @@ def create_journey_map_folium(locations):
         # Create the marker with click event
         marker = folium.Marker(
             location=[loc['lat'], loc['lon']],
-            popup=folium.Popup(popup_html, max_width=250),
+            popup=folium.Popup(popup_html, max_width=200),
             tooltip=loc['name'],
             icon=folium.Icon(color='red', icon='info-sign')
         )
-        
-        # Add JavaScript to update sidebar on click
-        marker_js = f"""
-        <script>
-        var locationData_{i} = {{
-            name: "{loc['name']}",
-            institution: "{loc['institution']}",
-            degree: "{loc['degree']}",
-            years: "{loc['years']}",
-            story: `{loc['story']}`
-        }};
-        </script>
-        """
         
         marker.add_to(m)
     
@@ -290,12 +300,12 @@ def save_map_with_sidebar(map_obj, locations, filename='journey_map.html'):
         // Location data
         const locations = {locations_json};
         
-        // Create the map
-        var map = L.map('map').setView([37.0, -95.0], 4);
+        // Create the map centered on the globe
+        var map = L.map('map').setView([20.0, 0.0], 2);
         
-        // Add tile layer
-        L.tileLayer('https://cartodb-basemaps-{{s}}.global.ssl.fastly.net/light_all/{{z}}/{{x}}/{{y}}.png', {{
-            attribution: '© OpenStreetMap contributors © CARTO',
+        // Add satellite tile layer
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}', {{
+            attribution: '© Esri, Maxar, Earthstar Geographics',
             maxZoom: 19
         }}).addTo(map);
         
@@ -314,14 +324,10 @@ def save_map_with_sidebar(map_obj, locations, filename='journey_map.html'):
             
             // Add popup
             marker.bindPopup(`
-                <div style="width: 200px; font-family: Arial, sans-serif;">
+                <div style="width: 180px; font-family: Arial, sans-serif;">
                     <h4 style="margin: 0 0 8px 0; color: #333;">${{loc.name}}</h4>
-                    <p style="margin: 4px 0; font-size: 12px; color: #666;">
-                        <b>${{loc.institution}}</b><br>
-                        ${{loc.years}}
-                    </p>
                     <p style="margin: 8px 0 0 0; font-size: 11px; color: #999;">
-                        Click marker for full details →
+                        Click marker for the full story →
                     </p>
                 </div>
             `);
@@ -338,9 +344,6 @@ def save_map_with_sidebar(map_obj, locations, filename='journey_map.html'):
             sidebar.innerHTML = `
                 <div class="marker-icon">📍</div>
                 <h2>${{locationData.name}}</h2>
-                <h3>${{locationData.institution}}</h3>
-                <div class="years">${{locationData.years}}</div>
-                <p><strong>${{locationData.degree}}</strong></p>
                 <div class="story">${{locationData.story}}</div>
             `;
         }}

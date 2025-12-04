@@ -94,14 +94,14 @@
     
     <script>
         // Location data
-        const locations = [{"name": "Hong Kong", "lat": 22.3193, "lon": 114.1694, "institution": "Hong Kong University of Science and Technology", "degree": "BSc in Environmental Science", "years": "2015 - 2019", "story": "\n            Where my journey began. This is where I first discovered my passion for \n            understanding human-environment interactions and the power of geospatial \n            analysis to address environmental challenges. The vibrant city and coastal \n            ecosystems provided a rich context for learning about urban environmental issues.\n        "}, {"name": "Berkeley, California", "lat": 37.8715, "lon": -122.273, "institution": "University of California, Berkeley", "degree": "Master of Landscape Architecture (MLA)", "years": "2021 - 2023", "story": "\n            At UC Berkeley, I deepened my understanding of urban forests, microclimate \n            modeling, and how environmental planning can create more equitable and \n            sustainable cities. Working with Prof. Iryna Dronova opened new doors \n            to remote sensing and GeoAI research. The Bay Area's diverse landscapes \n            and progressive environmental policies provided endless research opportunities.\n        "}, {"name": "Austin, Texas", "lat": 30.2849, "lon": -97.7341, "institution": "The University of Texas at Austin", "degree": "PhD in Geography", "years": "2023 - Present", "story": "\n            Currently pursuing my PhD in the GISense Lab with Prof. Yuhao Kang. \n            Here, I'm developing data-driven GeoAI approaches to understand environmental \n            processes, urban sustainability, and climate resilience. Austin has become \n            my home for exploring the frontiers of geospatial science. The city's rapid \n            growth and environmental challenges provide a living laboratory for my research.\n        "}, {"name": "Minneapolis, Minnesota", "lat": 44.9778, "lon": -93.265, "institution": "ACSP 2025 Conference", "degree": "Conference Presentation", "years": "October 2025", "story": "\n            My first ACSP conference! Presented my research on urban forests and \n            microclimate modeling in the \"Advanced Methods for Environmental Science\" session. \n            Visited Prof. Yao-Yi Chiang's lab at University of Minnesota and connected \n            with the planning community. The Mill City Museum and Minneapolis Institute \n            of Art were highlights of the visit. The city's commitment to green infrastructure \n            was inspiring.\n        "}];
+        const locations = [{"name": "Yueqing, China", "lat": 28.1167, "lon": 120.9667, "story": "\n            I was born in 1998 in Yueqing, a coastal town tucked under the jurisdiction of Wenzhou in eastern China. \n            Ringed by mountains on one side and the sea on the other, it's a place shaped by fishing traditions, \n            early industrial growth, and the rhythms of the ocean. I spent my earliest years there\u2014only until about \n            the age of five\u2014but it wasn't until much later that I understood how distinctive my hometown really was.\n            Yueqing was transforming rapidly back then, with countless privately owned lighting factories sprouting \n            up across the town. At the same time, it was constantly tested by nature. Typhoons were a regular part \n            of life, and I still remember waking up to find a foot of water covering the ground outside. My dad would \n            simply roll up his pants, start his motorcycle, and ride through the flooded streets to pick up groceries, \n            unfazed by the stormy chaos around him. Even though I left early, these memories have stayed with me. \n            Yueqing remains a place of deep personal significance\u2014my first home, and the backdrop of the experiences \n            that quietly shaped my sense of resilience, curiosity, and connection to the environments I later chose to study.\n        "}, {"name": "Hong Kong", "lat": 22.3193, "lon": 114.1694, "story": "\n            Where my academic journey began. This is where I first discovered my passion for \n            understanding human-environment interactions and the power of geospatial \n            analysis to address environmental challenges. The vibrant city and coastal \n            ecosystems provided a rich context for learning about urban environmental issues.\n        "}, {"name": "Berkeley, California", "lat": 37.8715, "lon": -122.273, "story": "\n            At UC Berkeley, I deepened my understanding of urban forests, microclimate \n            modeling, and how environmental planning can create more equitable and \n            sustainable cities. Working with Prof. Iryna Dronova opened new doors \n            to remote sensing and GeoAI research. The Bay Area's diverse landscapes \n            and progressive environmental policies provided endless research opportunities.\n        "}, {"name": "Austin, Texas", "lat": 30.2849, "lon": -97.7341, "story": "\n            Currently pursuing my PhD in the GISense Lab with Prof. Yuhao Kang. \n            Here, I'm developing data-driven GeoAI approaches to understand environmental \n            processes, urban sustainability, and climate resilience. Austin has become \n            my home for exploring the frontiers of geospatial science. The city's rapid \n            growth and environmental challenges provide a living laboratory for my research.\n        "}, {"name": "Minneapolis, Minnesota", "lat": 44.9778, "lon": -93.265, "story": "\n            My first ACSP conference! Presented my research on urban forests and \n            microclimate modeling in the \"Advanced Methods for Environmental Science\" session. \n            Visited Prof. Yao-Yi Chiang's lab at University of Minnesota and connected \n            with the planning community. The Mill City Museum and Minneapolis Institute \n            of Art were highlights of the visit. The city's commitment to green infrastructure \n            was inspiring.\n        "}];
         
-        // Create the map
-        var map = L.map('map').setView([37.0, -95.0], 4);
+        // Create the map centered on the globe
+        var map = L.map('map').setView([20.0, 0.0], 2);
         
-        // Add tile layer
-        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors © CARTO',
+        // Add satellite tile layer
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '© Esri, Maxar, Earthstar Geographics',
             maxZoom: 19
         }).addTo(map);
         
@@ -120,14 +120,10 @@
             
             // Add popup
             marker.bindPopup(`
-                <div style="width: 200px; font-family: Arial, sans-serif;">
+                <div style="width: 180px; font-family: Arial, sans-serif;">
                     <h4 style="margin: 0 0 8px 0; color: #333;">${loc.name}</h4>
-                    <p style="margin: 4px 0; font-size: 12px; color: #666;">
-                        <b>${loc.institution}</b><br>
-                        ${loc.years}
-                    </p>
                     <p style="margin: 8px 0 0 0; font-size: 11px; color: #999;">
-                        Click marker for full details →
+                        Click marker for the full story →
                     </p>
                 </div>
             `);
@@ -144,9 +140,6 @@
             sidebar.innerHTML = `
                 <div class="marker-icon">📍</div>
                 <h2>${locationData.name}</h2>
-                <h3>${locationData.institution}</h3>
-                <div class="years">${locationData.years}</div>
-                <p><strong>${locationData.degree}</strong></p>
                 <div class="story">${locationData.story}</div>
             `;
         }

@@ -18,7 +18,7 @@ Each marker represents a significant location in my journey—where I've studied
 
 **Click on markers to see full details in the sidebar panel**
 
-<iframe src="/files/journey_map.html" width="100%" height="800px" style="border:1px solid #ddd; border-radius: 8px;"></iframe>
+<iframe src="/files/journey_map.html" width="100%" height="800px" style="border:1px solid #ddd; border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
 
 ---
 
