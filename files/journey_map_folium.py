@@ -33,7 +33,7 @@ except ImportError:
         'lon': 120.9667,
         'institution': 'Birthplace',
         'degree': 'Early Childhood',
-        'years': '1998 - 2003',
+        'years': '1998 - 2004',
         'story': '''
             I was born in 1998 in Yueqing, a coastal town tucked under the jurisdiction of Wenzhou in eastern China. 
             Ringed by mountains on one side and the sea on the other, it's a place shaped by fishing traditions, 
@@ -52,6 +52,8 @@ except ImportError:
         'name': 'Hangzhou',
         'lat': 30.2741,
         'lon': 120.1551,
+        'institution': 'Childhood Home',
+        'years': '2004 - 2017',
         'story': '''
             The second meaningful place in my life is Hangzhou, the capital of Zhejiang Province and one of China’s largest and most storied cities. I spent nearly all my childhood and teenage years there—from primary school through high school—before heading off to university. Hangzhou is a city with a long memory, having once served as the capital of a major part of China, and its landscapes carry layers of history, culture, and human ingenuity.
 
