@@ -1,6 +1,6 @@
 ---
 title: 'Connecting the Dots: A Geospatial Journey Through Place and Space'
-date: 2025-12-04
+date: 2025-12-02
 permalink: /posts/2025/12/connecting-dots-geospatial-journey/
 tags:
   - visualization
