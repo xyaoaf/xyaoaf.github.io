@@ -1,8 +1,9 @@
 ---
+layout: archive
 permalink: /
 # title: "Xihan Yao, UT Austin"
 excerpt: "About me"
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
