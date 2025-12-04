@@ -107,23 +107,19 @@ def create_journey_map(locations):
     # Create the 3D globe trace
     fig = go.Figure()
     
-    # Create custom hover text with HTML formatting for story popups
+    # Create clean hover text for each location
     hover_texts = []
     for _, row in df.iterrows():
-        hover_text = f"""
-        <div style='width: 280px; padding: 16px; background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-family: Arial, sans-serif;'>
-            <h3 style='margin: 0 0 12px 0; font-size: 18px; color: #333; font-weight: bold;'>{row['name']}</h3>
-            <div style='font-size: 13px; color: #666; line-height: 1.6;'>{row['story']}</div>
-            <div style='margin-top: 12px; padding-top: 12px; border-top: 1px solid #eee; font-size: 11px; color: #999;'>Click to explore more</div>
-        </div>
-        """
+        # Clean the story text by removing extra HTML tags and whitespace
+        story_clean = row['story'].replace('<b>', '').replace('</b>', '').replace('<br>', ' ').replace('<br/>', ' ').strip()
+        hover_text = f"<b>{row['name']}</b><br><br>{story_clean}"
         hover_texts.append(hover_text)
     
     # Add markers for each location (no connecting lines)
     fig.add_trace(go.Scattergeo(
         lon=df['lon'],
         lat=df['lat'],
-        customdata=hover_texts,
+        text=hover_texts,
         mode='markers',
         name='',
         marker=dict(
@@ -132,7 +128,13 @@ def create_journey_map(locations):
             line=dict(width=2, color='white'),
             symbol='circle'
         ),
-        hovertemplate='%{customdata}<extra></extra>',
+        hovertemplate='%{text}<extra></extra>',
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=13,
+            font_family="Arial",
+            bordercolor="#ddd"
+        ),
         showlegend=False
     ))
     
