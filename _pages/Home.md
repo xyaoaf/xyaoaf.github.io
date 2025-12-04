@@ -17,22 +17,13 @@ I received my Master's degree in Environmental Planning at University of Califor
 
 ## Recent News
 
-**December 2024**  
-[Award] Starting PhD at UT Austin in Fall 2025, joining the GISense Lab 🎉
+{% for post in site.posts limit:3 %}
+**{{ post.date | date: "%B %Y" }}**  
+[{{ post.title }}]({{ post.url }}) ... [Read More]({{ post.url }})
 
-**Fall 2024**  
-[Mentorship] Mentored NASA DEVELOP Fall 2024 project on urban canopy cover & heat in San Jose
+{% endfor %}
 
-**2024**  
-[Talk] Presented at MIT Senseable City Lab and Stanford Natural Capital Symposium
-
-**2024**  
-[Paper] Manuscript on urban forests, LiDAR classification, and microclimate simulation under review at *Landscape and Urban Planning*
-
-**Fall 2023**  
-[Teaching] Instructor of record for GEOG/LDARCH C188: Geographic Information Science at UC Berkeley (200+ students)
-
-[See All News](/year-archive/)
+[See All News](/News-Posts/)
 
 ---
 
