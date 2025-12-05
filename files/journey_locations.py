@@ -174,6 +174,8 @@ JOURNEY_LOCATIONS = [
 
             Austin is still new to me, but it's full of possibility. I'm looking forward to the growth, challenges, and opportunities this chapter will bring.
         '''
+            ,
+            'photo': '../images/E4CBD7EF-8361-4088-997D-1094B15CB593_1_102_o.jpeg'
     },
     {
         'name': 'Minneapolis, Minnesota',
