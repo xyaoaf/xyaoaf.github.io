@@ -35,8 +35,8 @@ except ImportError as e:
     LOCATIONS = [
     {
         'name': 'Yueqing, Zhejiang',
-        'lat': 28.1167,
-        'lon': 120.9667,
+        'lat': 28.115304,
+        'lon': 120.953046,
         'institution': 'Birthplace',
         'degree': 'Early Childhood',
         'years': '1998 - 2004',
@@ -56,8 +56,8 @@ except ImportError as e:
     },
     {
         'name': 'Hangzhou, Zhejiang',
-        'lat': 30.2741,
-        'lon': 120.1551,
+        'lat': 30.222346,
+        'lon': 120.030019,
         'institution': 'Childhood Home',
         'years': '2004 - 2017',
         'story': '''
@@ -72,8 +72,8 @@ All of these elements shaped my understanding of the close relationship between 
     },
     {
         'name': 'Hong Kong',
-        'lat': 22.3193,
-        'lon': 114.1694,
+        'lat': 22.336668,
+        'lon': 114.263418,
         'institution': 'Hong Kong University of Science and Technology',
         'degree': 'BSc in Environmental Science',
         'years': '2015 - 2019',
@@ -86,8 +86,8 @@ All of these elements shaped my understanding of the close relationship between 
     },
     {
         'name': 'Berkeley, California',
-        'lat': 37.8715,
-        'lon': -122.2730,
+        'lat': 37.8714281,
+        'lon': -122.2550388,
         'institution': 'University of California, Berkeley',
         'degree': 'Master of Landscape Architecture (MLA)',
         'years': '2021 - 2023',
@@ -101,8 +101,8 @@ All of these elements shaped my understanding of the close relationship between 
     },
     {
         'name': 'Austin, Texas',
-        'lat': 30.2849,
-        'lon': -97.7341,
+        'lat': 30.2851932,
+        'lon': -97.7364137,
         'institution': 'The University of Texas at Austin',
         'degree': 'PhD in Geography',
         'years': '2023 - Present',
@@ -116,8 +116,8 @@ All of these elements shaped my understanding of the close relationship between 
     },
     {
         'name': 'Minneapolis, Minnesota',
-        'lat': 44.9778,
-        'lon': -93.2650,
+        'lat': 44.9737073,
+        'lon': -93.272617,
         'institution': 'ACSP 2025 Conference',
         'degree': 'Conference Presentation',
         'years': 'October 2025',

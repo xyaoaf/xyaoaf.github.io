@@ -8,8 +8,8 @@ Edit this file to add/update locations, then run journey_map_folium.py to regene
 JOURNEY_LOCATIONS = [
     {
         'name': 'Yueqing, Zhejiang',
-        'lat': 28.1167,
-        'lon': 120.9667,
+        'lat': 28.115304,
+        'lon': 120.953046,
         'story': '''
             I was born in 1998 in Yueqing, a coastal town tucked under the jurisdiction of Wenzhou in eastern China. 
             Ringed by mountains on one side and the sea on the other, it's a place shaped by fishing traditions, 
@@ -26,8 +26,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Hangzhou, Zhejiang',
-        'lat': 30.2741,
-        'lon': 120.1551,
+        'lat': 30.222346,
+        'lon': 120.030019,
         'story': '''
             The second meaningful place in my life is Hangzhou, the capital of Zhejiang Province and one of China's largest 
             and most storied cities. I spent nearly all my childhood and teenage years there—from primary school through 
@@ -51,8 +51,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Hong Kong',
-        'lat': 22.3193,
-        'lon': 114.1694,
+        'lat': 22.336668,
+        'lon': 114.263418,
         'story': '''
             The third meaningful place in my journey is Hong Kong, where I completed my undergraduate studies from 2017 to 2021. 
             Ending up there was, in many ways, a twist of fate—after the competitive and unpredictable experience of the Chinese 
@@ -77,8 +77,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Shanghai',
-        'lat': 31.2304,
-        'lon': 121.4737,
+        'lat': 31.104848,
+        'lon': 121.610225,
         'story': '''
             Shanghai played a unique—though relatively brief—role in my life in 2020. I never lived there long-term, but the city, 
             just about 200 kilometers from my home in Hangzhou, has always stood out as China's largest and most dynamic metropolis. 
@@ -105,8 +105,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Beijing',
-        'lat': 39.9042,
-        'lon': 116.4074,
+        'lat': 39.909395,
+        'lon':  116.465402,
         'story': '''
             Beijing became another meaningful stop in my journey during the summer of 2020, right after my internship in Shanghai. 
             I spent about three months there, working at the Beijing Smart and Green Transport Research Institute—a small but 
@@ -131,8 +131,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Seattle, Washington',
-        'lat': 47.6062,
-        'lon': -122.3321,
+        'lat': 47.655442, 
+        'lon': -122.307149,
         'story': '''
             Seattle holds a special place in my life because of two very different—but equally meaningful—chapters I experienced there.
 
@@ -147,8 +147,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Berkeley, California',
-        'lat': 37.8715,
-        'lon': -122.2730,
+        'lat': 37.8703622,
+        'lon': -122.2551394,
         'story': '''
             Berkeley, California, is unquestionably one of the most influential places in my life. From 2021 to 2023, I completed my Master's degree in Environmental Planning at UC Berkeley—an experience that reshaped not only my academic trajectory but also my understanding of myself. On the very first day of class, I realized I was the only Chinese or foreign student in my cohort. That moment carried far more weight than I expected; it made me acutely aware of how different cultural backgrounds and worldviews intersect in an academic environment like Berkeley.
 
@@ -165,8 +165,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Austin, Texas',
-        'lat': 30.2849,
-        'lon': -97.7341,
+        'lat': 30.2844774,
+        'lon': -97.737072,
         'story': '''
             Austin, Texas marks the newest chapter of my journey as I begin my PhD in Geography. It's a fresh start in a young, energetic city, and I feel fortunate to have joined a research group that fits me so well. I didn't choose my labmates, but working with them has been one of the best surprises—they're supportive, talented, and make the start of my PhD feel exciting rather than overwhelming.
 
@@ -177,16 +177,16 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Minneapolis, Minnesota',
-        'lat': 44.9778,
-        'lon': -93.2650,
+        'lat': 44.9737073,
+        'lon': -93.272617,
         'story': '''
             I visited Minneapolis in October 2025 for the ACSP conference—my first time attending a planning conference. It brought together people from technology, science, and social science, all discussing planning from different angles. The experience gave me fresh insights and new connections, and I wrote a short post about my time there to look back on. It was brief, but it added another valuable perspective to my path.
         '''
     },
     {
         'name': 'Portland, Oregon',
-        'lat': 45.5152,
-        'lon': -122.6784,
+        'lat': 45.545435,
+        'lon': -122.651532,
         'story': '''
             Portland holds a special place in my heart as the city where I conducted my Master's thesis research on urban forest equity and microclimate disparities. I visited Portland several times during my research, and I was privileged to collaborate with the Bureau of Environmental Services at the City of Portland. They provided me with invaluable resources—especially the 2019 high-density LiDAR dataset—that made my thesis research possible.
 
@@ -197,8 +197,8 @@ JOURNEY_LOCATIONS = [
     },
     {
         'name': 'Pasadena, California',
-        'lat': 34.1478,
-        'lon': -118.1445,
+        'lat': 34.1436727,
+        'lon': -118.1451019,
         'story': '''
             Pasadena, California marks a pivotal milestone in my research career. In June 2023, I attended the IEEE IGARSS conference—the first major academic conference of my career and the first time I publicly presented my Master's thesis research on a large international stage.
 
