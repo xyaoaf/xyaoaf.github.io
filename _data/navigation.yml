@@ -16,33 +16,7 @@ main:
     url: /teaching/
     
   - title: "Connecting the Dots"
-    url: /journey/
-    
+    url: /connecting-the-dots/
+
   - title: "CV"
     url: /files/251201_XihanYao_Academic_CV.pdf
-
-# # main links links
-# main:
-#   - title: "Home"
-#     url: /Home/
-
-#   - title: "Talks"
-#     url: /talks/    
-
-#   - title: "Teaching"
-#     url: /teaching/    
-    
-#   - title: "Portfolio"
-#     url: /portfolio/
-        
-#   - title: "Blog Posts"
-#     url: /year-archive/
-    
-#   - title: "CV"
-#     url: /cv/
-    
-#   - title: "Connecting the dots"
-#     url: /connecting-the-dots/
-    
-#   - title: "Guide"
-#     url: /markdown/

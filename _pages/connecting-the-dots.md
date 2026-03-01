@@ -69,7 +69,6 @@ This interactive knowledge web serves as both:
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 // Check if Three.js loaded
 if (typeof THREE === 'undefined') {
@@ -192,7 +191,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 THREE.OrbitControls.prototype = Object.create( THREE.EventDispatcher.prototype );
 THREE.OrbitControls.prototype.constructor = THREE.OrbitControls;
 
-<script>
 // Knowledge Web 3D Visualization
 let scene, camera, renderer, controls;
 let papers = [];

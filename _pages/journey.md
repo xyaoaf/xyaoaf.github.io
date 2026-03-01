@@ -49,5 +49,5 @@ I plan to expand this map with:
 ---
 
 **Map Created:** December 2025  
-**Tools:** Python, Plotly, Interactive Geospatial Visualization  
+**Tools:** Python, Folium, Interactive Geospatial Visualization  
 **Concept:** Place-based storytelling in geographic research
