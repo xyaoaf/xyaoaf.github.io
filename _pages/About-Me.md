@@ -4,11 +4,11 @@ title: "About Me"
 permalink: /self-intro/
 author_profile: true
 ---
-I am a PhD student at the Department of Geography and the Environment at The University of Texas at Austin. I work in the [GISense Lab](https://sites.utexas.edu/gisense/) and I am advised by Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en). My research develops data-driven and GeoAI-powered approaches to understand how the built and natural environment evolve and interact. I integrate multimodal geospatial data, including satellite and aerial imagery, LiDAR, street-level imagery, and human mobility datasets, with computational modeling to analyze environmental processes, assess ecosystem services, and uncover the dynamics of human–environment interactions.
+I am a PhD student in the Department of Geography and the Environment at The University of Texas at Austin. I work in the [GISense Lab](https://sites.utexas.edu/gisense/) under the supervision of Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en).
 
-My work aims to build scalable, interpretable tools that support climate resilience, urban sustainability, and equitable environmental planning across heterogeneous and rapidly changing landscapes.
+My research brings together GeoAI, remote sensing, spatial analysis, and environmental modeling to examine interactions between people and their built and natural environments. I am particularly interested in combining satellite and aerial imagery, LiDAR, street-level imagery, and human mobility data to study environmental change, urban ecosystems, and climate-related risks.
 
-I received my Master's degree in Environmental Planning at University of California, Berkeley, supervised by Professor [Iryna Dronova](https://scholar.google.com/citations?user=qDUBrUMAAAAJ&hl=en&inst=4034227699702668181). I received my BSc degree from The Hong Kong University of Science and Technology.
+Before joining UT Austin, I completed a master’s degree in Environmental Planning at the University of California, Berkeley, where I worked with Professor [Iryna Dronova](https://scholar.google.com/citations?user=qDUBrUMAAAAJ&hl=en&inst=4034227699702668181). I received my bachelor’s degree from the Hong Kong University of Science and Technology.
 
 ---
 
@@ -28,15 +28,15 @@ Capstone Project (with Publication): *Light pollution impact assessment in Hong 
 
 ---
 
-## Research Statement
+## Research Areas
 
-My research centers on leveraging advanced geospatial technologies and computational methods to understand the complex dynamics of human-environment interactions and support climate resilience. I integrate cutting-edge GeoAI methods with multimodal geospatial data to address pressing environmental challenges in urban and natural systems. My work is driven by three core research themes:
+My research examines environmental change and human–environment interactions through three connected areas:
 
-- **(1) GeoAI & Computational Methods for Environmental Monitoring**: Developing deep learning models and computational frameworks to extract environmental intelligence from high-resolution remote sensing data, including satellite imagery, LiDAR, and street-level imagery. My work focuses on automated feature extraction, land cover classification, and spatial pattern recognition to support scalable environmental monitoring and assessment.
+**GeoAI and environmental monitoring.** I develop computational methods for extracting environmental information from satellite and aerial imagery, LiDAR, and street-level imagery. This work includes land-cover mapping, object-based analysis, and spatial representation learning.
 
-- **(2) Human-Environment Interactions & Urban Sustainability**: Investigating how the built and natural environment shape and are shaped by human activities, with emphasis on urban microclimate modeling, ecosystem services assessment, and environmental justice. I explore the relationships between urban form, vegetation characteristics, and human well-being to inform evidence-based planning and design decisions.
+**Urban ecosystems and climate resilience.** I study how vegetation, urban form, and environmental conditions influence microclimates and ecosystem services. I am particularly interested in how these benefits and risks vary among neighborhoods.
 
-- **(3) Multimodal Data Integration & Spatial Analysis**: Integrating diverse geospatial data sources—including multispectral imagery, LiDAR point clouds, street view imagery, and human mobility data—to develop comprehensive understanding of environmental processes. My research advances methods for fusing heterogeneous data streams to capture the multidimensional nature of environmental systems and support holistic decision-making.
+**Multimodal and interpretable geospatial modeling.** I combine remote-sensing observations, environmental data, and human-centered datasets to study processes that cannot be represented through a single source. My goal is to develop models whose results can be interpreted in relation to physical processes and geographic context.
 
 ---
 

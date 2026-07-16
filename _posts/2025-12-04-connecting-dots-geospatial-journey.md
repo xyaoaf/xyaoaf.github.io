@@ -9,11 +9,11 @@ tags:
   - personal-journey
 ---
 
-As part of my final project for the **Issues in Geography** class, I created an interactive globe visualization that traces my personal and academic journey across different places. This project, titled *"Connecting the Dots,"* explores the relationship between place and space through my own experiences.
+As part of my final project for the **Issues in Geography** class, I created an interactive map that traces my personal and academic journey across different places. This project, titled *"Connecting the Dots,"* explores the relationship between place and space through my own experiences.
 
 ## Project Concept
 
-The interactive map allows viewers to explore the places that have shaped my academic and personal growth. Each location on the globe is marked with a clickable point that reveals a story about my connection to that place—where I've studied, lived, worked, and grown.
+The interactive map allows viewers to explore the places that have shaped my academic and personal growth. Each location is marked with a clickable point that reveals a story about where I have studied, lived, and worked.
 
 This visualization represents more than just geographic coordinates; it's a narrative map of experiences, relationships, and the places that have influenced my perspective as a geographer and researcher.
 
@@ -23,7 +23,7 @@ You can explore the full interactive map on the [**Connecting the Dots** page](/
 
 ## Technical Approach
 
-The map was built using Python with **Plotly** for interactive 3D globe visualization. Each marker represents a significant place in my journey, with popup stories that describe:
+The map was built with **Python, Folium, and Leaflet**. Each marker represents a significant place in my journey, with stories that describe:
 - Academic experiences and institutions
 - Research projects and fieldwork
 - Cultural experiences and personal growth
@@ -41,10 +41,10 @@ The process of creating this map made me reflect on:
 
 ## Explore the Map
 
-Head over to the [**Connecting the Dots** section](/journey/) to interact with the globe and explore my geospatial journey!
+Visit the [**Geospatial Journey** page](/journey/) to explore the map.
 
 ---
 
 *Course: Issues in Geography (Fall 2025)*  
 *Project Type: Interactive Visualization*  
-*Tools: Python, Plotly, HTML/JavaScript*
+*Tools: Python, Folium, Leaflet, HTML/JavaScript*

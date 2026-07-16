@@ -8,46 +8,28 @@ author_profile: true
 
 ## Connecting the Dots: A Geospatial Journey Through Place and Space
 
-As a geographer, I believe that understanding place and space is fundamental to understanding our world. This interactive map traces the places that have shaped my academic journey and personal growth.
+This interactive map traces selected places connected to my education, research, and professional experience. Each marker provides a short account of how a location contributed to the development of my academic interests.
 
-Each marker represents a significant location in my journey—where I've studied, lived, conducted research, and grown as a scholar and person. Click on any marker to explore my story and connection to that place.
+I created the project for an Issues in Geography course in Fall 2025. It uses place-based biography to examine how academic interests develop through relationships among location, experience, and environmental context.
+
+Locations are shown at the city or public-institution level. Residential and other private location information is intentionally excluded.
 
 ---
 
 ## Interactive Journey Map
 
-**Click on markers to see full details in the sidebar panel**
+Select a marker to read its accompanying note in the sidebar.
 
 <iframe src="/files/journey_map.html" width="100%" height="800px" style="border:1px solid #ddd; border-radius: 8px;" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-## About This Project
+## Project Status
 
-This visualization was created as part of my **Issues in Geography** final project. It explores the concept that every point on a map holds a story—not just coordinates, but relationships, experiences, and transformations.
-
-The map reminds me that:
-- Geography is deeply personal
-- Places shape who we become
-- Our academic journeys are rooted in specific spaces
-- Mobility and access to diverse geographic contexts are privileges
-- Place-based knowledge illuminates broader geographic phenomena
+The project is still being developed. Future updates may add selected fieldwork, conference, and research locations when they are relevant to the academic narrative.
 
 ---
 
-### Future Additions
-
-I plan to expand this map with:
-- Research fieldwork locations
-- Conference and presentation venues
-- Collaborative networks across institutions
-- Environmental projects and case studies
-- Cultural and personal experiences that shaped my perspective
-
-*Feel free to reach out if you'd like to know more about any of these places or my experiences there!*
-
----
-
-**Map Created:** December 2025  
-**Tools:** Python, Folium, Interactive Geospatial Visualization  
-**Concept:** Place-based storytelling in geographic research
+**Created:** December 2025  
+**Tools:** Python, Folium, Leaflet  
+**Concept:** Place-based academic biography

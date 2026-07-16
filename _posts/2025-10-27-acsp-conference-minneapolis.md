@@ -1,5 +1,5 @@
 ---
-title: '[Conference] ACSP 2025 Conference in Minneapolis'
+title: 'Presenting at the 2025 ACSP Annual Conference'
 date: 2025-10-27
 permalink: /posts/2025/10/acsp-conference-minneapolis/
 tags:
@@ -9,41 +9,29 @@ tags:
   - microclimate
 ---
 
-I had the wonderful opportunity to attend and present at the **Association of Collegiate Schools of Planning (ACSP) 2025 Annual Conference** in Minneapolis, Minnesota, from October 25-27, 2025. This was my first ACSP conference, and it was an incredibly enriching experience!
+I attended the **2025 Association of Collegiate Schools of Planning (ACSP) Annual Conference** in Minneapolis, Minnesota, from October 25–27. This was my first ACSP conference.
 
 ## Conference Presentation
 
-I presented my research in the session **"Advanced Methods for Environmental Science"** (Session 13.24). My presentation focused on my publication from earlier this year on **community-scale microclimate simulation and urban forest analysis**. 
+I presented in the session **"Advanced Methods for Environmental Science"** (Session 13.24). My presentation was based on our recently published research on community-scale microclimate simulation and urban forest analysis.
 
-**Presentation Title:** *Human-centered Geospatial AI: Facilitating Place Perceptions and Map Creativity*
+**Presentation title:** *Community-scale microclimate simulation using Airborne Laser Scanning and object-based urban tree classification*
 
-While I've presented this study several times in the past, this was the first time presenting after the official publication, and it will likely be the last major conference presentation for this particular work. The session sparked engaging discussions about integrating remote sensing, LiDAR data, and GeoAI approaches for urban environmental planning.
+The presentation discussed how airborne LiDAR, object-based tree classification, and environmental modeling can be combined to evaluate urban vegetation and simulate neighborhood microclimates. It was my first presentation of this work following its journal publication.
 
 ## Lab Visit at University of Minnesota
 
-During my visit to Minneapolis, I also had the privilege of visiting the lab of **Professor Yao-Yi Chiang** at the University of Minnesota. My advisor, Professor Yuhao Kang, gave a guest lecture titled *"Human-centered Geospatial AI: Facilitating Place Perceptions and Map Creativity"* to their research group. Special thanks to Leeje Jang, a PhD student in Prof. Chiang's lab, for organizing the visit and hosting us at Kenneth H. Keller Hall.
+During the trip, I visited **Professor Yao-Yi Chiang’s lab** at the University of Minnesota. My advisor, Professor Yuhao Kang, gave a guest lecture titled *"Human-centered Geospatial AI: Facilitating Place Perceptions and Map Creativity"* to the research group.
 
-The lab focuses on machine learning algorithms for spatial and GIS applications, and it was fascinating to learn about their ongoing research and exchange ideas about the future of GeoAI in geographic and planning contexts.
+The visit provided an opportunity to learn about the group’s work on machine learning for spatial and GIS applications and to discuss current directions in GeoAI.
 
 ## Networking & Community
 
-As my first ACSP conference, I had the opportunity to meet fellow students and professors working in planning and geography. I connected with scholars from various institutions, including several from UC Berkeley—where I completed my master's degree—which made for some wonderful reunions and conversations.
-
-I also volunteered at the conference, which gave me a behind-the-scenes perspective on how academic conferences are organized and allowed me to contribute to the community.
+I met researchers working across planning and geography, including colleagues from UC Berkeley, where I completed my master’s degree. I also volunteered at the conference and learned more about its organization.
 
 ## Exploring Minneapolis
 
-Beyond the conference, I explored some of Minneapolis's cultural attractions, including:
-- **Minneapolis Institute of Art (Mia)** - An impressive collection with beautiful galleries
-- **Mill City Museum** - Located in a historic flour mill with stunning architecture along the Mississippi River
-
-The weather was crisp and cool, perfect for walking around the city. Minneapolis has a unique blend of historic industrial architecture and modern urban design that was fascinating to experience.
-
-## Reflections
-
-Attending ACSP 2025 was a milestone in my PhD journey. It was inspiring to see the breadth of research in planning, from environmental justice to housing policy to sustainable urban design. I'm grateful for the opportunity to share my research, learn from the planning community, and experience Minneapolis for the first time.
-
-Looking forward to future conferences and continued collaboration with this vibrant academic community!
+Outside the conference, I visited the Minneapolis Institute of Art and the Mill City Museum. The latter, housed in a former flour mill beside the Mississippi River, offered a useful perspective on the city’s industrial and urban history.
 
 ---
 

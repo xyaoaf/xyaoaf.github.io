@@ -7,51 +7,15 @@ author_profile: true
 
 {% include base_path %}
 
-# Mini-Geo Journey: Theories of Space and Place
+# Space, Place, and GeoAI: An Exploratory Knowledge Map
 
-Welcome to my **Mini-Geo Journey** - an interactive exploration of how theories of space and place shape my intellectual development and research trajectory toward understanding built-environment-personality relationships.
+This course-based project explores connections among theories of space and place, environmental psychology, and computational approaches in geography. The network organizes selected readings and research concepts that informed my early thinking about built environments, human perception, and GeoAI.
 
-This visualization represents my intellectual roadmap, demonstrating how foundational spatial theories connect to contemporary research in GeoAI and human-environment interactions. Each node in the web below represents a key reading, and the connections show how ideas flow and build upon one another in my scholarly journey.
-> Related post: [Integrating Elements into Geographic Science](/posts/2025/10/integrating-elements-into-geographic-science/)
+The project is exploratory and remains under development. Connections in the visualization represent my interpretation of relationships among the works rather than a formal bibliometric analysis.
 
+[View the accompanying Jupyter notebook](/connecting-the-dots.ipynb). The notebook contains the bibliography, Python code, and additional exploratory analyses.
 
-## 📊 Interactive Analysis Options
-
-### Option 1: Jupyter Notebook Format 
-**🎯 Recommended for Deep Exploration**
-
-<div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #4CAF50;">
-  <p><strong>🔬 Interactive Data Analysis:</strong> Explore the complete bibliography dataset with Python code, network visualizations, and interactive widgets.</p>
-  
-  <p><strong>Key Features:</strong></p>
-  <ul>
-    <li>📈 Interactive network graphs with clickable nodes</li>
-    <li>🔍 Filterable paper explorer by domain, year, and keywords</li>
-    <li>📊 Timeline analysis of reading progression</li>
-    <li>🎛️ Dynamic visualizations with hover details</li>
-    <li>💻 Full Python code for reproducible analysis</li>
-  </ul>
-  
-  <p style="margin-top: 15px;">
-    <a href="connecting-the-dots.ipynb" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-      🚀 Launch Interactive Notebook
-    </a>
-  </p>
-  
-  <p style="font-size: 14px; color: #666; margin-top: 10px;">
-    <em>Best viewed in Jupyter Lab or VSCode. Click nodes to see paper properties, use widgets to filter by domain/year.</em>
-  </p>
-</div>
-
-### Option 2: 3D Web Visualization 
-**🌐 Browser-Based Exploration**
-
-## About This Journey
-
-This interactive knowledge web serves as both:
-- **Academic Assignment**: First Mini-Geo Journey focusing on space/place theories for my graduate coursework
-- **Research Foundation**: Theoretical groundwork for my built-environment-personality study
-- **Intellectual Map**: Visual demonstration of how I engage with spatial theory and connect it to methodological approaches
+Related reflection: [Water, Fire, and a Geographic Approach to GeoAI](/posts/2025/10/integrating-elements-into-geographic-science/).
 
 ### Interactive Knowledge Web
 
@@ -59,7 +23,6 @@ This interactive knowledge web serves as both:
   <div id="knowledge-web" style="width: 100%; height: 100%;"></div>
   <div id="web-controls" style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 5px; font-size: 12px;">
     <button onclick="resetView()" style="margin: 2px; padding: 5px;">Reset View</button><br>
-    <button onclick="addRandomPaper()" style="margin: 2px; padding: 5px;">Add Paper</button><br>
     <span style="color: #666;">Drag to rotate • Scroll to zoom</span>
   </div>
   <div id="paper-info" style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 5px; font-size: 12px; max-width: 300px; display: none;">
@@ -197,8 +160,8 @@ let papers = [];
 let connections = [];
 let raycaster, mouse;
 
-// Sample papers data - representing my space/place theory journey
-const samplePapers = [
+// Readings and research concepts represented in the knowledge map
+const knowledgeItems = [
   {
     id: 0,
     title: "Topophilia: A Study of Environmental Perceptions, Attitudes, and Values",
@@ -361,7 +324,7 @@ function initKnowledgeWeb() {
 }
 
 function createPapers() {
-  samplePapers.forEach(paperData => {
+  knowledgeItems.forEach(paperData => {
     const paper = createPaperObject(paperData);
     papers.push({ object: paper, data: paperData });
     scene.add(paper);
@@ -407,9 +370,9 @@ function createPaperObject(paperData) {
 }
 
 function createConnections() {
-  samplePapers.forEach(paper => {
+  knowledgeItems.forEach(paper => {
     paper.connections.forEach(connectedId => {
-      const connectedPaper = samplePapers.find(p => p.id === connectedId);
+      const connectedPaper = knowledgeItems.find(p => p.id === connectedId);
       if (connectedPaper && paper.id < connectedId) { // Avoid duplicate connections
         createConnection(paper.position, connectedPaper.position);
       }
@@ -498,11 +461,11 @@ function showPaperInfo(paperData) {
   }
   
   if (paperData.isGoal) {
-    detailsHTML += `<br><br><span style="color: #E91E63;">🎯 Research Goal</span>`;
+    detailsHTML += `<br><br><span style="color: #E91E63;">Research Goal</span>`;
   }
   
   if (paperData.file) {
-    detailsHTML += `<br><br><a href="${paperData.file}" target="_blank" style="color: #007cba;">📄 View file</a>`;
+    detailsHTML += `<br><br><a href="${paperData.file}" target="_blank" style="color: #007cba;">View file</a>`;
   }
   
   document.getElementById('paper-details').innerHTML = detailsHTML;
@@ -516,26 +479,6 @@ function hidePaperInfo() {
 function resetView() {
   camera.position.set(5, 5, 5);
   controls.reset();
-}
-
-function addRandomPaper() {
-  const newPaper = {
-    id: Date.now(),
-    title: "New Research Paper",
-    type: Math.random() > 0.5 ? 'paper' : 'book',
-    field: "New Field",
-    position: {
-      x: (Math.random() - 0.5) * 8,
-      y: (Math.random() - 0.5) * 8,
-      z: (Math.random() - 0.5) * 8
-    },
-    color: Math.random() * 0xffffff,
-    connections: []
-  };
-  
-  const paperObject = createPaperObject(newPaper);
-  papers.push({ object: paperObject, data: newPaper });
-  scene.add(paperObject);
 }
 
 function animate() {
@@ -561,7 +504,7 @@ function onWindowResize() {
 document.addEventListener('DOMContentLoaded', function() {
   // Add a loading message first
   const container = document.getElementById('knowledge-web');
-  container.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 16px;"><div>Loading 3D Knowledge Web... ⚡</div></div>';
+  container.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 16px;"><div>Loading knowledge map...</div></div>';
   
   // Try to initialize after a short delay
   setTimeout(function() {
@@ -633,7 +576,7 @@ function createFallbackVisualization() {
         
         <div style="position: absolute; left: 35%; bottom: 25%; background: #E91E63; color: white; padding: 8px; border-radius: 5px; font-size: 10px; max-width: 110px; text-align: center;">
           <strong>My Research Goal</strong><br>
-          <small>🎯 Built-Env-Personality</small>
+          <small>Built-Environment and Personality</small>
         </div>
         
         <!-- Connection lines -->
@@ -650,13 +593,12 @@ function createFallbackVisualization() {
       </div>
       
       <p style="color: #666; margin-top: 20px; text-align: center; max-width: 450px; font-size: 14px;">
-        <strong>Mini-Geo Journey 1:</strong> This network maps my engagement with space/place theories, 
-        showing the intellectual progression from phenomenological foundations to contemporary GeoAI applications.
+        This exploratory network connects selected theories of space and place with contemporary GeoAI applications.
       </p>
       
       <div style="margin-top: 15px;">
         <button onclick="location.reload()" style="background: #007cba; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
-          🔄 Try 3D Interactive Version
+          Retry 3D version
         </button>
       </div>
     </div>
@@ -692,15 +634,6 @@ This knowledge web demonstrates my theoretical journey from classical phenomenol
 - Using GeoAI for large-scale environmental psychology research
 - Developing new approaches to built-environment-personality studies
 
-### Assignment Reflection
-
-This Mini-Geo Journey accomplishes several academic goals:
-
-- **Theoretical Engagement**: Demonstrates deep reading in space/place literature
-- **Intellectual Connections**: Shows how different theoretical traditions inform my research
-- **Methodological Bridge**: Connects classical theory to contemporary digital methods
-- **Research Roadmap**: Illustrates progression toward my built-environment-personality study
-
 ### Interactive Features
 
 - **Drag and Rotate**: Explore the 3D knowledge space
@@ -708,13 +641,11 @@ This Mini-Geo Journey accomplishes several academic goals:
 - **Connection Mapping**: See how ideas flow between different authors and approaches
 - **Theoretical Clustering**: Notice how different schools of thought group together
 
-## Papers I Have Read
+## Selected Reading List
 
-Below are the comprehensive bibliographies of papers I have read across three key areas of my research. These readings form the foundation of my theoretical understanding and inform my approach to built-environment-personality research.
+The references below are selected readings associated with the project. They are grouped by topic rather than presented as a comprehensive bibliography.
 
-### 📊 GeoAI & Spatial Intelligence
-
-<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #007cba;">
+### GeoAI and Spatial Intelligence
 
 **Brown, C. F., Kazmierski, M. R., Pasquarella, V. J., et al.** (2025). *AlphaEarth Foundations: An embedding field model for accurate and efficient global mapping from sparse label data* (arXiv:2507.22291). arXiv. [https://doi.org/10.48550/arXiv.2507.22291](https://doi.org/10.48550/arXiv.2507.22291)
 
@@ -728,11 +659,7 @@ Below are the comprehensive bibliographies of papers I have read across three ke
 
 **Jean, N., Wang, S., Samar, A., Azzari, G., Lobell, D., & Ermon, S.** (2019). Tile2Vec: Unsupervised Representation Learning for Spatially Distributed Data. *Proceedings of the AAAI Conference on Artificial Intelligence*, *33*(01), 3967–3974. [https://doi.org/10.1609/aaai.v33i01.33013967](https://doi.org/10.1609/aaai.v33i01.33013967)
 
-</div>
-
-### 🧠 Geography & Personality Research
-
-<div style="background: #f1f8e9; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #4CAF50;">
+### Geography and Personality Research
 
 **Biljecki, F., & Ito, K.** (2021). Street view imagery in urban analytics and GIS: A review. *Landscape and Urban Planning*, *215*, 104217. [https://doi.org/10.1016/j.landurbplan.2021.104217](https://doi.org/10.1016/j.landurbplan.2021.104217)
 
@@ -758,11 +685,7 @@ Below are the comprehensive bibliographies of papers I have read across three ke
 
 **Wei, W., Lu, J. G., Galinsky, A. D., et al.** (2017). Regional ambient temperature is associated with human personality. *Nature Human Behaviour*, *1*(12), 890–895. [https://doi.org/10.1038/s41562-017-0240-0](https://doi.org/10.1038/s41562-017-0240-0)
 
-</div>
-
-### 🏛️ Critical Issues in Geography
-
-<div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #FF9800;">
+### Critical Issues in Geography
 
 **Cox, K.** (2021). Human and physical geography and the question of space. *Belgeo. Revue Belge de Géographie*, *4*. [https://doi.org/10.4000/belgeo.52790](https://doi.org/10.4000/belgeo.52790)
 
@@ -776,21 +699,6 @@ Below are the comprehensive bibliographies of papers I have read across three ke
 
 **Mansfield, B., Lave, R., McSweeney, K., et al.** (2019). It's time to recognize how men's careers benefit from sexually harassing women in academia. *Human Geography*, *12*(1), 82–87. [https://doi.org/10.1177/194277861901200110](https://doi.org/10.1177/194277861901200110)
 
-</div>
+## Project Context
 
-### 📚 Reading Strategy & Research Impact
-
-These comprehensive reading lists demonstrate my systematic approach to literature review across multiple domains:
-
-- **🔬 Technical Foundation**: GeoAI papers provide methodological grounding for computational spatial analysis
-- **🧩 Theoretical Integration**: Geography-personality research bridges spatial theory with psychological frameworks  
-- **⚖️ Critical Perspective**: Issues in geography ensure awareness of disciplinary challenges and social justice concerns
-- **🔗 Interdisciplinary Synthesis**: Combined readings inform my built-environment-personality research approach
-
-*The papers listed above represent active engagement with current literature in my field, informing both my Mini-Geo Journey theoretical development and my ongoing research methodology.*
-
----
-
-*This visualization serves as my first Mini-Geo Journey, demonstrating how theories of space and place inform my research trajectory in environmental psychology and GeoAI. The interactive format allows viewers to explore the connections between foundational readings and contemporary methodological approaches.*
-
-**Assignment Context**: First of three Mini-Geo Journeys for graduate coursework, focusing on space/place theory engagement and research foundation building.
+This was the first of three short course projects examining how geographic theory can inform my developing research questions. The visualization is a record of that stage of thinking, not a completed conceptual framework or systematic literature review.

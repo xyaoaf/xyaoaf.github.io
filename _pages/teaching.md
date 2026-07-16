@@ -5,7 +5,7 @@ permalink: /teaching/
 author_profile: true
 ---
 
-I am passionate about teaching and mentoring the next generation of geospatial scientists and environmental planners. My teaching philosophy emphasizes hands-on learning, real-world applications, and fostering critical thinking skills that empower students to tackle complex environmental challenges.
+My teaching focuses on helping students connect geospatial concepts with applied environmental and planning questions. I have taught GIS and remote sensing through lectures, laboratory instruction, project-based learning, and individual mentoring.
 
 ---
 
@@ -14,41 +14,30 @@ I am passionate about teaching and mentoring the next generation of geospatial s
 ### GEOG/LDARCH C188: Geographic Information Science
 **University of California, Berkeley** | Fall 2023
 
-As the instructor of record, I had the privilege of leading UC Berkeley's largest GIS course, serving over 200 students across multiple disciplines. This was one of the most rewarding and challenging experiences of my academic career, requiring careful course design, team coordination, and dedication to student success.
+In Fall 2023, I served as the instructor of record for GEOG/LDARCH C188, an interdisciplinary GIS course enrolling more than 200 students. I designed and delivered lectures, coordinated the instructional team, developed assignments and assessments, and supported student projects across geography, landscape architecture, environmental science, and urban planning.
 
-**Course Overview:**
-- **Enrollment**: 200+ students from Geography, Landscape Architecture, Environmental Science, Urban Planning, and related fields
-- **Format**: Lectures, hands-on labs, and applied group projects
-- **Focus**: Foundational and advanced GIS concepts, spatial analysis, remote sensing integration, and real-world applications
+**Course responsibilities:**
+- Taught GIS concepts, spatial data analysis, and geospatial technologies through weekly lectures
+- Coordinated Graduate Student Instructors and laboratory sections
+- Developed course materials, assignments, and assessments
+- Supported students through office hours, discussion forums, and individual mentoring
+- Designed group projects applying GIS methods to environmental and planning questions
 
-**Key Responsibilities:**
-- Designed and delivered weekly lectures on GIS theory, spatial data analysis, and geospatial technologies
-- Supervised a team of Graduate Student Instructors (GSIs) to ensure consistent and high-quality lab instruction
-- Developed course materials, assignments, and assessments that balanced theoretical foundations with practical skills
-- Coordinated with 200+ students through office hours, discussion forums, and one-on-one mentoring
-- Created final group projects that challenged students to apply GIS methods to real-world environmental and urban planning problems
-
-**Teaching Highlights:**
-- Successfully managed one of Berkeley's largest courses while maintaining high student engagement and learning outcomes
-- Integrated cutting-edge topics including remote sensing, spatial data science, and emerging GIS technologies
-- Showcased exceptional student projects through curated galleries:
-  - [StoryMap Collection: Applied Term Projects (StoryMaps)](https://storymaps.arcgis.com/collections/1d41e52a33774245a24ad1287fe21086) - Interactive web maps demonstrating diverse GIS applications
-  - [StoryMap Collection: Applied Term Projects (Posters)](https://storymaps.arcgis.com/collections/e378a6792d16476ba9016dc03bb74a0f) - Professional posters showcasing advanced spatial analysis
+**Selected student work:**
+- [Applied Term Projects: StoryMaps](https://storymaps.arcgis.com/collections/1d41e52a33774245a24ad1287fe21086)
+- [Applied Term Projects: Posters](https://storymaps.arcgis.com/collections/e378a6792d16476ba9016dc03bb74a0f)
 
 <img src="/images/teaching_c188_gallery1.jpg" alt="UC Berkeley C188 Student Projects Gallery 1" width="500">
 
-*Fall 2023 Applied Term Projects Gallery 1: Student StoryMaps showcasing diverse GIS applications*
+*Selected StoryMap projects from Fall 2023*
 
 <img src="/images/teaching_c188_gallery2.jpg" alt="UC Berkeley C188 Student Projects Gallery 2" width="500">
 
-*Fall 2023 Applied Term Projects Gallery 2: Final posters demonstrating advanced spatial analysis*
-
-**Impact:**
-This teaching experience reinforced my commitment to education and my ability to communicate complex geospatial concepts to diverse audiences. Managing a course of this scale taught me invaluable lessons about leadership, curriculum design, and the importance of making GIS accessible and relevant to students from all backgrounds.
+*Selected final project posters from Fall 2023*
 
 <img src="/images/teaching_presentation.jpg" alt="Teaching GIS at UC Berkeley" width="500">
 
-*Presenting during a lecture*
+*Teaching GEOG/LDARCH C188 at UC Berkeley*
 
 ---
 

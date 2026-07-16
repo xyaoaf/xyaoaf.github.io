@@ -16,7 +16,7 @@ Publications are numbered in reverse chronological order (most recent = highest 
 When you publish new papers:
 
 1. **Create new publication file**: Copy the template format from existing files
-2. **Update numbering**: New paper gets the next number (currently would be [6])
+2. **Update numbering**: New paper gets the next number (currently [6]); retired entries do not cause later papers to be renumbered
 3. **Update this documentation**: Add the new paper to the list above
 4. **Follow APA format**: Maintain consistent citation style
 5. **Include all required fields**: title, venue, date, citation, excerpt

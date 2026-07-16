@@ -6,7 +6,7 @@ This script creates an interactive map where clicking markers updates a sidebar
 with detailed information about each location.
 
 Requirements:
-    pip install folium pandas
+    pip install folium
 
 Usage:
     1. Edit the LOCATIONS list below with your places and stories
@@ -17,7 +17,6 @@ Usage:
 
 import folium
 from folium import IFrame
-import pandas as pd
 import json
 import sys
 import os
@@ -75,8 +74,8 @@ All of these elements shaped my understanding of the close relationship between 
         'lat': 22.336668,
         'lon': 114.263418,
         'institution': 'Hong Kong University of Science and Technology',
-        'degree': 'BSc in Environmental Science',
-        'years': '2015 - 2019',
+        'degree': 'BSc in Environmental Management and Technology',
+        'years': '2017 - 2021',
         'story': '''
             Where my journey began. This is where I first discovered my passion for 
             understanding human-environment interactions and the power of geospatial 
@@ -105,7 +104,7 @@ All of these elements shaped my understanding of the close relationship between 
         'lon': -97.7364137,
         'institution': 'The University of Texas at Austin',
         'degree': 'PhD in Geography',
-        'years': '2023 - Present',
+        'years': '2025 - Present',
         'story': '''
             Currently pursuing my PhD in the GISense Lab with Prof. Yuhao Kang. 
             Here, I'm developing data-driven GeoAI approaches to understand environmental 
@@ -308,7 +307,7 @@ def save_map_with_sidebar(map_obj, locations, filename='journey_map.html'):
         // Location data
         const locations = {locations_json};
         
-        // Create the map centered on the globe
+        // Create the map centered on the initial view
         var map = L.map('map').setView([20.0, 0.0], 2);
         
         // Add satellite tile layer
