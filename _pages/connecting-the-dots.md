@@ -23,7 +23,7 @@ Related reflection: [Water, Fire, and a Geographic Approach to GeoAI](/posts/202
   <div id="knowledge-web" style="width: 100%; height: 100%;"></div>
   <div id="web-controls" style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 5px; font-size: 12px;">
     <button onclick="resetView()" style="margin: 2px; padding: 5px;">Reset View</button><br>
-    <span style="color: #666;">Drag to rotate • Scroll to zoom</span>
+    <span style="color: #666;">Drag to pan • Scroll to zoom</span>
   </div>
   <div id="paper-info" style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 10px; border-radius: 5px; font-size: 12px; max-width: 300px; display: none;">
     <div id="paper-title"></div>
@@ -31,8 +31,8 @@ Related reflection: [Water, Fire, and a Geographic Approach to GeoAI](/posts/202
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
+<script src="/assets/js/knowledge-web.js" defer></script>
+<script type="text/plain" data-legacy-knowledge-web>
 // Check if Three.js loaded
 if (typeof THREE === 'undefined') {
   document.getElementById('knowledge-web').innerHTML = '<p style="text-align: center; padding: 50px; color: #666;">Loading 3D visualization... Please wait or refresh the page if this message persists.</p>';
@@ -636,7 +636,7 @@ This knowledge web demonstrates my theoretical journey from classical phenomenol
 
 ### Interactive Features
 
-- **Drag and Rotate**: Explore the 3D knowledge space
+- **Pan and Zoom**: Explore the knowledge map at different scales
 - **Hover for Details**: Learn about each work and its relevance
 - **Connection Mapping**: See how ideas flow between different authors and approaches
 - **Theoretical Clustering**: Notice how different schools of thought group together
