@@ -61,8 +61,10 @@ Location data lives in `files/journey_locations.py`.
 | `teaching.md` | `/teaching/` | Teaching experience |
 | `connecting-the-dots.md` | `/connecting-the-dots/` | Three.js knowledge web — nav entry "Connecting the Dots" |
 | `journey.md` | `/journey/` | Embeds the Folium journey map (not in nav; linked internally) |
-| `cv.md` | `/cv/` | CV page (nav links to PDF instead) |
 | `404.md` | `/404.html` | Custom 404 page |
+
+There is deliberately no CV page and no CV PDF. The CV and the detailed
+resume are private and sent directly to people; do not publish either here.
 
 ## Publication Conventions
 
@@ -114,7 +116,7 @@ tags:
 3. Commit both the updated `.py` and `.html` files
 
 ### Adding a teaching entry
-Create `_teaching/YYYY-MM-DD-course-name.md` — it will auto-appear on the Teaching page and CV.
+Create `_teaching/YYYY-MM-DD-course-name.md` — it will auto-appear on the Teaching page.
 
 ### Updating navigation
 Edit `_data/navigation.yml`. Each entry needs `title:` and `url:`.
