@@ -59,7 +59,7 @@ Location data lives in `files/journey_locations.py`.
 | `News-Posts.html` | `/News-Posts/` | Posts grouped by year |
 | `publications.md` | `/publications/` | Publications list |
 | `teaching.md` | `/teaching/` | Teaching experience |
-| `connecting-the-dots.md` | `/connecting-the-dots/` | Three.js knowledge web — nav entry "Connecting the Dots" |
+| `connecting-the-dots.md` | `/connecting-the-dots/` | Three.js knowledge web. Unpublished since 2026-10-08 (`published: false`, notebook excluded in `_config.yml`), kept for a later redesign |
 | `journey.md` | `/journey/` | Embeds the Folium journey map (not in nav; linked internally) |
 | `404.md` | `/404.html` | Custom 404 page |
 

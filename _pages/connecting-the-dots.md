@@ -2,6 +2,8 @@
 layout: archive
 title: "Connecting the dots"
 permalink: /connecting-the-dots/
+# Off the site since 2026-10-08, to be redesigned later. Remove "published: false" to put it back.
+published: false
 author_profile: true
 ---
 
