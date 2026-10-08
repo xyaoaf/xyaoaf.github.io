@@ -85,9 +85,9 @@ issue's year once volume and pages are cited.
 - `pubtype`: `journal` or `proceedings`. The Publications page lists the two
   separately, as the CV does.
 - `highlighted`: `true` puts the paper under Highlighted Research on the home page.
-  Currently highlighted: the 2026 Annals article, the 2025 microclimate article, the
-  2024 light-pollution article and the 2022 coastal water-quality article; the 2023
-  IGARSS paper is on the Publications page only.
+  Keep three, the strongest: currently the 2026 Annals article, the 2025
+  microclimate article and the 2024 light-pollution article. The 2022 coastal
+  water-quality article and the 2023 IGARSS paper are on the Publications page only.
 - `paper_number`: permanent; 3 is unused. The next new publication is 7.
 
 Generated file names are `YYYY-MM-DD-paper-N-short-title.md`.
