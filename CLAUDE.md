@@ -126,6 +126,18 @@ Edit `_data/navigation.yml`. Each entry needs `title:` and `url:`.
 
 ## Styling
 
+The site's own look is set in two small files on top of the theme; change it
+there rather than in the theme partials:
+
+- `_sass/_tokens.scss`: every colour, font and size (text colours, the dark blue
+  accent shared with the CV, the system font stack, five type sizes, two line
+  heights, the reading width). It is imported right after `_variables.scss` and
+  also sets the theme's own colour and font variables.
+- `_sass/_custom.scss`: typography and spacing rules that the theme variables do
+  not reach, imported last in `assets/css/main.scss`.
+
+Fonts are the system stack, so there are no web fonts to load or update.
+
 SASS source is in `_sass/`. Compiled CSS lives in `assets/css/`. JavaScript is in `assets/js/`. To minify JS:
 
 ```bash

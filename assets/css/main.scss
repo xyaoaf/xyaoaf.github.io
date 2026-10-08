@@ -12,6 +12,7 @@
 
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
+@import "tokens";    // site colours, fonts and sizes; sets theme variables
 @import "mixins";
 @import "vendor/susy/susy";
 
@@ -38,4 +39,5 @@
 @import "vendor/font-awesome/solid";
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
+@import "custom";    // site typography and spacing, on top of the theme
 @import "print";

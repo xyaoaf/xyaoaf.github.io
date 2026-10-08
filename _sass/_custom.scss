@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Site overrides
+
+   Typography and spacing on top of the theme, imported last. All values come
+   from _tokens.scss; change them there rather than here.
+   ========================================================================== */
+
+/* Root size: 16px on phones, 17px from tablets up (the theme jumped to 18px). */
+html {
+  font-size: 16px;
+
+  @include breakpoint($medium) {
+    font-size: 17px;
+  }
+}
+
+body {
+  color: $site-text;
+  line-height: $site-leading;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reading width: no line of text longer than about 75 characters. Only text
+   blocks are limited; figures and the interactive map keep the full width. */
+.page__content > p, .page__content > ul, .page__content > ol, .page__content > dl,
+.page__content > blockquote, .page__content > h2, .page__content > h3, .page__content > h4,
+.page__content > hr,
+.archive > p, .archive > ul, .archive > ol, .archive > dl, .archive > blockquote,
+.archive > h1, .archive > h2, .archive > h3, .archive > h4, .archive > hr,
+.archive > .list__item {
+  max-width: $site-measure;
+}
+
+/* Text: one size, one line height. */
+.page__content p,
+.page__content li,
+.page__content dl,
+.archive p,
+.archive li {
+  font-size: $site-size-body;
+  line-height: $site-leading;
+}
+
+.page__content p,
+.archive p {
+  margin: 0 0 1em;
+}
+
+/* Headings: three sizes, one weight. */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: $site-leading-tight;
+}
+
+h1,
+.page__title {
+  font-size: $site-size-h1;
+  line-height: $site-leading-tight;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5em;
+}
+
+h2,
+.page__content h2,
+.archive h2 {
+  font-size: $site-size-h2;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.page__content h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+h3,
+.page__content h3,
+.archive h3 {
+  font-size: $site-size-h3;
+  margin: 1.75rem 0 0.5rem;
+}
+
+/* Titles in publication and news lists: subsection size, text colour. */
+.archive .archive__item-title,
+.page__content .archive__item-title {
+  font-size: $site-size-h3;
+  margin: 1.75rem 0 0.4rem;
+
+  a {
+    color: $site-text;
+  }
+
+  a:hover {
+    color: $site-accent;
+  }
+}
+
+/* Links: underlined only on hover. */
+.page__content a,
+.archive a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Small text: dates, reading time, footer. */
+.page__meta,
+.archive .page__meta,
+.archive .page__meta p,
+.page__footer,
+.page__footer-copyright {
+  font-size: $site-size-small;
+  color: $site-muted;
+}
+
+/* Navigation */
+.greedy-nav a {
+  font-size: $site-size-small;
+}
+
+.greedy-nav .masthead__menu-item--lg a {
+  color: $site-text;
+  font-weight: 600;
+}
+
+/* Sidebar: the name, then one small size and one even spacing for the rest.
+   The theme gave links extra padding and margin that plain lines (location,
+   email) did not have, so the rows were spaced unevenly. */
+.sidebar .author__name {
+  font-size: $site-size-h3;
+  font-weight: 600;
+}
+
+.author__bio,
+.author__urls li {
+  font-size: $site-size-small;
+  line-height: $site-leading;
+  color: $site-muted;
+}
+
+@include breakpoint($large) {
+  .author__name {
+    margin: 0.75rem 0 0.25rem;
+  }
+
+  .author__bio {
+    margin: 0 0 1rem;
+  }
+}
+
+.author__urls li {
+  margin: 0;
+  padding: 0.15rem 0;
+}
+
+/* In the desktop sidebar, a line too long for it (the email) breaks where it
+   must, and its second line lines up with the text after the icon. On phones
+   the list is a drop-down that sizes itself to unbroken lines, so leave it. */
+@include breakpoint($large) {
+  .author__urls li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    white-space: normal;
+    word-break: break-all;
+  }
+}
+
+.author__urls a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+
+  &:hover {
+    color: $site-text;
+  }
+}
+
+/* The X logo is an image with an inline size; match the width of the icons. */
+.author__urls img {
+  width: 1.25em !important;
+  height: 1em !important;
+  margin: 0 !important;
+  object-fit: contain;
+  vertical-align: -0.125em !important;
+}
