@@ -95,6 +95,11 @@ h3,
   }
 }
 
+/* Publication lists: the citation sits right under its title. */
+.archive .archive__item-citation {
+  margin: 0;
+}
+
 /* Links: underlined only on hover. */
 .page__content a,
 .archive a {

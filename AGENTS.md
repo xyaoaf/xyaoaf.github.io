@@ -71,26 +71,26 @@ sent directly to people. There is deliberately no /cv/ page.
 
 ## Publication Conventions
 
-Publications retain their existing sequence numbers. There are currently 4 public publication entries; the next new publication should use [6].
+Publications must match the CV: the same titles, authors, years, volumes, pages
+and DOIs as the publication list in the private CV repository (xyaoaf/XihanYao_CV,
+`cv.tex`). Check a new entry against the journal's record (Crossref) before adding
+it. For an article first published online and later placed in an issue, use the
+issue's year once volume and pages are cited.
 
-Homepage research highlights are curated with `highlighted: true` in publication front matter. The current highlights are the 2025 microclimate article, the 2024 light-pollution article, and the 2022 coastal water-quality article. Keep the 2023 IGARSS paper on the Publications page but not on the homepage. Future papers may replace older homepage highlights.
+`markdown_generator/publications.tsv` is the source of truth. Edit it and run
+`python publications.py` rather than editing `_publications/` by hand. Columns:
 
-File naming: `YYYY-MM-DD-paper-N-short-title.md`
+- `citation`: the APA reference from the CV, with `**Yao, X.**` in bold and the
+  journal name and volume in `*italics*`. The templates add the DOI from `paper_url`.
+- `pubtype`: `journal` or `proceedings`. The Publications page lists the two
+  separately, as the CV does.
+- `highlighted`: `true` puts the paper under Highlighted Research on the home page.
+  Currently highlighted: the 2026 Annals article, the 2025 microclimate article, the
+  2024 light-pollution article and the 2022 coastal water-quality article; the 2023
+  IGARSS paper is on the Publications page only.
+- `paper_number`: permanent; 3 is unused. The next new publication is 7.
 
-Front matter template:
-```yaml
----
-title: "Paper Title"
-collection: publications
-highlighted: true # optional; include only for homepage highlights
-permalink: /publication/YYYY-short-title
-excerpt: 'Brief description.'
-date: YYYY-MM-DD
-venue: 'Journal or Conference Name'
-paperurl: 'DOI or Google Scholar link'
-citation: 'APA format citation'
----
-```
+Generated file names are `YYYY-MM-DD-paper-N-short-title.md`.
 
 ## Maintenance Workflows
 
@@ -107,9 +107,8 @@ tags:
 ```
 
 ### Adding a publication
-1. Add a row to `markdown_generator/publications.tsv`, including its permanent `paper_number` and `highlighted` value
+1. Add a row to `markdown_generator/publications.tsv` with the CV's wording (see Publication Conventions)
 2. Run `cd markdown_generator && python publications.py`
-3. Or manually create `_publications/YYYY-MM-DD-paper-N-short-title.md` (next number is [6])
 
 ### Adding a talk
 1. Add a row to `markdown_generator/talks.tsv`

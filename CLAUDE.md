@@ -71,23 +71,26 @@ sent directly to people. There is deliberately no /cv/ page.
 
 ## Publication Conventions
 
-Publications are numbered in reverse chronological order (newest = highest number). Current count: 5 publications (next would be [6]).
+Publications must match the CV: the same titles, authors, years, volumes, pages
+and DOIs as the publication list in the private CV repository (xyaoaf/XihanYao_CV,
+`cv.tex`). Check a new entry against the journal's record (Crossref) before adding
+it. For an article first published online and later placed in an issue, use the
+issue's year once volume and pages are cited.
 
-File naming: `YYYY-MM-DD-paper-N-short-title.md`
+`markdown_generator/publications.tsv` is the source of truth. Edit it and run
+`python publications.py` rather than editing `_publications/` by hand. Columns:
 
-Front matter template:
-```yaml
----
-title: "[N] Paper Title"
-collection: publications
-permalink: /publication/YYYY-short-title
-excerpt: 'Brief description.'
-date: YYYY-MM-DD
-venue: 'Journal or Conference Name'
-paperurl: 'DOI or Google Scholar link'
-citation: 'APA format citation'
----
-```
+- `citation`: the APA reference from the CV, with `**Yao, X.**` in bold and the
+  journal name and volume in `*italics*`. The templates add the DOI from `paper_url`.
+- `pubtype`: `journal` or `proceedings`. The Publications page lists the two
+  separately, as the CV does.
+- `highlighted`: `true` puts the paper under Highlighted Research on the home page.
+  Currently highlighted: the 2026 Annals article, the 2025 microclimate article, the
+  2024 light-pollution article and the 2022 coastal water-quality article; the 2023
+  IGARSS paper is on the Publications page only.
+- `paper_number`: permanent; 3 is unused. The next new publication is 7.
+
+Generated file names are `YYYY-MM-DD-paper-N-short-title.md`.
 
 ## Maintenance Workflows
 
@@ -104,9 +107,8 @@ tags:
 ```
 
 ### Adding a publication
-1. Add a row to `markdown_generator/publications.tsv`
+1. Add a row to `markdown_generator/publications.tsv` with the CV's wording (see Publication Conventions)
 2. Run `cd markdown_generator && python publications.py`
-3. Or manually create `_publications/YYYY-MM-DD-paper-N-short-title.md` (next number is [6])
 
 ### Adding a talk
 1. Add a row to `markdown_generator/talks.tsv`

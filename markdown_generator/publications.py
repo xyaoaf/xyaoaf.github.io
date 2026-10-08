@@ -20,6 +20,7 @@ REQUIRED_FIELDS = {
     "url_slug",
     "paper_url",
     "highlighted",
+    "pubtype",
 }
 
 
@@ -45,6 +46,9 @@ def validate_row(row, row_number):
     if not row["paper_number"].isdigit():
         raise ValueError(f"Row {row_number}: paper_number must be an integer")
 
+    if row["pubtype"].strip() not in {"journal", "proceedings"}:
+        raise ValueError(f"Row {row_number}: pubtype must be journal or proceedings")
+
 
 def render_publication(row):
     year = row["pub_date"][:4]
@@ -53,6 +57,11 @@ def render_publication(row):
         f'title: "{row["title"].replace(chr(34), "&quot;")}"',
         "collection: publications",
     ]
+
+    # The Publications page lists journal articles and conference proceedings
+    # separately, as the CV does; journal is the default and is not written.
+    if row["pubtype"].strip() == "proceedings":
+        lines.append("pubtype: proceedings")
 
     if parse_bool(row["highlighted"]):
         lines.append("highlighted: true")
@@ -65,14 +74,12 @@ def render_publication(row):
             f'paperurl: {yaml_single_quote(row["paper_url"])}',
             f'citation: {yaml_single_quote(row["citation"])}',
             "---",
-            "",
-            f'[paper]({row["paper_url"]})',
         ]
     )
 
     excerpt = row["excerpt"].strip()
     if excerpt:
-        lines.insert(-6, f'excerpt: {yaml_single_quote(excerpt)}')
+        lines.insert(-1, f'excerpt: {yaml_single_quote(excerpt)}')
 
     return "\n".join(lines) + "\n"
 
