@@ -100,6 +100,18 @@ include:
   - _pages
   - files
 exclude:
+  # Repository notes, data and scripts: kept in the repository, not published as pages.
+  - AGENTS.md
+  - CLAUDE.md
+  - CONTRIBUTING.md
+  - PUBLICATION_MANAGEMENT.md
+  - markdown_generator
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - files/journey_locations.py
+  - files/journey_map_folium.py
+  - files/papers                # reading lists for the unpublished /connecting-the-dots/ page
   - connecting-the-dots.ipynb   # goes with the unpublished /connecting-the-dots/ page
   - "*.sublime-project"
   - "*.sublime-workspace"

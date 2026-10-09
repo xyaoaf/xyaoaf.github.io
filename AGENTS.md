@@ -63,7 +63,7 @@ Location data lives in `files/journey_locations.py`.
 | `journey.md` | `/journey/` | Embeds the Folium journey map (not in nav; linked internally) |
 | `404.md` | `/404.html` | Custom 404 page |
 
-The only CV on this site is `files/XihanYao_CV.pdf`, the de-sensitized public CV,
+The only CV on this site is `files/XihanYao_CV.pdf`, the public CV,
 linked from the navigation. It is built from `cv_public.tex` in the private repository
 xyaoaf/XihanYao_CV; replace the PDF from there, keeping the file name so the link
 stays stable. Never publish the full CV or the resume here: both are private and
