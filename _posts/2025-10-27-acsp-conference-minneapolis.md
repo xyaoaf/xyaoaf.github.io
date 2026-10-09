@@ -9,32 +9,6 @@ tags:
   - microclimate
 ---
 
-I attended the **2025 Association of Collegiate Schools of Planning (ACSP) Annual Conference** in Minneapolis, Minnesota, from October 23–25. This was my first ACSP conference.
+I presented at the **2025 Association of Collegiate Schools of Planning (ACSP) Annual Conference** in Minneapolis, October 23–25, my first ACSP. In the session "Advanced Methods for Environmental Science" (Session 13.24), I presented our recently published study, *Community-scale microclimate simulation using Airborne Laser Scanning and object-based urban tree classification*, which maps individual trees and models how they shape neighborhood microclimates.
 
-## Conference Presentation
-
-I presented in the session **"Advanced Methods for Environmental Science"** (Session 13.24). My presentation was based on our recently published research on community-scale microclimate simulation and urban forest analysis.
-
-**Presentation title:** *Community-scale microclimate simulation using Airborne Laser Scanning and object-based urban tree classification*
-
-The presentation discussed how detailed maps of individual trees and environmental modeling can be combined to evaluate urban vegetation and simulate neighborhood microclimates. It was my first presentation of this work following its journal publication.
-
-## Lab Visit at University of Minnesota
-
-During the trip, I visited **Professor Yao-Yi Chiang’s lab** at the University of Minnesota. My advisor, Professor Yuhao Kang, gave a guest lecture titled *"Human-centered Geospatial AI: Facilitating Place Perceptions and Map Creativity"* to the research group.
-
-The visit provided an opportunity to learn about the group’s research on maps and spatial data and to exchange research ideas.
-
-## Networking & Community
-
-I met researchers working across planning and geography, including colleagues from UC Berkeley, where I completed my master’s degree. I also volunteered at the conference and learned more about its organization.
-
-## Exploring Minneapolis
-
-Outside the conference, I visited the Minneapolis Institute of Art and the Mill City Museum. The latter, housed in a former flour mill beside the Mississippi River, offered a useful perspective on the city’s industrial and urban history.
-
----
-
-*Conference: Association of Collegiate Schools of Planning (ACSP) 2025 Annual Conference*  
-*Location: Minneapolis, Minnesota*  
-*Date: October 23-25, 2025*
+During the trip I visited Professor Yao-Yi Chiang's lab at the University of Minnesota, where my advisor, Professor Yuhao Kang, gave a guest lecture, *"Human-centered Geospatial AI: Facilitating Place Perceptions and Map Creativity"*. I also volunteered at the conference and caught up with colleagues from UC Berkeley, where I did my master's degree.

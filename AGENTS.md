@@ -106,6 +106,20 @@ tags:
 ---
 ```
 
+Post style (Xihan, 2026-10-08): one plain, consistent voice, short enough to be read.
+
+- News posts (awards, talks, conferences, course projects): 100-150 words in one
+  to three paragraphs, no section headings or bullet lists. Say what happened,
+  when, where, with whom and the result, plus at most a sentence or two on what
+  it meant, in concrete terms.
+- Reflective essays: about 300 words, built on Xihan's own experiences.
+- First person, plain words. No generic wrap-up lines ("This experience
+  reinforced...", "at the intersection of...").
+- Describe what the work did and who it served rather than listing methods and
+  sensors, as in the public CV.
+- Never change facts: titles, names, dates, places, teams, judges and links stay
+  exactly as they are.
+
 ### Adding a publication
 1. Add a row to `markdown_generator/publications.tsv` with the CV's wording (see Publication Conventions)
 2. Run `cd markdown_generator && python publications.py`
