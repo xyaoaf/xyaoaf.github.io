@@ -9,7 +9,7 @@ tags:
   - microclimate
 ---
 
-I attended the **2025 Association of Collegiate Schools of Planning (ACSP) Annual Conference** in Minneapolis, Minnesota, from October 25–27. This was my first ACSP conference.
+I attended the **2025 Association of Collegiate Schools of Planning (ACSP) Annual Conference** in Minneapolis, Minnesota, from October 23–25. This was my first ACSP conference.
 
 ## Conference Presentation
 
@@ -17,13 +17,13 @@ I presented in the session **"Advanced Methods for Environmental Science"** (Ses
 
 **Presentation title:** *Community-scale microclimate simulation using Airborne Laser Scanning and object-based urban tree classification*
 
-The presentation discussed how airborne LiDAR, object-based tree classification, and environmental modeling can be combined to evaluate urban vegetation and simulate neighborhood microclimates. It was my first presentation of this work following its journal publication.
+The presentation discussed how detailed maps of individual trees and environmental modeling can be combined to evaluate urban vegetation and simulate neighborhood microclimates. It was my first presentation of this work following its journal publication.
 
 ## Lab Visit at University of Minnesota
 
 During the trip, I visited **Professor Yao-Yi Chiang’s lab** at the University of Minnesota. My advisor, Professor Yuhao Kang, gave a guest lecture titled *"Human-centered Geospatial AI: Facilitating Place Perceptions and Map Creativity"* to the research group.
 
-The visit provided an opportunity to learn about the group’s work on machine learning for spatial and GIS applications and to discuss current directions in GeoAI.
+The visit provided an opportunity to learn about the group’s research on maps and spatial data and to exchange research ideas.
 
 ## Networking & Community
 
@@ -37,4 +37,4 @@ Outside the conference, I visited the Minneapolis Institute of Art and the Mill 
 
 *Conference: Association of Collegiate Schools of Planning (ACSP) 2025 Annual Conference*  
 *Location: Minneapolis, Minnesota*  
-*Date: October 25-27, 2025*
+*Date: October 23-25, 2025*

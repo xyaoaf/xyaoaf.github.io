@@ -5,15 +5,15 @@ permalink: /posts/2025/10/geoscience-hackathon-second-place/
 tags:
   - awards
   - competition
-  - geoai
-  - earth-observation
+  - environmental-monitoring
+  - land-cover
 ---
 
-Our team received **second place** at the **2025 UT Austin Geoscience Hackathon** for *Tracking Earth's Changes with AlphaEarth Foundations*. We developed an open-source prototype for exploring land-cover change using Google Earth Engine and AlphaEarth embeddings.
+Our team received **second place** at the **2025 UT Austin Geoscience Hackathon**. We developed an open-source prototype for exploring how the land surface changes from year to year.
 
 ## Approach
 
-The prototype compares multidimensional representations of satellite observations from different years to identify and visualize changes in Earth’s surface. We organized the analysis around three questions:
+The prototype compares observations of the same place from different years to identify and visualize changes in the land surface. We organized the analysis around three questions:
 
 1. **Timing:** When did a change occur?
 2. **Magnitude:** How substantial was the change?
@@ -28,7 +28,7 @@ We tested the workflow with examples of:
 - urban expansion in Austin; and
 - agricultural rotation in Central Texas.
 
-The interactive interface allows users to define an area of interest, compare observations across years, visualize detected changes, and export results for additional analysis. The project served as a practical exploration of how geospatial foundation models and cloud-based processing can support environmental monitoring.
+The interactive interface allows users to define an area of interest, compare observations across years, visualize detected changes, and export results for additional analysis. The project served as a practical exploration of how openly available geospatial data can support environmental monitoring.
 
 ## Team and repository
 

@@ -5,7 +5,7 @@ permalink: /posts/2025/12/connecting-dots-geospatial-journey/
 tags:
   - visualization
   - interactive-map
-  - geoai
+  - geography
   - personal-journey
 ---
 

@@ -14,7 +14,7 @@ My teaching focuses on helping students connect geospatial concepts with applied
 ### GEOG/LDARCH C188: Geographic Information Science
 **University of California, Berkeley** | Fall 2023
 
-In Fall 2023, I served as the instructor of record for GEOG/LDARCH C188, an interdisciplinary GIS course enrolling more than 200 students. I designed and delivered lectures, coordinated the instructional team, developed assignments and assessments, and supported student projects across geography, landscape architecture, environmental science, and urban planning.
+In Fall 2023, I served as the instructor of record for GEOG/LDARCH C188, an interdisciplinary GIS course with 200 students. I designed and delivered lectures, coordinated the instructional team, developed assignments and assessments, and supported student projects across geography, landscape architecture, environmental science, and urban planning.
 
 **Course responsibilities:**
 - Taught GIS concepts, spatial data analysis, and geospatial technologies through weekly lectures
@@ -46,19 +46,12 @@ In Fall 2023, I served as the instructor of record for GEOG/LDARCH C188, an inte
 ### ESPM/LDARCH C289: Applied Remote Sensing
 **University of California, Berkeley** | Spring 2023
 
-Served as a Graduate Student Instructor for this advanced course on remote sensing applications in environmental science and landscape architecture.
+Served as a Graduate Student Instructor for this graduate-level course on remote sensing applications in environmental science and landscape architecture.
 
 **Responsibilities:**
-- Led weekly lab sections teaching practical remote sensing analysis using Google Earth Engine, ENVI, and ArcGIS
-- Guided students through hands-on projects on multispectral image analysis, change detection, and vegetation monitoring
-- Provided mentoring on final projects applying remote sensing to environmental research questions
-- Held office hours and graded assignments, ensuring students developed strong technical skills in image processing and analysis
-
-**Teaching Focus:**
-- Multispectral and hyperspectral image analysis
-- Satellite-based vegetation indices and land cover classification
-- Time-series analysis for environmental change detection
-- Integration of remote sensing with GIS for spatial analysis
+- Led weekly lab sections in Google Earth Engine, where students applied remote sensing to environmental questions such as vegetation monitoring and land cover change
+- Mentored students on final projects addressing environmental research questions
+- Held office hours and graded assignments
 
 ---
 
@@ -68,10 +61,9 @@ Served as a Graduate Student Instructor for this advanced course on remote sensi
 Served as a Graduate Student Instructor for the introductory GIS course, where I first developed my teaching skills in geospatial science education.
 
 **Responsibilities:**
-- Facilitated weekly lab sections for 25-30 students, introducing foundational GIS concepts and software (ArcGIS Pro, QGIS)
-- Taught spatial data acquisition, management, analysis, and visualization techniques
-- Mentored students on lab assignments and provided one-on-one support during office hours
-- Assisted in grading and providing constructive feedback on student projects
+- Led weekly lab sections teaching GIS concepts and software skills through demonstrations, hands-on exercises, and project supervision
+- Updated lab materials and recorded demonstration videos as the course moved from ArcGIS Desktop to ArcGIS Pro
+- Supported students during office hours and gave feedback on assignments and projects
 
 **Teaching Focus:**
 - Introduction to GIS concepts and coordinate systems

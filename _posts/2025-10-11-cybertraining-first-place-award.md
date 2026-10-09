@@ -5,17 +5,15 @@ permalink: /posts/2025/10/cybertraining-first-place/
 tags:
   - awards
   - competition
-  - geoai
+  - geospatial
   - disaster-management
 ---
 
-Our team received **first place** in the **2025 CyberTraining Summer School Competition** hosted by Texas A&M University. We developed a framework for assessing disaster impacts by combining multimodal geospatial data, building-damage prediction, and demographic information.
+Our team received **first place** in the **2025 CyberTraining Summer School Competition** hosted by Texas A&M University. We developed a framework for assessing disaster impacts that combines geospatial data, estimates of building damage, and demographic information.
 
 ## Project
 
-**Project Title:** *Assessing Instance-based Disaster Impact Through Multimodal Geospatial Data with Damage Prediction and Demographic Attributes*
-
-The project integrates machine-learning estimates of building damage with demographic attributes to examine both physical impacts and social vulnerability. Our aim was to demonstrate how geospatial data and GeoAI methods can support disaster assessment, preparedness, and resilience planning.
+The project combines estimates of building damage with demographic information to examine both physical impacts and social vulnerability. Our aim was to show how geospatial data can support disaster assessment, preparedness, and resilience planning.
 
 ## Program and presentation
 
