@@ -9,6 +9,21 @@ My teaching focuses on helping students connect geospatial concepts with applied
 
 ---
 
+## Teaching Assistant
+
+### GRG 356T: Spatial Data Science and Maps
+**The University of Texas at Austin** | Fall 2026
+
+I am the Teaching Assistant for this course, taught by Professor Yuhao Kang.
+
+**Responsibilities:**
+- Lead the weekly lab sessions (ten labs) and grade the labs and final projects
+- Hold office hours twice a week and answer students' questions on Canvas and by email
+- Update lab materials and help build the course websites
+- Proctor the class exam and help grade it
+
+---
+
 ## Instructor of Record
 
 ### GEOG/LDARCH C188: Geographic Information Science
