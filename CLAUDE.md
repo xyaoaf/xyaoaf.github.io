@@ -60,7 +60,7 @@ Location data lives in `files/journey_locations.py`.
 | `publications.md` | `/publications/` | Publications list |
 | `teaching.md` | `/teaching/` | Teaching experience |
 | `connecting-the-dots.md` | `/connecting-the-dots/` | Three.js knowledge web. Unpublished since 2026-10-08 (`published: false`, notebook excluded in `_config.yml`), kept for a later redesign |
-| `journey.md` | `/journey/` | Embeds the Folium journey map (not in nav; linked internally) |
+| `journey.md` | `/journey/` | Journey map (`files/journey_map.html`). Unpublished since 2026-10-08 with Connecting the Dots, together with its December 2025 post; kept for a later redesign |
 | `404.md` | `/404.html` | Custom 404 page |
 
 The only CV on this site is `files/XihanYao_CV.pdf`, the public CV,

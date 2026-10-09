@@ -2,6 +2,8 @@
 title: 'Connecting the Dots: A Geospatial Journey Through Place and Space'
 date: 2025-12-04
 permalink: /posts/2025/12/connecting-dots-geospatial-journey/
+# Off the site since 2026-10-08 with Connecting the Dots. Remove "published: false" to put it back.
+published: false
 tags:
   - visualization
   - interactive-map

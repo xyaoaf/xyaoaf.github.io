@@ -1,6 +1,8 @@
 ---
 layout: archive
 permalink: /journey/
+# Off the site since 2026-10-08 with Connecting the Dots. Remove "published: false" to put it back.
+published: false
 title: "Connecting the Dots: A Geospatial Journey"
 excerpt: "An interactive map tracing places that shaped my academic and personal journey"
 author_profile: true

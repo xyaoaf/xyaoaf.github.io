@@ -111,6 +111,7 @@ exclude:
   - talkmap.ipynb
   - files/journey_locations.py
   - files/journey_map_folium.py
+  - files/journey_map.html      # the journey map, off the site with Connecting the Dots
   - files/papers                # reading lists for the unpublished /connecting-the-dots/ page
   - connecting-the-dots.ipynb   # goes with the unpublished /connecting-the-dots/ page
   - "*.sublime-project"
