@@ -110,14 +110,20 @@ h3,
   }
 }
 
-/* Small text: dates, reading time, footer. */
+/* Small text: dates, footer. */
 .page__meta,
 .archive .page__meta,
 .archive .page__meta p,
+.page__date,
+.archive .page__date,
 .page__footer,
 .page__footer-copyright {
   font-size: $site-size-small;
   color: $site-muted;
+}
+
+.page__date strong {
+  font-weight: inherit;
 }
 
 /* Navigation */

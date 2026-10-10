@@ -189,10 +189,12 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      # Posts are short: no reading time, share buttons or related-post list
+      # (Xihan, 2026-10-10).
+      read_time: false
       comments: true
-      share: true
-      related: true
+      share: false
+      related: false
   # _pages
   - scope:
       path: ""

@@ -62,7 +62,8 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
+        {% comment %}Tags are not shown: the site has no tag archive, so tag links
+        would lead to a missing /tags/ page. The tags stay in the posts' front matter.{% endcomment %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
