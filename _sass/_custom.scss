@@ -160,20 +160,57 @@ h3,
   padding: 0.15rem 0;
 }
 
-/* In the desktop sidebar, a line too long for it (the email) breaks where it
-   must, and its second line lines up with the text after the icon. On phones
-   the list is a drop-down that sizes itself to unbroken lines, so leave it. */
+/* Each contact row is two columns, a fixed-width icon and its text, so the
+   icons line up whatever their kind (font icons or the X image) and in every
+   browser, and a line too long for the sidebar (the email) wraps under its own
+   text. The email breaks only at <at> and <dot> (<wbr> in _config.yml). */
+.author__urls li,
+.author__urls li > a {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35em;
+}
+
+.author__urls li > a,
+.author__urls li > span {
+  flex: 1 1 auto;
+}
+
+.author__urls li > i,
+.author__urls li > a > i {
+  flex: 0 0 1.25em;
+  width: 1.25em;
+  line-height: inherit;
+  text-align: center;
+}
+
+/* On phones the list is a drop-down that sizes itself to unbroken lines; only
+   the desktop sidebar wraps a long line. */
+.author__urls li > span {
+  white-space: nowrap;
+}
+
+.author__urls li > span wbr {
+  display: none; // browsers break at <wbr> even under nowrap
+}
+
 @include breakpoint($large) {
-  .author__urls li {
-    padding-left: 1.5em;
-    text-indent: -1.5em;
+  .author__urls li,
+  .author__urls li > span {
     white-space: normal;
-    word-break: break-all;
+  }
+
+  .author__urls li > span wbr {
+    display: inline;
+  }
+
+  .author__urls li > a,
+  .author__urls li > span {
+    min-width: 0;
   }
 }
 
 .author__urls a {
-  display: block;
   margin: 0;
   padding: 0;
   font-size: inherit;
@@ -184,11 +221,13 @@ h3,
   }
 }
 
-/* The X logo is an image with an inline size; match the width of the icons. */
+/* The X logo is an image with an inline size: give it the icons' width and
+   centre it on the first line of text (line height 1.6em, image 1em). */
 .author__urls img {
+  flex: 0 0 1.25em;
   width: 1.25em !important;
   height: 1em !important;
-  margin: 0 !important;
+  margin: 0.3em 0 0 !important;
   object-fit: contain;
-  vertical-align: -0.125em !important;
+  vertical-align: top !important;
 }
