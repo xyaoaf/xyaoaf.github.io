@@ -4,11 +4,13 @@ title: "About Me"
 permalink: /self-intro/
 author_profile: true
 ---
-I am a PhD student in the Department of Geography and the Environment at The University of Texas at Austin. I work in the [GISense Lab](https://sites.utexas.edu/gisense/) under the supervision of Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en).
+I am a PhD student in the Department of Geography and the Environment at The University of Texas at Austin, where I work with Professor [Yuhao Kang](https://scholar.google.com/citations?user=amySMvcAAAAJ&hl=en) in the [GISense Lab](https://sites.utexas.edu/gisense/). I study how urban and natural environments relate to the people who live in them: urban greenery, ecosystem services and local climate, and how landscape features shape environmental and social well-being across neighborhoods. I use geospatial data and spatial analysis to understand these patterns and to inform environmental planning.
 
-My research examines how urban and natural environments relate to the people who live in them. I am particularly interested in urban greenery, ecosystem services and local climate, and in how landscape features shape environmental and social well-being across neighborhoods. I use geospatial data and spatial analysis to study these patterns and to inform environmental planning.
+I trained as an environmental scientist and planner. I completed a Master of Landscape Architecture in Environmental Planning at the University of California, Berkeley, where I worked with Professor [Iryna Dronova](https://scholar.google.com/citations?user=qDUBrUMAAAAJ&hl=en&inst=4034227699702668181) on urban trees and neighborhood microclimates in Portland, Oregon; the thesis became an article in [*Landscape and Urban Planning*](https://doi.org/10.1016/j.landurbplan.2025.105420). My bachelor's degree is in Environmental Management and Technology from the Hong Kong University of Science and Technology, where my capstone project on light pollution in Hong Kong was also [published](https://doi.org/10.1177/0958305X221146942). After my master's degree, I taught UC Berkeley's largest GIS course, with 200 students, as instructor of record.
 
-Before joining UT Austin, I completed a master’s degree in Environmental Planning at the University of California, Berkeley, where I worked with Professor [Iryna Dronova](https://scholar.google.com/citations?user=qDUBrUMAAAAJ&hl=en&inst=4034227699702668181). I received my bachelor’s degree from the Hong Kong University of Science and Technology.
+Alongside research, I have worked on geospatial data that people use: tree canopy and land cover maps for U.S. cities at EarthDefine, and data for state broadband offices at Ready.net. I want my research to reach planners and communities, not only journals.
+
+Outside work, I kayak and photograph landscapes.
 
 ---
 
@@ -20,11 +22,11 @@ GISense Lab: [link](https://sites.utexas.edu/gisense/)
 
 ### University of California, Berkeley
 MLA, Environmental Planning, 2021 - 2023  
-Thesis: *Towards more effective urban vegetation monitoring and management: Studying of urban tree characteristics and their relationship to the urban heat island effect with high-resolution remote sensing products, a case study in Portland, Oregon, USA*
+Thesis: *Towards more effective urban vegetation monitoring and management: Studying of urban tree characteristics and their relationship to the urban heat island effect with high-resolution remote sensing products, a case study in Portland, Oregon, USA* ([Publication](https://doi.org/10.1016/j.landurbplan.2025.105420))
 
 ### Hong Kong University of Science and Technology (HKUST)
 BSc, Environmental Management and Technology, 2017 - 2021  
-Capstone Project (with Publication): *Light pollution impact assessment in Hong Kong: Multi-dimensional measurement and spatial numerical modelling on integrated light sources in the neighbourhood level* ([Publication](https://doi.org/10.1177/0958305X221146942))
+Capstone Project: *Light pollution impact assessment in Hong Kong: Multi-dimensional measurement and spatial numerical modelling on integrated light sources in the neighbourhood level* ([Publication](https://doi.org/10.1177/0958305X221146942))
 
 ### University of Washington, Seattle
 Exchange Student, 2019
