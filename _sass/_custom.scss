@@ -227,8 +227,16 @@ h3,
   }
 }
 
-/* The X logo is an image with an inline size: give it the icons' width and
-   centre it on the first line of text (line height 1.6em, image 1em). */
+/* All contact icons in the one grey of the sidebar text, instead of the theme's
+   brand colours (blue LinkedIn, black GitHub). The selector outweighs the
+   theme's .social-icons .fa-linkedin rules. */
+.sidebar .social-icons i {
+  color: $site-muted;
+}
+
+/* The X logo is an image with an inline size: give it the icons' width, centre
+   it on the first line of text (line height 1.6em, image 1em) and fade the
+   black logo to the icons' grey (#6e6e73 is 43% of black on white). */
 .author__urls img {
   flex: 0 0 1.25em;
   width: 1.25em !important;
@@ -236,4 +244,5 @@ h3,
   margin: 0.3em 0 0 !important;
   object-fit: contain;
   vertical-align: top !important;
+  opacity: 0.57;
 }
