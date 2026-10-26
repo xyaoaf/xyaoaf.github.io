@@ -22,7 +22,7 @@ GISense Lab: [link](https://sites.utexas.edu/gisense/)
 
 ### University of California, Berkeley
 MLA, Environmental Planning, 2021 - 2023  
-Thesis: *Towards more effective urban vegetation monitoring and management: Studying of urban tree characteristics and their relationship to the urban heat island effect with high-resolution remote sensing products, a case study in Portland, Oregon, USA* ([Publication](https://doi.org/10.1016/j.landurbplan.2025.105420))
+Thesis: *Towards Effective Urban Forestry Monitoring and Evaluation: Studying Urban Tree Characteristics and Their Relationship to the Urban Microclimate, A Case Study in Portland, Oregon, USA* ([Publication](https://doi.org/10.1016/j.landurbplan.2025.105420))
 
 ### Hong Kong University of Science and Technology (HKUST)
 BSc, Environmental Management and Technology, 2017 - 2021  
