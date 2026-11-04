@@ -23,6 +23,8 @@ REQUIRED_FIELDS = {
     "pubtype",
 }
 
+OPTIONAL_FIELDS = {"code_url", "data_url"}
+
 
 def yaml_single_quote(value):
     """Return a YAML-safe single-quoted scalar."""
@@ -77,6 +79,10 @@ def render_publication(row):
         ]
     )
 
+    for field, key in (("code_url", "codeurl"), ("data_url", "dataurl")):
+        value = (row.get(field) or "").strip()
+        if value:
+            lines.insert(-1, f"{key}: {yaml_single_quote(value)}")
     excerpt = row["excerpt"].strip()
     if excerpt:
         lines.insert(-1, f'excerpt: {yaml_single_quote(excerpt)}')
@@ -90,9 +96,9 @@ def generate(input_path, output_dir):
     with input_path.open(newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
         fields = set(reader.fieldnames or [])
-        if fields != REQUIRED_FIELDS:
+        if not REQUIRED_FIELDS <= fields <= REQUIRED_FIELDS | OPTIONAL_FIELDS:
             missing = sorted(REQUIRED_FIELDS - fields)
-            extra = sorted(fields - REQUIRED_FIELDS)
+            extra = sorted(fields - REQUIRED_FIELDS - OPTIONAL_FIELDS)
             details = []
             if missing:
                 details.append(f"missing columns: {', '.join(missing)}")

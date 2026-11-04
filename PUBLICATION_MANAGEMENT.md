@@ -5,9 +5,10 @@
 Publications are numbered in reverse chronological order (most recent = highest number).
 
 **Current Publications:**
-- [5] 2025 - Community-scale microclimate simulation (Landscape and Urban Planning)
+- [6] 2026 - Big Five personality and built environment (Annals of the AAG)
+- [5] 2025 - Community-scale microclimate simulation (Landscape and Urban Planning) — code: https://github.com/xyaoaf/UrbanTreeStudywithLidar
 - [4] 2024 - Light pollution assessment Hong Kong (Energy & Environment) 
-- [3] 2024 - LiDAR urban forest Portland (Authorea Preprints)
+- [3] retired — Authorea preprint of [5], removed from the site after the journal version was published
 - [2] 2023 - Urban forests microclimates Portland (IGARSS)
 - [1] 2022 - Coastal chlorophyll-a UAV mapping (Journal of Hydro-Environment Research)
 
@@ -16,7 +17,7 @@ Publications are numbered in reverse chronological order (most recent = highest 
 When you publish new papers:
 
 1. **Create new publication file**: Copy the template format from existing files
-2. **Update numbering**: New paper gets the next number (currently [6]); retired entries do not cause later papers to be renumbered
+2. **Update numbering**: New paper gets the next number (currently [7]); retired entries do not cause later papers to be renumbered
 3. **Update this documentation**: Add the new paper to the list above
 4. **Follow APA format**: Maintain consistent citation style
 5. **Include all required fields**: title, venue, date, citation, excerpt

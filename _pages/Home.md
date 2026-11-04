@@ -32,7 +32,7 @@ I trained in environmental management and environmental planning, and I study ur
 {% for pub in highlighted_publications %}
 ### {{ pub.title }}
 *{{ pub.venue }}*  
-[View publication]({{ pub.paperurl }})
+[View publication]({{ pub.paperurl }}){% if pub.codeurl %} · [Code]({{ pub.codeurl }}){% endif %}{% if pub.dataurl %} · [Data]({{ pub.dataurl }}){% endif %}
 
 {% endfor %}
 
