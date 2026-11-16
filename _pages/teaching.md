@@ -16,11 +16,7 @@ My teaching focuses on helping students connect geospatial concepts with applied
 
 I am the Teaching Assistant for this course, taught by Professor Yuhao Kang.
 
-**Responsibilities:**
-- Lead the weekly lab sessions (ten labs) and grade the labs and final projects
-- Hold office hours twice a week and answer students' questions on Canvas and by email
-- Update lab materials and help build the course websites
-- Proctor the class exam and help grade it
+I rebuilt three of the course's Python labs: one that checks how well AI language models know the geography of Texas against Census data, one that measures street greenery from street-level images, and one on access to maternal health care. I also revised the other labs.
 
 ---
 
