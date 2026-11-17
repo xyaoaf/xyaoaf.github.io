@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Xihan Yao 姚希翰"
 title_separator          : "-"
 name                     : &name "Xihan Yao"
-description              : &description "Personal website of Xihan Yao - Academic and professional portfolio"
+description              : &description "Xihan Yao (姚希翰) is a PhD student in Geography and the Environment at The University of Texas at Austin (GISense Lab), studying how urban and natural environments relate to the people who live in them."
 url                      : https://xyaoaf.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "xyaoaf/xyaoaf.github.io"
@@ -69,6 +69,11 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://www.linkedin.com/in/xihan-yao-6381b3181/"
+    - "https://github.com/xyaoaf"
+    - "https://scholar.google.com/citations?user=YguEIS4AAAAJ"
+    - "https://orcid.org/0000-0003-1166-4497"
+    - "https://x.com/YaoXihan"
 
 
 # Analytics

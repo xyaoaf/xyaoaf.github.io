@@ -2,7 +2,7 @@
 layout: archive
 permalink: /
 # title: "Xihan Yao, UT Austin"
-excerpt: "About me"
+excerpt: "Xihan Yao (姚希翰) is a PhD student in Geography and the Environment at The University of Texas at Austin (GISense Lab), studying how urban and natural environments relate to the people who live in them."
 author_profile: true
 redirect_from: 
   - /about/

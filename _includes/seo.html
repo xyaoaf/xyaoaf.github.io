@@ -119,6 +119,12 @@
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name" : "{{ site.social.name | default: site.name }}",
       "url" : {{ seo_url | jsonify }},
+      "jobTitle" : "PhD student",
+      "affiliation" : {
+        "@type" : "CollegeOrUniversity",
+        "name" : "The University of Texas at Austin",
+        "url" : "https://www.utexas.edu/"
+      },
       "sameAs" : {{ site.social.links | jsonify }}
     }
   </script>
