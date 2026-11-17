@@ -45,7 +45,7 @@ layout: default
         
              
         {% if page.citation and page.paperurl %}
-          <p>Recommended citation: {{ page.citation | markdownify | remove: '<p>' | remove: '</p>' | strip }} DOI: <a href="{{ page.paperurl }}">{{ page.paperurl | remove: 'https://doi.org/' }}</a> {% if page.codeurl %} | <a href="{{ page.codeurl }}">Code</a>{% endif %}{% if page.dataurl %} | <a href="{{ page.dataurl }}">Data</a>{% endif %}{% if page.pdfurl %} | <a href="{{ page.pdfurl | relative_url }}">PDF</a>{% endif %}</p>{% if page.pdflicense %}
+          <p>Recommended citation: {{ page.citation | markdownify | remove: '<p>' | remove: '</p>' | strip }} DOI: <a href="{{ page.paperurl }}">{{ page.paperurl | remove: 'https://doi.org/' }}</a> {% if page.codeurl %} | <a href="{{ page.codeurl }}">Code</a>{% endif %}{% if page.dataurl %} | <a href="{{ page.dataurl }}">Data</a>{% endif %}{% if page.pdfurl %} | <a href="{{ page.pdfurl | relative_url }}">PDF</a>{% endif %}{% if page.aamurl %} | <a href="{{ page.aamurl | relative_url }}">Accepted manuscript</a>{% endif %}</p>{% if page.pdflicense %}
           <p class="page__date">{{ page.pdflicense }}</p>{% endif %}
         {% elsif page.citation %}
           <p>Recommended citation: {{ page.citation | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>

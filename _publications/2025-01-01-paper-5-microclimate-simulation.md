@@ -11,4 +11,5 @@ codeurl: 'https://github.com/xyaoaf/UrbanTreeStudywithLidar'
 pdfurl: '/files/Yao_2025_LUP_Community-scale_microclimate_simulation.pdf'
 pdflicense: '© 2025 The Authors. Published by Elsevier B.V. under a CC BY 4.0 license.'
 authorsfull: 'Yao, Xihan; Kim, Minho; Dronova, Iryna; McBride, Joe R.; Kondolf, G. Mathias; Radke, John D.'
+aamurl: '/files/Yao_2025_LUP_Community-scale_microclimate_simulation_accepted_manuscript.pdf'
 ---
