@@ -23,7 +23,7 @@ REQUIRED_FIELDS = {
     "pubtype",
 }
 
-OPTIONAL_FIELDS = {"code_url", "data_url"}
+OPTIONAL_FIELDS = {"code_url", "data_url", "pdf_url", "pdf_license", "authors_full"}
 
 
 def yaml_single_quote(value):
@@ -79,7 +79,7 @@ def render_publication(row):
         ]
     )
 
-    for field, key in (("code_url", "codeurl"), ("data_url", "dataurl")):
+    for field, key in (("code_url", "codeurl"), ("data_url", "dataurl"), ("pdf_url", "pdfurl"), ("pdf_license", "pdflicense"), ("authors_full", "authorsfull")):
         value = (row.get(field) or "").strip()
         if value:
             lines.insert(-1, f"{key}: {yaml_single_quote(value)}")
